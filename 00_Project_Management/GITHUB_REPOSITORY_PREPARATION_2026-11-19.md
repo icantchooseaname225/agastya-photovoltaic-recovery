@@ -2,11 +2,11 @@
 
 ## Findings
 
-- Initial audit found no Git repository. In the current continuation, `C:\Agastya` was initialized on `main` and the exact owner-supplied URL was added as `origin`; there are no commits.
+- Initial audit found no Git repository. `C:\Agastya` was initialized on `main` with the exact owner-supplied URL as `origin`; the reviewed initial set now has local root commit `e194ddb06275c48159356f85cea18c473b4f6f66`.
 - Git and Git LFS are installed. `gh` (GitHub CLI) is not on PATH.
 - GitHub Desktop is installed, but launching it through the available computer-use surface returned an accessibility window-opened error and exposed no repository/account window. No authentication was attempted.
 - Read-only GitHub repository access checked the exact owner-supplied URL. The destination exists, is empty, has default branch `main`, and is currently public.
-- The connected account `icantchooseaname225` has repository admin permission. The owner chose to keep the repository public. No visibility change, commit, or upload has occurred.
+- The connected account `icantchooseaname225` has repository admin permission. The owner chose to keep the repository public. The local commit exists; a command-line push was rejected because no Git credentials were available, and the remote remains empty.
 
 ## Data and privacy review required before upload
 
@@ -18,6 +18,8 @@ The `.gitignore` is a curated initial-publication filter: it excludes personal c
 
 ## Current state and next requirement
 
-The owner supplied [`https://github.com/icantchooseaname225/agastya-photovoltaic-recovery.git`](https://github.com/icantchooseaname225/agastya-photovoltaic-recovery) and directed that the repository remain public. Connected metadata confirms the repository is empty, public, uses `main`, and grants the connected account admin permission. No visibility change or sign-in is needed under the current instruction; no credentials were entered.
+The owner supplied [`https://github.com/icantchooseaname225/agastya-photovoltaic-recovery.git`](https://github.com/icantchooseaname225/agastya-photovoltaic-recovery) and directed that the repository remain public. Connected metadata confirms the repository is empty, public, uses `main`, and grants the connected account admin permission. No sign-in is needed to change visibility. A Git sign-in is required to push the local commit.
 
-The local `C:\Agastya` repository is initialized on branch `main`, with the exact URL configured as `origin`. No commit or push has occurred. Before adding the review manifest, the filtered candidate set contains 399 files totalling 2,726,177 working-tree bytes; no candidate exceeds 10 MiB. The text/code candidates were screened for email addresses, local profile paths and credential patterns. The final staged count and byte total, including the manifest itself, are recorded in `GITHUB_STAGED_FILE_REVIEW_2026-11-19.md`. The owner must review and approve this exact staged set before any initial commit or push.
+The local `C:\Agastya` repository is on branch `main`, with the exact URL configured as `origin`. The complete staged set was reconciled against the manifest and committed locally as `e194ddb06275c48159356f85cea18c473b4f6f66`. The text/code candidates were screened for email addresses, local profile paths and credential patterns; no candidate exceeds 10 MiB. The manifest contains the exact count, byte total, paths and exclusions. A regular `git push -u origin main` failed because command-line Git had no saved credentials. The repository remains empty/public; no force-push or alternative partial upload was attempted.
+
+The connected GitHub tools expose Git object operations, but no action for creating the initial branch ref in an empty repository. The local commit is ready to publish after the owner signs in through Git Credential Manager or GitHub Desktop.

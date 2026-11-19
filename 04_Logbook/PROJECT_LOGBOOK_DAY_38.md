@@ -19,19 +19,19 @@ I ran the existing EYE `unittest` suite with the already-installed Python 3.14.1
 
 An Arduino CLI metadata query fetched board/library catalog indices into its local cache outside the project. No board core or library was installed. An attempt to remove the downloaded cache files was blocked by the automatic tool review; this environment-side effect is disclosed in the final handoff.
 
-The owner directed that the GitHub repository remain public. The remote is empty. The staged-file review must be refreshed after this entry and the validation record before any initial commit or push.
+The owner directed that the GitHub repository remain public. I refreshed and reconciled the complete staged manifest, then created local root commit `e194ddb06275c48159356f85cea18c473b4f6f66`. The ordinary push attempt failed because command-line Git had no saved credentials; the remote remains empty and no files were uploaded.
 
 ## Findings and decisions
 
 1. Days 34–37 already have full/short pairs; Day 38 is the correct next entry.
 2. Do not reconstruct missing Days 31–33 or describe desk simulations as physical evidence.
-3. Keep the repository public at the owner’s direction. The exact updated staged set and manifest must be reviewed before initial publication.
+3. Keep the repository public at the owner’s direction. The reviewed staged set has a local commit; the push awaits GitHub sign-in.
 4. Physical validation and final economic conclusions remain dependent on real samples, qualified facilities, measured data and verifiable quotes.
 
 ## Next steps
 
-1. Refresh and reconcile the complete staged-file manifest after this update.
-2. Review the staged paths, sizes, exclusions and publication scope; then follow the initial-sync approval gate in the master directive.
-3. Resolve the school/guide, sample, facility, assay and equipment-quote dependencies in the master task list before claiming physical validation or profitability.
+1. Sign in to GitHub through Git Credential Manager or GitHub Desktop, then push `main` with a regular non-force push and verify the remote commit.
+2. Resolve the school/guide, sample, facility, assay and equipment-quote dependencies in the master task list before claiming physical validation or profitability.
+3. Keep the partial software-test and no-hardware-validation limits visible in any external presentation.
 
 **Full/short pair:** [Day 38 short entry](Short%20Versions/DAY_38_SHORT_ENTRY.md).

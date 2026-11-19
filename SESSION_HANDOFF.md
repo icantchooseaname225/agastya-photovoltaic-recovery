@@ -33,7 +33,7 @@ This remains an engineering desk study and computational project. No AGASTYA rob
 ## Next work, in dependency order
 
 1. Confirm current event requirements, team/guide responsibilities and a student-led local problem/evidence plan before presenting historical decks externally.
-2. The owner has chosen to keep the empty remote public. Review the complete staged path list, total size, privacy and license screen; wait for owner approval before any initial commit or push.
+2. Sign in to GitHub through Git Credential Manager or GitHub Desktop, then push the local `main` branch to the still-empty public remote without force.
 3. Measure the accepted module envelope, mass and disassembly operations; develop a cold fixture and compare an arm with tooling against panel indexing/rails and dedicated mechanisms. Only then proceed to 3D reach/collision, payload, force and actuator sizing.
 4. Specify foam-roller material and contact conditions; prepare a qualified-facility matched comparison of hot-knife-only and hot-knife-plus-roller operation. Keep active heating gated by host approval and safety review.
 5. Characterize actual Stage 3 output, including size, liberation, dust and representative Ag/Si/Al/Cu/Sn/Pb assay. Compare dry size classification, conditional ECS and qualified flotation on matched feed with complete mass/silver balances.
@@ -48,7 +48,7 @@ The older Python 3.12 virtual environments point to a missing base interpreter. 
 
 The prior [21 October handoff backup](99_Archive/Engineering_Reassessment_2026-11-19_PreChange/SESSION_HANDOFF_2026-10-21.md) is preserved as historical context. Its manual Stage 2 baseline and software-install account are not the current project direction or current environment status.
 
-## Latest continuation addendum — 19 November 2026
+## Earlier continuation addendum — 19 November 2026
 
 - Added an AGASTYA-EYE demo sketch at `Agastya-EYE/demos/servo_gate/`. It accepts synthetic serial APPROVE/REJECT/HOLD commands and defaults/times out to HOLD. It is separate from classifier firmware; it was not compiled or tested on hardware.
 - Generated a conceptual 2D R12 CAD plan at `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan.dxf` from the existing illustrative 71-point reach case. It is not a robot assembly or manufacturing drawing.
@@ -60,15 +60,15 @@ The prior [21 October handoff backup](99_Archive/Engineering_Reassessment_2026-1
 
 ### Current immediate owner action
 
-Review the refreshed complete staged path list and exclusions in the linked manifest. After owner approval, the initial commit/push may proceed to the repository, which is to remain public.
+Sign in through Git Credential Manager or GitHub Desktop, then push local `main` to the supplied public repository without force. Verify the resulting remote commit.
 
-## GitHub preparation continuation — 19 November 2026
+## Earlier GitHub preparation continuation — 19 November 2026
 
 - GitHub connector metadata confirms `icantchooseaname225/agastya-photovoltaic-recovery` is empty, public, and on default `main`; the connected account has admin permission. The tool catalog has no visibility-update action.
 - During the earlier privacy check, the browser displayed a GitHub sign-in page and no credentials were entered. The owner has since directed that the repository remain public; no sign-in or visibility change is required.
 - Initialized local Git on `main` and configured the exact supplied URL as `origin`. Before adding this review file, the filtered candidate set was 399 files / 2,726,177 bytes, with no file over 10 MiB. See `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-19.md` for final staged paths and total.
 - Candidate files were screened for email addresses, user-profile paths and credential patterns. Outreach/private contact files, raw datasets, model weights, QA contact sheets, generated inspections, archival duplicates and unreviewed binary office/PDF packages are excluded by `.gitignore`.
-- No commit or push has been made. The repository remains public at the owner’s direction. The user must review the staged manifest and approve the initial commit/push.
+- At that handoff, no commit or push had been made. The later Day 38 continuation records the local commit and current authentication blocker.
 
 ## Directive and logbook continuation — 19 November 2026
 
@@ -76,4 +76,4 @@ Review the refreshed complete staged path list and exclusions in the linked mani
 - Confirmed that Days 34–37 have paired full and short entries. Created the next chronological Day 38 pair and updated the logbook/project indexes, status, changelog and handoff.
 - Ran the EYE unit suite: 29 of 35 tests passed; 6 errored because PyTorch, NumPy and Pillow were unavailable. The documented PC-only image simulator was not run. Source-reviewed the servo demo; no board core or Servo library was available for compilation. See [the validation record](Agastya-EYE/docs/STAGE1_VALIDATION_RUN_2026-11-19.md).
 - No missing Days 31–33 were reconstructed. No email or physical experiment was conducted.
-- Add the Day 38 files and affected navigation to the refreshed staged-file manifest before initial synchronization.
+- The refreshed manifest includes the Day 38 pair, Stage 1 validation record and affected navigation. Local root commit `e194ddb06275c48159356f85cea18c473b4f6f66` records the reviewed set. Push failed because no command-line Git credentials were available; the remote remains empty/public.

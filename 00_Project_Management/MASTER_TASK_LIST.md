@@ -9,7 +9,7 @@ Tasks are prioritized by dependencies, not by how advanced a tool sounds. Effort
 | P0-01 | Ask the local NCSC coordinator for the event level, final rules, category, submission dates, report form, presentation time, display and safety requirements. | Student's school/event location; coordinator contact | Save the dated rule/response; fill every “confirm” row in the NCSC guide and register. | 30–60 min plus reply time | Student with teacher/guide | BLOCKED |
 | P0-02 | Confirm the student team and guide; define whose work and records the project represents. | School and student decision | Names/roles and mentor consent recorded in approved project records. | 30–60 min | Student/teacher | BLOCKED |
 | P0-03 | Identify a specific local PV end-of-life problem and obtain genuine local evidence. NCSC expects a neighborhood problem, student inquiry and field work. | Event scope, school/community access and permissions | One bounded research question, dated observations/survey/interview with permission, and a clear data plan. | 2–6 hours plus field schedule | Student personally leads; guide approves access | NOT STARTED |
-| P0-04 | Complete staged review and safe initial synchronization. | Supplied URL `https://github.com/icantchooseaname225/agastya-photovoltaic-recovery.git`; owner directed that the repository remain public. | Review all staged paths, total bytes, sensitive content and licenses; commit/push only after owner review and approval of the complete staged set. | 30–90 min plus review | Project owner | READY FOR OWNER REVIEW — remote is empty/public by owner direction; local main/origin initialized; staged review validated; no commit/push; owner approval required |
+| P0-04 | Complete staged review and safe initial synchronization. | Supplied URL `https://github.com/icantchooseaname225/agastya-photovoltaic-recovery.git`; owner directed that the repository remain public. | Review all staged paths, total bytes, sensitive content and licenses; publish only after owner review and approval. | 30–90 min plus review | Project owner | LOCAL COMMIT CREATED — `e194ddb`; remote remains empty/public; Git push could not authenticate; owner sign-in through Git Credential Manager or GitHub Desktop is required; no force-push |
 
 ## Priority 1 — essential scientific and technical work
 
@@ -53,7 +53,7 @@ Tasks are prioritized by dependencies, not by how advanced a tool sounds. Effort
 ## Next seven actions
 
 1. Confirm the event, team/guide and student-led local evidence plan (P0-01 through P0-03).
-2. Review and approve the complete staged path list and privacy/size/license screen for the public repository before any initial commit or push (P0-04).
+2. Sign in to GitHub through Git Credential Manager or GitHub Desktop, then push local `main` to the supplied empty public remote without force (P0-04).
 3. Identify a traceable representative c-Si sample and qualified host; otherwise keep physical work at desk-study and cold-fixture planning (P1-02).
 4. Measure the module envelope, mass and actual disassembly tasks; develop the Stage 2 fixture and compare robot/tooling with indexing/rail or dedicated mechanisms (P1-08).
 5. Specify the foam roller and prepare an approved, matched hot-knife-only versus hot-knife-plus-roller plan before any active heating (P1-03 through P1-05).
