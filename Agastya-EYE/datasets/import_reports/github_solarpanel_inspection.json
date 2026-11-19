@@ -1,0 +1,510 @@
+{
+  "source_id": "github_solarpanel_inspection",
+  "pinned_commit": "868cf7c004cf3cea274d2bfdf398ac6c2216ca47",
+  "archive_sha256": "0b71bb1aa4b88e19c9ea7e2702a299a05132d2a85f1d360261668a4abef6bb9a",
+  "license": "CC BY 4.0",
+  "annotated_source_images": 866,
+  "unique_images_imported": 734,
+  "missing_annotated_images": [
+    {
+      "split": "valid",
+      "filename": "Physical-4-_jpg.rf.e7c77ae507a89723819e95ff8b67d135.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-25-_jpg.rf.e4950cf1fc64ae8d02c4b6f32e89ffb0.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-69-_jpg.rf.e7cb27b35498f27c1079b42fdc376e27.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-34-_jpg.rf.ea4857a512955654254cc0042dd7ecd6.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-43-_jpg.rf.ee115eee5253a16233b29de8f95a245c.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-93-_jpg.rf.e670ac93d0436eabf03e785a4631eb0e.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-24-_jpg.rf.ec4a11f556e587afe083d9750854af13.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-6-_jpg.rf.edc30e4a90bec26494ec5d496c1476c3.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-69-_jpg.rf.e94003146ac81c336c61050c3c32e148.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-103-_jpg.rf.e4f2a54aa30df9296b4921f35b575454.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-96-_jpg.rf.e26f85371132bd7ea43117ff0eaa95c5.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-124-_jpg.rf.ebca858be9756ca84f2982076086b8d8.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-61-_jpg.rf.eef6620e485b29c7837d0c0ca6af99d1.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-144-_jpg.rf.e61266c7e300529690c83c1ee96a2bb3.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-115-_jpg.rf.e9bfb27677bb23a684bf944f4ddfccd5.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-110-_jpg.rf.e9f1d790d7fbd998fceacf205aef6ff5.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-21-_jpg.rf.d81fdb420511a67199ef416e5c6b1ebe.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-135-_jpg.rf.eab0c2ae338cfe4beab53d39546ef3bc.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-183-_jpg.rf.ec5111fbbfbf5521f812ce094eee089e.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-118-_jpg.rf.e5a9fa403e60434ee40fdd1697dbfce6.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-135-_jpg.rf.e5a25545e51dd50867df4945096300ac.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-175-_jpg.rf.e595320bd046c27151ffb58e60e938d7.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-84-_jpg.rf.ea1ab88c7be697e1572d3436fb1b7302.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-125-_jpg.rf.ebbbd236a94b51ca3d904c934518d55d.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-150-_jpg.rf.e84a0f3fc270e1b026bfddd3b4722c3f.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-159-_jpg.rf.e1a8d9e19a830c04784871b3f256c3c0.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-103-_jpg.rf.ee5e2305748f142c0eb5a0886aa9a33c.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-129-_jpg.rf.e83f3b7e79ec04dd28574db5d3a7b3ce.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-10-_jpg.rf.e191fcd899d0f7365c59905335cc77b4.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-131-_jpg.rf.e4e1679c1cdcca62e7028841d33036dd.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-26-_jpg.rf.d9a299c7e3d0c7e77f992fd4518529f8.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-2-_JPG.rf.e9372adbcd1d8294d5aa3f7c95a15c32.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-24-_jpg.rf.eb8ff90cc5ea27121c3b38def8508697.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-4-_png.rf.e634c1535c5e0da5f176d76e27203c40.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-33-_jpg.rf.e902d236ec120f2bcc1a6cf4c7de435a.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-33-_jpg.rf.e7a6554e239a2eada91d41c9256c5ef5.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-32-_jpg.rf.eb2b20f763d01ad2c0d9d2eee457fabb.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-21-_jpg.rf.eda4de2d91a20d15a30eec70a2341929.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-1-_jpeg.rf.d664260988dd7668759ebe13a714074e.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-31-_jpg.rf.e913476d53421bb3d5e8f86811b0df33.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-92-_jpg.rf.edd704c74b2f48c1e7392f306f819d79.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-58-_jpg.rf.eb71738fc6bbc653c9c8767b82729c61.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Electrical-77-_jpg.rf.ebfe1b1e984f05d50b946e927dd7f87f.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-6-_jpg.rf.e9659dec9123763a975b9e0b0a04d94c.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-189-_jpg.rf.ea4855d532768567e23c20cc73e60995.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Dust-117-_jpg.rf.e58022fe33f382d655bf5c99c2cbd7f9.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-21-_jpg.rf.ec6668c710be0f99f9319560aeef4bca.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-149-_jpg.rf.e5d6a3963c1c77ebb7f536fb838dcaa4.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-23-_jpg.rf.e6fa9656c62a11151997b70702ecf030.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-101-_jpg.rf.e63697900cf02ad4893921709b7b4f17.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-169-_jpg.rf.edbee620cf0ee74db9460345bb716433.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-61-_jpg.rf.e3b7e415294f34c5675b07622ee049df.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-89-_jpg.rf.e8a89918a6a0dbea44d3773c18e585a2.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-74-_jpg.rf.e709d48f02f1dee652b9b492d8bede32.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-39-_jpg.rf.f027f5a79ebe963e5e8b4b215fbe4643.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-66-_jpg.rf.ee06c5ae2386312851374f28bb122839.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-21-_jpg.rf.e52d1ec29163fc7f7f65858a3f81a130.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-52-_JPG.rf.e67c6b62b58307eb3947d93d40eabe39.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-144-_jpg.rf.ec72931013677d4a901bf86a5b7f40e2.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-50-_jpg.rf.e66525f79fd4405c82afbe6c404d1439.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-170-_JPG.rf.e75181f330478b6eedd74dd979ca61dd.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-88-_jpg.rf.ee40f82f642cd5ba27a8af76805f20e3.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-106-_jpg.rf.e5bd4a7668160d90453a763a9b982cd9.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-177-_jpg.rf.e81b140e34845c29a1ff2c1ed824dd17.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-28-_jpg.rf.ec6eed779166d37529489399f9573ad5.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Bird-187-_jpg.rf.e8da5ad3f4b8b957abe3ca4d410b1627.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Clean-24-_jpg.rf.daa11130427380e42005eb7965f5e649.jpg"
+    },
+    {
+      "split": "valid",
+      "filename": "Physical-56-_jpg.rf.e5bd449e90e802845829962f694cb2fd.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-48-_jpg.rf.e21db09d66af43ad61a301bc07eca68e.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-110-_jpg.rf.dc82c06ef6da8de4f72016e9bf4853b5.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-132-_jpg.rf.df5878154ecfdd539781724303b0bada.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-69-_jpg.rf.e0b446c3bcf408f57d8a65609c4b524a.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-36-_jpg.rf.db0568fbf0f8f043c283457251531788.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-161-_jpg.rf.d8657a41541dd7e0c28309d743ae4424.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-48-_jpg.rf.df08f0bd42ec5d88be5fb810d6eaaa15.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-112-_jpg.rf.e1511aedc2051106c19084562b55449e.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-135-_jpg.rf.db7a4225cfd0187a64c63d20d36477e7.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-81-_jpg.rf.db959c2cf6d24f77f2ecf0187196e6e9.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-190-_jpg.rf.ddc8251a0c4c004bfbe75e59c41fe5a4.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-48-_jpg.rf.d6d092308026a29a7d9e2ff45200e92f.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-65-_JPG.rf.dc4d337cbe8f7af96ec839cb7c6e5742.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-91-_jpg.rf.e4a1c7964be49faa5ca051bc9bb5c4d3.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Physical-13-_jpg.rf.d646351b718b652e37275159a7fd3513.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-60-_jpg.rf.e504cb91e07ae1615887834789a40a3c.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-45-_jpg.rf.d757dfea708035049e2c57c8e2827c56.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-37-_jpg.rf.d7433088e8c4dd7847c82f1f0d193579.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-160-_jpg.rf.dd6d0ef83ec9b68f260de407aa32daae.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-39-_jpg.rf.da49b49d575be0b9cd01f6489a12cad3.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-165-_jpg.rf.e04c055c4d5a99ba0a124a2ce834ec72.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-14-_jpg.rf.dd34b00d2828ca57eff49499f0a39a09.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-176-_jpg.rf.dd5ba76eb368f0bcf0236dc061ee7ef1.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-40-_jpg.rf.e0d32a15eecd14e51b761a4a378582da.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-72-_jpg.rf.e1fb61cc66c2416093edb973f2b73395.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-66-_JPG.rf.e24f303c27a36489095880dc4815e65d.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-174-_jpg.rf.e197086d35205ac36c8abca284158116.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-166-_jpg.rf.e2cf19f1eccd0d83fc39236f9669c5cd.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-180-_jpg.rf.d64616d36c274c3a87f8497f80fd5dab.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-53-_JPG.rf.e0747573df2be7d3ff0389f0339de04a.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-155-_jpg.rf.dfe0cd91be1f2d4031c896945743c1d2.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-105-_jpg.rf.dfeb974a4f6ee413b6b6b5e42a5657ab.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-1-_png.rf.d636c79d3a19dbccd3ef72a57664874a.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-22-_jpg.rf.dd39486f8575593e74784171fa3dbead.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-59-_jpg.rf.dd4f5db5d947c00bde794922646face9.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-135-_jpg.rf.d967060fa597a88302e09ca75551cc18.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-173-_jpg.rf.e381e1fe0ef43f38e57a61df55284831.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "14_JPG.rf.e429aedad630607d3c2a2b29dfc96b89.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-11-_jpg.rf.d7eeadd968a5797ed3e4ca6cc4208616.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Physical-44-_jpg.rf.dc02eb0a090c6f0bc237714788e5b204.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-90-_jpg.rf.db6e43b6d8f944870c5ba5bc7500937d.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-1-_jpeg.rf.dfdbddac77bbbc6ea482aa129ee118d9.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "8_JPG.rf.dd30d0d6c592b338e2ed63445dccec82.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-96-_jpg.rf.debf20203b4ee6a43ced0bdb6f35e165.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-139-_JPG.rf.def0b0122fc3d0700dfaf6a23499071d.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "9_JPG.rf.dba7099d8c27fd979db86c1881e07fd2.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Clean-1-_jpeg.rf.de3e418631c02608eb196b9a26b84aff.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-115-_jpg.rf.e271f448be39eb371ee16a7781ceebce.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-47-_jpg.rf.df839ef814a332b3f9b60cfcb31c6a9d.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Electrical-10-_jpg.rf.e198c42ecd41d1613db0c3e28fc6e347.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-193-_jpg.rf.e1edaba0ac5d7c2646e8261e6cc243a2.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-143-_jpg.rf.dc495882d5c472d48564f83b366132da.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-50-_jpg.rf.e0ade22d41423dfb443f281f42d7404d.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Bird-176-_jpg.rf.d9ca73e171b7f67b963e65477510291a.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-78-_jpg.rf.d67a81d39862df4ad47afa5420a1ebf9.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Physical-56-_jpg.rf.dfa1e0cc057472d43c97250e05bc6a08.jpg"
+    },
+    {
+      "split": "test",
+      "filename": "Dust-16-_jpg.rf.e4a12525dfda234f453b45751c02029a.jpg"
+    }
+  ]
+}

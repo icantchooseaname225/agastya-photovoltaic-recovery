@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<defs>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#183c3a" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#526d69"/></marker>
+ <style>
+ .h1{font:700 38px 'Segoe UI',Arial,sans-serif;fill:#153d39}.sub{font:400 18px 'Segoe UI',Arial,sans-serif;fill:#55716c}
+ .head{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#183f3b}.txt{font:400 15px 'Segoe UI',Arial,sans-serif;fill:#526b68}
+ .label{font:700 13px 'Segoe UI',Arial,sans-serif;letter-spacing:.5px;fill:#34534f}.station{font:700 14px 'Segoe UI',Arial,sans-serif;fill:#234c46}
+ .dim{font:700 13px 'Segoe UI',Arial,sans-serif;fill:#657c77}.badge{font:700 12px 'Segoe UI',Arial,sans-serif;letter-spacing:1px}
+ </style>
+</defs>
+<rect width="1600" height="1120" fill="#f2f6f3"/>
+<text x="64" y="70" class="h1">AGASTYA | STRUCTURAL MODEL PLAN</text>
+<text x="66" y="105" class="sub">Physical layout: chassis, platform, feed deck, station frames and collection bins</text>
+<rect x="1275" y="44" width="260" height="44" rx="22" fill="#fff0d9" stroke="#e5c181"/>
+<text x="1405" y="72" text-anchor="middle" class="badge" fill="#8b5a13">CARDBOARD • NON-WORKING</text>
+
+<!-- Side elevation card -->
+<rect x="55" y="142" width="1490" height="560" rx="25" fill="#fff" stroke="#d9e5dd" stroke-width="2" filter="url(#shadow)"/>
+<text x="88" y="185" class="head">1. SIDE ELEVATION — the long side of the machine</text>
+<text x="1488" y="184" text-anchor="end" class="dim">DISPLAY MODEL BASE: about 60 cm long × 30 cm wide</text>
+<line x1="88" y1="204" x2="1510" y2="204" stroke="#e7ede8" stroke-width="2"/>
+
+<!-- deck/chassis -->
+<!-- wheels -->
+<circle cx="190" cy="580" r="28" fill="#344f50"/><circle cx="190" cy="580" r="12" fill="#d7e1dc"/>
+<circle cx="488" cy="580" r="28" fill="#344f50"/><circle cx="488" cy="580" r="12" fill="#d7e1dc"/>
+<circle cx="1110" cy="580" r="28" fill="#344f50"/><circle cx="1110" cy="580" r="12" fill="#d7e1dc"/>
+<circle cx="1395" cy="580" r="28" fill="#344f50"/><circle cx="1395" cy="580" r="12" fill="#d7e1dc"/>
+<!-- frame rails and base -->
+<rect x="115" y="510" width="1375" height="43" rx="7" fill="#476566" stroke="#28494a" stroke-width="3"/>
+<rect x="137" y="485" width="1330" height="28" rx="6" fill="#719493" stroke="#476566" stroke-width="2"/>
+<path d="M260 553v26M595 553v26M925 553v26M1270 553v26" stroke="#627f7e" stroke-width="8"/>
+<text x="800" y="540" text-anchor="middle" class="badge" fill="#fff">LOW CHASSIS / PLATFORM</text>
+<!-- deck -->
+<rect x="145" y="452" width="1315" height="24" rx="7" fill="#d5e5df" stroke="#73928a" stroke-width="2"/>
+<text x="800" y="470" text-anchor="middle" class="badge" fill="#345b54">FLAT WORK DECK</text>
+
+<!-- panel on rollers -->
+<g>
+ <rect x="207" y="410" width="1050" height="30" rx="5" fill="#263f49"/>
+ <rect x="214" y="415" width="1036" height="20" rx="3" fill="#4c8b96"/>
+ <path d="M386 415v20M558 415v20M730 415v20M902 415v20M1074 415v20" stroke="#d4eee8" stroke-width="3"/>
+ <path d="M238 445h980" stroke="#627e7a" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 22"/>
+ <path d="M240 390h950" stroke="#526d69" stroke-width="3" marker-end="url(#arr)"/>
+ <text x="715" y="382" text-anchor="middle" class="label">PANEL FEED DIRECTION</text>
+</g>
+<!-- station 1 overhead camera arch -->
+<path d="M270 410v-130h18v130M400 410V280h18v130M270 280h148v18H270z" fill="#2d7770" stroke="#1d5e59" stroke-width="2"/>
+<rect x="325" y="299" width="37" height="25" rx="5" fill="#234e50"/>
+<circle cx="344" cy="325" r="10" fill="#f0c96e" stroke="#856828" stroke-width="2"/>
+<text x="344" y="254" text-anchor="middle" class="station">1  CAMERA FRAME</text>
+<text x="344" y="344" text-anchor="middle" class="dim">paper camera</text>
+<!-- station 2 uprights and tool head -->
+<rect x="555" y="301" width="18" height="109" rx="3" fill="#728347"/>
+<rect x="710" y="301" width="18" height="109" rx="3" fill="#728347"/>
+<rect x="555" y="301" width="173" height="18" rx="3" fill="#85985b"/>
+<rect x="621" y="321" width="43" height="38" rx="4" fill="#c5d09f" stroke="#6b7e42" stroke-width="2"/>
+<path d="M643 359v39" stroke="#6b7e42" stroke-width="5"/>
+<text x="641" y="275" text-anchor="middle" class="station">2  FRAME / BOX WORK ZONE</text>
+<text x="641" y="381" text-anchor="middle" class="dim">fixed crossbar + blunt tool shape</text>
+<!-- station 3 guarded hood / fixed blade symbol -->
+<path d="M825 410v-116q0-16 16-16h151q16 0 16 16v116" fill="#e5a04f" fill-opacity=".28" stroke="#bd7628" stroke-width="5"/>
+<path d="M826 294h181" stroke="#bd7628" stroke-width="8"/>
+<path d="M910 320v74" stroke="#9a523a" stroke-width="10" stroke-linecap="round"/>
+<rect x="901" y="390" width="19" height="11" rx="3" fill="#9a523a"/>
+<text x="916" y="254" text-anchor="middle" class="station">3  GUARDED SEPARATION ZONE</text>
+<text x="916" y="344" text-anchor="middle" class="dim">rounded cardboard blade symbol</text>
+<!-- station 4 sorter housing -->
+<rect x="1105" y="300" width="208" height="110" rx="12" fill="#6977a4" stroke="#4b5886" stroke-width="3"/>
+<rect x="1122" y="317" width="174" height="76" rx="8" fill="#e3e7f5" stroke="#aab3d4" stroke-width="2"/>
+<circle cx="1208" cy="354" r="25" fill="#b8c0e1" stroke="#6674a2" stroke-width="3"/>
+<path d="M1208 332v44M1186 354h44" stroke="#6674a2" stroke-width="4"/>
+<text x="1209" y="277" text-anchor="middle" class="station">4  SORTER HOUSING</text>
+<text x="1209" y="428" text-anchor="middle" class="dim">paper box + paper-roll symbol</text>
+<!-- output chute/bin -->
+<path d="M1320 415l78 52h-77z" fill="#d5c1a2" stroke="#8d7758" stroke-width="3"/>
+<rect x="1321" y="467" width="82" height="52" rx="4" fill="#eee4d4" stroke="#8d7758" stroke-width="3"/>
+<text x="1362" y="493" text-anchor="middle" class="dim">OUTPUT</text><text x="1362" y="510" text-anchor="middle" class="dim">TRAY</text>
+<!-- controller panel decoration -->
+<rect x="1331" y="300" width="92" height="110" rx="9" fill="#f4f5f0" stroke="#9aa9a2" stroke-width="3"/>
+<circle cx="1355" cy="326" r="7" fill="#4b9b75"/><circle cx="1380" cy="326" r="7" fill="#e2b752"/>
+<rect x="1347" y="344" width="59" height="30" rx="3" fill="#dce9e4" stroke="#859a91"/>
+<text x="1377" y="394" text-anchor="middle" class="dim">LABEL PANEL</text>
+<!-- base dimension line -->
+<path d="M116 622v20M1490 622v20M120 634h1365" fill="none" stroke="#78918a" stroke-width="2" marker-end="url(#arr)"/>
+<text x="800" y="661" text-anchor="middle" class="dim">60 cm base length (approx.)</text>
+<text x="110" y="680" class="dim">Bottle-cap wheels are decoration only; the model stays on a table.</text>
+
+<!-- lower panels -->
+<!-- top view -->
+<rect x="55" y="730" width="930" height="335" rx="25" fill="#fff" stroke="#d9e5dd" stroke-width="2" filter="url(#shadow)"/>
+<text x="88" y="774" class="head">2. TOP VIEW — platform footprint</text>
+<text x="88" y="802" class="txt">Keep the feed line centered; place controls and trays along the side.</text>
+<!-- footprint 60x30 -->
+<rect x="135" y="838" width="775" height="165" rx="14" fill="#dfe9e4" stroke="#66857e" stroke-width="3"/>
+<rect x="157" y="875" width="727" height="74" rx="8" fill="#f6faf7" stroke="#9ab3aa" stroke-width="2"/>
+<rect x="172" y="890" width="690" height="40" rx="6" fill="#4d8d96"/>
+<path d="M315 890v40M460 890v40M605 890v40M750 890v40" stroke="#d9efea" stroke-width="3"/>
+<path d="M210 910h610" stroke="#fff" stroke-width="3" marker-end="url(#arr)"/>
+<text x="520" y="922" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#fff">CENTER FEED LANE</text>
+<!-- modules along side rails -->
+<rect x="193" y="847" width="122" height="22" rx="8" fill="#2d7770"/><rect x="367" y="847" width="130" height="22" rx="8" fill="#85985b"/>
+<rect x="549" y="847" width="130" height="22" rx="8" fill="#e5a04f"/><rect x="731" y="847" width="130" height="22" rx="8" fill="#6977a4"/>
+<text x="254" y="863" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">CAMERA</text>
+<text x="432" y="863" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">FRAME ZONE</text>
+<text x="614" y="863" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">SEPARATOR</text>
+<text x="796" y="863" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">SORTER</text>
+<text x="520" y="984" text-anchor="middle" class="dim">BASE DECK: about 60 × 30 cm • station blocks sit over the blue feed lane</text>
+
+<!-- front view -->
+<rect x="1010" y="730" width="535" height="335" rx="25" fill="#fff" stroke="#d9e5dd" stroke-width="2" filter="url(#shadow)"/>
+<text x="1043" y="774" class="head">3. FRONT VIEW</text>
+<text x="1043" y="802" class="txt">Look from the panel entry end.</text>
+<!-- front elevation -->
+<rect x="1110" y="861" width="335" height="28" rx="5" fill="#476566"/>
+<rect x="1130" y="837" width="295" height="20" rx="4" fill="#d5e5df" stroke="#73928a" stroke-width="2"/>
+<rect x="1210" y="830" width="135" height="7" rx="3" fill="#4d8d96"/>
+<path d="M1165 836v-94h18v94M1390 836v-94h18v94M1165 742h243v17h-243" fill="#2d7770" stroke="#1d5e59" stroke-width="2"/>
+<rect x="1273" y="759" width="30" height="18" rx="4" fill="#234e50"/>
+<circle cx="1288" cy="780" r="7" fill="#f0c96e"/>
+<path d="M1140 889v54M1414 889v54" stroke="#627f7e" stroke-width="10"/>
+<circle cx="1145" cy="955" r="20" fill="#344f50"/><circle cx="1145" cy="955" r="8" fill="#d7e1dc"/>
+<circle cx="1410" cy="955" r="20" fill="#344f50"/><circle cx="1410" cy="955" r="8" fill="#d7e1dc"/>
+<path d="M1095 827h-30M1455 827h30" stroke="#78918a" stroke-width="2" marker-end="url(#arr)"/>
+<text x="1277" y="1001" text-anchor="middle" class="dim">30 cm base width (approx.)</text>
+<text x="1277" y="1030" text-anchor="middle" class="dim">Open frame lets judges see the stations</text>
+
+<!-- footer -->
+<text x="64" y="1095" class="txt">Build from clean scrap carton, paper tubes, paper fasteners, tape and bottle caps. No real glass, blades, heaters, motors or electrical parts.</text>
+</svg>

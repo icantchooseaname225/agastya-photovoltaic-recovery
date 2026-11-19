@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1020" viewBox="0 0 1500 1020">
+<defs>
+ <filter id="s" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#23413d" flood-opacity=".13"/></filter>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#376e65"/></marker>
+ <style>
+ .title{font:700 36px 'Segoe UI',Arial,sans-serif;fill:#173e39}.sub{font:400 18px 'Segoe UI',Arial,sans-serif;fill:#55716b}
+ .head{font:700 21px 'Segoe UI',Arial,sans-serif;fill:#173e39}.label{font:700 17px 'Segoe UI',Arial,sans-serif;fill:#214a44}
+ .body{font:400 15px 'Segoe UI',Arial,sans-serif;fill:#526b65}.small{font:700 13px 'Segoe UI',Arial,sans-serif;fill:#59706a;letter-spacing:.3px}
+ .num{font:700 17px Arial,sans-serif;fill:#fff}
+ </style>
+</defs>
+<rect width="1500" height="1020" fill="#f2f6f3"/>
+<text x="58" y="66" class="title">AGASTYA MODEL — THE PHYSICAL BUILD</text>
+<text x="60" y="99" class="sub">Think of it as a small cardboard machine on a long base. A pretend panel moves through four pretend work areas.</text>
+<rect x="1210" y="43" width="235" height="42" rx="21" fill="#fff0d9" stroke="#e4c17e"/>
+<text x="1328" y="70" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" letter-spacing=".7" fill="#805716">DISPLAY MODEL • DOES NOT WORK</text>
+
+<!-- main side picture -->
+<rect x="48" y="135" width="1404" height="545" rx="24" fill="#fff" stroke="#d7e4dc" stroke-width="2" filter="url(#s)"/>
+<text x="78" y="177" class="head">LOOK FROM THE SIDE</text>
+<text x="1417" y="176" text-anchor="end" class="small">MAKE THE BASE ABOUT 60 CM LONG</text>
+<line x1="78" y1="194" x2="1422" y2="194" stroke="#e6ede8" stroke-width="2"/>
+
+<!-- pretend panel, feed arrow -->
+<rect x="96" y="375" width="175" height="44" rx="6" fill="#263f49"/>
+<rect x="104" y="382" width="159" height="30" rx="3" fill="#4b8993"/>
+<path d="M129 382v30M155 382v30M181 382v30M207 382v30M233 382v30" stroke="#dbf1ec" stroke-width="2"/>
+<text x="183" y="448" text-anchor="middle" class="label">Pretend panel</text>
+<text x="183" y="469" text-anchor="middle" class="body">cardboard + paper</text>
+<path d="M275 395h64" stroke="#376e65" stroke-width="4" marker-end="url(#a)"/>
+
+<!-- base / supports / track -->
+<rect x="118" y="500" width="1210" height="45" rx="8" fill="#476566" stroke="#28494a" stroke-width="3"/>
+<text x="720" y="530" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">LONG CARDBOARD BASE — THE PART EVERYTHING SITS ON</text>
+<rect x="143" y="463" width="1160" height="25" rx="6" fill="#cfe0d9" stroke="#78958b" stroke-width="2"/>
+<rect x="158" y="438" width="1100" height="22" rx="6" fill="#78a7a4" stroke="#476f70" stroke-width="2"/>
+<text x="710" y="456" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#fff">THE PANEL SLIDES ALONG THIS TOP TRACK</text>
+<!-- support feet and wheels -->
+<path d="M210 545v34M496 545v34M949 545v34M1245 545v34" stroke="#718986" stroke-width="11"/>
+<circle cx="210" cy="590" r="19" fill="#344f50"/><circle cx="210" cy="590" r="7" fill="#d7e1dc"/>
+<circle cx="496" cy="590" r="19" fill="#344f50"/><circle cx="496" cy="590" r="7" fill="#d7e1dc"/>
+<circle cx="949" cy="590" r="19" fill="#344f50"/><circle cx="949" cy="590" r="7" fill="#d7e1dc"/>
+<circle cx="1245" cy="590" r="19" fill="#344f50"/><circle cx="1245" cy="590" r="7" fill="#d7e1dc"/>
+<text x="715" y="630" text-anchor="middle" class="body">Bottle caps can look like wheels. They are decoration; the model stays on a table.</text>
+
+<!-- 4 work areas -->
+<!-- camera frame -->
+<path d="M340 437V266h18v171M475 437V266h18v171M340 266h153v18H340" fill="#2f7972" stroke="#1d5e59" stroke-width="2"/>
+<rect x="394" y="286" width="38" height="27" rx="5" fill="#234e50"/><circle cx="413" cy="314" r="8" fill="#f0c96e"/>
+<circle cx="350" cy="225" r="18" fill="#176b62"/><text x="350" y="231" text-anchor="middle" class="num">1</text>
+<text x="378" y="231" class="label">Camera frame</text><text x="378" y="251" class="body">A little arch over the panel</text>
+
+<!-- remove frame zone -->
+<path d="M575 437V303h16v134M711 437V303h16v134M575 303h152v16H575" fill="#829557" stroke="#64783f" stroke-width="2"/>
+<rect x="635" y="319" width="34" height="48" rx="5" fill="#d3dba9" stroke="#64783f" stroke-width="2"/>
+<circle cx="580" cy="225" r="18" fill="#667b3f"/><text x="580" y="231" text-anchor="middle" class="num">2</text>
+<text x="608" y="231" class="label">Frame-removal area</text><text x="608" y="251" class="body">Show loose frame strips beside it</text>
+
+<!-- separator cover -->
+<path d="M815 438V302q0-14 14-14h144q14 0 14 14v136" fill="#e3a04f" fill-opacity=".32" stroke="#bd7628" stroke-width="5"/>
+<path d="M815 302h172" stroke="#bd7628" stroke-width="8"/>
+<path d="M896 329v74" stroke="#9c563e" stroke-width="8" stroke-linecap="round"/>
+<circle cx="820" cy="225" r="18" fill="#c47a22"/><text x="820" y="231" text-anchor="middle" class="num">3</text>
+<text x="848" y="231" class="label">Covered glass-splitting area</text><text x="848" y="251" class="body">A blunt card strip stands for the knife</text>
+
+<!-- sorting box -->
+<rect x="1067" y="300" width="158" height="137" rx="12" fill="#7884ad" stroke="#566392" stroke-width="3"/>
+<rect x="1083" y="316" width="126" height="83" rx="7" fill="#e5e8f4" stroke="#a8b2d3" stroke-width="2"/>
+<circle cx="1146" cy="357" r="23" fill="#c5cbe3" stroke="#6976a3" stroke-width="3"/><path d="M1146 337v40M1126 357h40" stroke="#6976a3" stroke-width="3"/>
+<circle cx="1072" cy="225" r="18" fill="#5969a2"/><text x="1072" y="231" text-anchor="middle" class="num">4</text>
+<text x="1100" y="231" class="label">Sorting box</text><text x="1100" y="251" class="body">Just a labeled cardboard box</text>
+<!-- output tray -->
+<path d="M1226 429l70 34h-70z" fill="#d9c6a5" stroke="#907b5b" stroke-width="3"/>
+<rect x="1227" y="463" width="69" height="39" rx="3" fill="#eee4d4" stroke="#907b5b" stroke-width="3"/>
+<text x="1261" y="487" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#68573c">TRAY</text>
+
+<!-- simple callout -->
+<rect x="91" y="643" width="1310" height="22" rx="11" fill="#fff7e8"/>
+<text x="746" y="659" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#79571e">None of the arches, box or wheels need to move. They only show where each job would happen.</text>
+
+<!-- bottom cards -->
+<rect x="48" y="710" width="840" height="260" rx="24" fill="#fff" stroke="#d7e4dc" stroke-width="2" filter="url(#s)"/>
+<text x="80" y="752" class="head">LOOK FROM ABOVE</text>
+<text x="80" y="778" class="body">This is where the parts sit on the long base.</text>
+<rect x="104" y="817" width="730" height="112" rx="12" fill="#dfe9e4" stroke="#718e84" stroke-width="3"/>
+<rect x="123" y="855" width="690" height="43" rx="6" fill="#4d8992"/>
+<path d="M300 855v43M465 855v43M630 855v43" stroke="#deefea" stroke-width="3"/>
+<text x="468" y="883" text-anchor="middle" font-family="Arial" font-size="13" font-weight="700" fill="#fff">PANEL PATH — STRAIGHT DOWN THE MIDDLE</text>
+<rect x="140" y="823" width="128" height="26" rx="8" fill="#2f7972"/><text x="204" y="841" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">CAMERA ARCH</text>
+<rect x="315" y="823" width="132" height="26" rx="8" fill="#829557"/><text x="381" y="841" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">FRAME ARCH</text>
+<rect x="480" y="823" width="132" height="26" rx="8" fill="#e3a04f"/><text x="546" y="841" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">COVER</text>
+<rect x="646" y="823" width="132" height="26" rx="8" fill="#7884ad"/><text x="712" y="841" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#fff">SORTING BOX</text>
+
+<rect x="913" y="710" width="539" height="260" rx="24" fill="#e8f0eb" stroke="#d1e0d6" stroke-width="2"/>
+<text x="946" y="752" class="head">BUILD IT IN 5 EASY STEPS</text>
+<g font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#405e58">
+ <circle cx="966" cy="793" r="14" fill="#176b62"/><text x="966" y="798" text-anchor="middle" fill="#fff" font-weight="700">1</text><text x="991" y="798">Cut a long, flat cardboard base.</text>
+ <circle cx="966" cy="829" r="14" fill="#176b62"/><text x="966" y="834" text-anchor="middle" fill="#fff" font-weight="700">2</text><text x="991" y="834">Glue two strips along it to make a track.</text>
+ <circle cx="966" cy="865" r="14" fill="#176b62"/><text x="966" y="870" text-anchor="middle" fill="#fff" font-weight="700">3</text><text x="991" y="870">Stand the 3 arches over the track.</text>
+ <circle cx="966" cy="901" r="14" fill="#176b62"/><text x="966" y="906" text-anchor="middle" fill="#fff" font-weight="700">4</text><text x="991" y="906">Glue the sorting box and output tray on.</text>
+ <circle cx="966" cy="937" r="14" fill="#176b62"/><text x="966" y="942" text-anchor="middle" fill="#fff" font-weight="700">5</text><text x="991" y="942">Add labels; slide a paper panel by hand.</text>
+</g>
+<text x="60" y="1004" class="body">Use clean scrap cardboard, paper, tape/glue, markers and bottle caps. No glass, heat, sharp blades, motors or wires.</text>
+</svg>

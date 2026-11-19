@@ -1,0 +1,5 @@
+﻿stage_id,stage_name,input_stream_id,output_stream_id,material,stage_input_mass_kg,stage_output_mass_kg,documented_loss_kg,input_Ag_mass_kg,target_output_Ag_mass_kg,Ag_grade_wt_percent,assay_method,source_class,source_reference,uncertainty,comments
+S1,Panel disassembly,,,,,,,,,,,,,,"Not measured; blank means unknown, not zero"
+S2,Mechanical liberation,,,,,,,,,,,,,,"Not measured; blank means unknown, not zero"
+S3,Electrostatic separation,,,,,,,,,,,,,,"Not measured; blank means unknown, not zero"
+S4,Assay and accounting,,,,,,,,,,,,,,"Not measured; blank means unknown, not zero"

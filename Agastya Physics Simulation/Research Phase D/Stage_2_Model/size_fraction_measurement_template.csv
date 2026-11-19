@@ -1,0 +1,2 @@
+run_id,parent_stream_id,fraction_id,aperture_lower_mm,aperture_upper_mm,wet_or_dry,feed_mass_g,fraction_mass_g,documented_loss_g,particle_shape_method,moisture_wt_percent,Ag_assay_mass_fraction,Ag_assay_method,assay_uncertainty,notes
+,,,,,,,,,,,,,,"Not measured; blanks are unknown, not zero"

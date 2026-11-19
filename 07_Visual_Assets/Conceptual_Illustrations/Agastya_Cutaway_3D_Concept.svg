@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<defs>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f8faf8"/><stop offset="1" stop-color="#e8efea"/></linearGradient>
+ <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#a8b8b3"/><stop offset=".5" stop-color="#637a76"/><stop offset="1" stop-color="#405855"/></linearGradient>
+ <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#76b0b5"/><stop offset="1" stop-color="#31717c"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-25%" width="150%" height="165%"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#1c3731" flood-opacity=".2"/></filter>
+ <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#176b62"/></marker>
+ <style>
+ .title{font:700 38px 'Segoe UI',Arial,sans-serif;fill:#153d39}.subtitle{font:400 18px 'Segoe UI',Arial,sans-serif;fill:#55716b}
+ .chip{font:700 14px 'Segoe UI',Arial,sans-serif;fill:#21443e}.note{font:400 14px 'Segoe UI',Arial,sans-serif;fill:#526962}
+ .legendhead{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#173e39}.legend{font:600 14px 'Segoe UI',Arial,sans-serif;fill:#36554f}
+ .badge{font:700 12px 'Segoe UI',Arial,sans-serif;letter-spacing:.8px}.num{font:700 13px Arial,sans-serif;fill:#fff}
+ </style>
+</defs>
+<rect width="1600" height="1200" fill="url(#bg)"/><circle cx="1445" cy="92" r="185" fill="#e1ece5"/>
+<text x="58" y="63" class="title">AGASTYA | INTERNAL CUTAWAY CONCEPT</text>
+<text x="60" y="96" class="subtitle">Isometric view of the proposed mobile solar-panel recovery line</text>
+<rect x="1250" y="45" width="292" height="42" rx="21" fill="#fff1d8" stroke="#e3c27f"/><text x="1396" y="72" text-anchor="middle" class="badge" fill="#805716">DESIGN CONCEPT • NOT BUILT</text>
+
+<!-- ground shadow -->
+<ellipse cx="790" cy="765" rx="632" ry="93" fill="#c7d4cb" opacity=".64"/>
+<!-- container rear structure, exposed roof and cutaway side -->
+<g filter="url(#shadow)">
+ <!-- far back wall -->
+ <path d="M200 518L300 408V170L200 280Z" fill="#536d69" stroke="#344e4b" stroke-width="3"/>
+ <!-- rear wall interior panels -->
+ <path d="M300 408V170L1180 170V408Z" fill="#e7eeea" stroke="#617a75" stroke-width="3"/>
+ <path d="M320 393V188M520 393V188M720 393V188M920 393V188M1120 393V188" stroke="#b5c3bd" stroke-width="4"/>
+ <!-- top beams / open roof outline -->
+ <path d="M200 280L300 170H1180L1280 280" fill="none" stroke="#496460" stroke-width="20" stroke-linejoin="round"/>
+ <path d="M200 280V615M300 170V510M1280 280V615" fill="none" stroke="#496460" stroke-width="18"/>
+ <!-- floor top -->
+ <path d="M200 615L1180 615L1280 505L300 505Z" fill="#879d96" stroke="#405b57" stroke-width="3"/>
+ <!-- near cutaway front wall: low sill and right end wall -->
+ <path d="M200 615H1180V734H200Z" fill="#45615d" stroke="#344e4b" stroke-width="3"/>
+ <path d="M1180 615L1280 505V624L1180 734Z" fill="#314c49" stroke="#344e4b" stroke-width="3"/>
+ <!-- doorway lip -->
+ <path d="M200 615H1180L1280 505H300Z" fill="#a9b9b2" stroke="#405b57" stroke-width="3"/>
+</g>
+
+<!-- conveyor bed through the interior -->
+<path d="M265 575L1100 575L1194 478L359 478Z" fill="#c7d4cf" stroke="#647b75" stroke-width="3"/>
+<path d="M290 561L1085 561L1166 481L371 481Z" fill="#395a5d" stroke="#29484b" stroke-width="2"/>
+<!-- belt and rollers -->
+<path d="M310 550L1076 550L1148 480L382 480Z" fill="url(#blue)" stroke="#2b6871" stroke-width="2"/>
+<g fill="#c9d7d3" stroke="#294e50" stroke-width="2">
+ <ellipse cx="390" cy="550" rx="13" ry="7"/><ellipse cx="520" cy="550" rx="13" ry="7"/><ellipse cx="650" cy="550" rx="13" ry="7"/><ellipse cx="780" cy="550" rx="13" ry="7"/><ellipse cx="910" cy="550" rx="13" ry="7"/><ellipse cx="1040" cy="550" rx="13" ry="7"/>
+</g>
+<path d="M398 524H1060" stroke="#ecf5f1" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="626" y="498" width="224" height="30" rx="15" fill="#f8fbf8" opacity=".95"/><text x="738" y="519" text-anchor="middle" class="badge" fill="#28564f">PANEL FEED DIRECTION</text>
+
+<!-- 1 camera and lighting arch -->
+<g>
+ <path d="M374 504V365L430 307V446Z" fill="#236e67" stroke="#174f4a" stroke-width="3"/><path d="M374 365H506L562 307H430Z" fill="#58a19a" stroke="#174f4a" stroke-width="3"/><path d="M506 365V504L562 446V307" fill="none" stroke="#37857c" stroke-width="20"/>
+ <path d="M374 365h132M430 307h132" stroke="#37857c" stroke-width="18"/>
+ <path d="M414 369l22-23h40l-22 23z" fill="#263f43" stroke="#17383a" stroke-width="2"/><circle cx="439" cy="357" r="8" fill="#90d2d8" stroke="#e2f2f1" stroke-width="3"/>
+ <path d="M397 375l8 22M488 375l-8 22" stroke="#f2d27d" stroke-width="5" stroke-linecap="round"/>
+ <rect x="313" y="451" width="50" height="36" rx="5" fill="#354c4d" stroke="#1f3c3c" stroke-width="2"/><rect x="321" y="458" width="34" height="17" rx="2" fill="#9ac8c6"/><circle cx="332" cy="481" r="3" fill="#7fc387"/>
+</g>
+<!-- 2 frame/junction handling robot and part tray -->
+<g>
+ <path d="M555 509V378L610 321V452Z" fill="#718345" stroke="#526331" stroke-width="3"/><path d="M555 378H695L750 321H610Z" fill="#a1b06b" stroke="#526331" stroke-width="3"/><path d="M695 378V509L750 452V321" fill="none" stroke="#899a52" stroke-width="20"/><path d="M555 378h140M610 321h140" stroke="#899a52" stroke-width="18"/>
+ <!-- articulated arm -->
+ <path d="M620 488l23-48 35-23 31 20-17 34-34 23" fill="none" stroke="#d6aa51" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><circle cx="643" cy="440" r="13" fill="#f1ce75" stroke="#80652b" stroke-width="3"/><circle cx="678" cy="417" r="12" fill="#f1ce75" stroke="#80652b" stroke-width="3"/>
+ <path d="M690 468l17-8 11 10-11 13-18-4z" fill="#455b57" stroke="#293e3b" stroke-width="2"/>
+ <!-- removed frame pieces -->
+ <path d="M570 575l38-37 13 7-38 38zM615 578l30-31 13 8-30 31z" fill="#b6a074" stroke="#7f704f" stroke-width="2"/>
+ <rect x="550" y="584" width="142" height="21" rx="4" fill="#8c9d96"/><text x="621" y="599" text-anchor="middle" class="badge" fill="#fff">FRAME / BOX TRAY</text>
+</g>
+<!-- 3 guarded thermal station, hot knife and proposed warm roller -->
+<g>
+ <path d="M764 505V355L820 297V447Z" fill="#d68e3d" fill-opacity=".58" stroke="#a9682b" stroke-width="3"/><path d="M764 355H930L986 297H820Z" fill="#f1c17c" fill-opacity=".75" stroke="#a9682b" stroke-width="3"/><path d="M930 355V505L986 447V297" fill="none" stroke="#d89549" stroke-width="19"/><path d="M764 355h166M820 297h166" stroke="#d89549" stroke-width="18"/>
+ <!-- fixed hot knife cartridge -->
+ <rect x="819" y="361" width="34" height="39" rx="5" fill="#565e5d" stroke="#333e3d" stroke-width="2"/><path d="M835 400l-7 79h14l8-79z" fill="#e6a857" stroke="#9a5b28" stroke-width="2"/>
+ <!-- heaters and sensor -->
+ <path d="M801 371c-13 8 13 14 0 22s13 15 0 22" fill="none" stroke="#b44f3b" stroke-width="4"/><circle cx="855" cy="415" r="6" fill="#63a7ae" stroke="#fff" stroke-width="2"/><path d="M855 415l35-29" stroke="#455f5a" stroke-width="3"/>
+ <!-- second heated roller -->
+ <ellipse cx="895" cy="479" rx="27" ry="17" fill="#b65f43" stroke="#733f33" stroke-width="3"/><path d="M895 462v34" stroke="#e4a083" stroke-width="4"/><path d="M922 479h25" stroke="#6d4a3e" stroke-width="7"/>
+ <!-- electrical control box outside station -->
+ <rect x="963" y="402" width="47" height="74" rx="6" fill="#d8ded9" stroke="#64736f" stroke-width="3"/><rect x="971" y="411" width="31" height="22" rx="2" fill="#273d41"/><text x="986" y="426" text-anchor="middle" font-family="Arial" font-size="8" font-weight="700" fill="#a9d6c7">TEMP</text><circle cx="979" cy="447" r="4" fill="#e1ae54"/><circle cx="994" cy="447" r="4" fill="#6dae83"/><path d="M963 458h-15" stroke="#4e635e" stroke-width="3"/>
+ <text x="871" y="521" text-anchor="middle" class="badge" fill="#804f1f">HOT KNIFE + WARM ROLLER CONCEPT</text>
+</g>
+<!-- 4 eddy current separator belt and magnetic rotor -->
+<g>
+ <path d="M1000 505V380L1055 323V448Z" fill="#586895" stroke="#3f4e79" stroke-width="3"/><path d="M1000 380H1122L1177 323H1055Z" fill="#8996c0" stroke="#3f4e79" stroke-width="3"/><path d="M1122 380V505L1177 448V323" fill="none" stroke="#6b78a6" stroke-width="19"/><path d="M1000 380h122M1055 323h122" stroke="#6b78a6" stroke-width="18"/>
+ <!-- rotor cross section -->
+ <circle cx="1075" cy="446" r="38" fill="#d5d9e6" stroke="#4d5b84" stroke-width="5"/><circle cx="1075" cy="446" r="19" fill="#6174a5" stroke="#35476e" stroke-width="4"/><path d="M1075 408v18M1113 446h-18M1075 484v-18M1037 446h18" stroke="#9b3d4b" stroke-width="8"/>
+ <!-- belt path and motor -->
+ <path d="M1024 495l102-103" stroke="#456f82" stroke-width="10"/><rect x="1120" y="468" width="42" height="31" rx="5" fill="#485c63" stroke="#283e45" stroke-width="3"/><path d="M1120 482h-14" stroke="#334a50" stroke-width="5"/>
+ <!-- split chutes -->
+ <path d="M1093 500l55 34-37 30-52-32z" fill="#b9a47e" stroke="#776547" stroke-width="3"/><path d="M1045 511l-28 42-45 24 29-43z" fill="#9ac5c4" stroke="#5d8a8b" stroke-width="3"/>
+ <rect x="1097" y="567" width="88" height="30" rx="4" fill="#d9c9aa" stroke="#8a7759" stroke-width="2"/><text x="1141" y="587" text-anchor="middle" class="badge" fill="#65543b">METAL FRACTION</text>
+ <rect x="949" y="579" width="91" height="30" rx="4" fill="#d4e7e4" stroke="#6d9691" stroke-width="2"/><text x="994" y="599" text-anchor="middle" class="badge" fill="#3e6763">RESIDUE</text>
+</g>
+<!-- Output glass and laminate bins at entry/side -->
+<g>
+ <path d="M324 565l-45 45-69-19 45-45z" fill="#92c3c9" stroke="#527b80" stroke-width="3"/><path d="M255 591l-1 67 69 19 1-67z" fill="#61959a" stroke="#527b80" stroke-width="3"/><path d="M255 591l-45-45 69-19 45 45z" fill="#b8dce0" stroke="#527b80" stroke-width="3"/>
+ <text x="247" y="633" text-anchor="middle" class="badge" fill="#fff">GLASS</text>
+ <path d="M418 580l-35 34-67-19 35-34z" fill="#cf9d8f" stroke="#8f6258" stroke-width="3"/><path d="M350 595v61l67 20v-62z" fill="#aa776d" stroke="#8f6258" stroke-width="3"/><path d="M350 595l-34-34 67-19 35 34z" fill="#e0b4a7" stroke="#8f6258" stroke-width="3"/><text x="370" y="633" text-anchor="middle" class="badge" fill="#fff">LAMINATE</text>
+</g>
+
+<!-- callout pills around machine -->
+<g>
+ <rect x="58" y="145" width="290" height="66" rx="13" fill="#fff" stroke="#c7d9d0" stroke-width="2"/><circle cx="83" cy="169" r="14" fill="#176b62"/><text x="83" y="174" text-anchor="middle" class="num">1</text><text x="108" y="170" class="chip">CAMERA + LIGHTS</text><text x="108" y="193" class="note">Find panel damage and type.</text><path d="M348 183l81 116" fill="none" stroke="#718b81" stroke-width="2"/>
+ <rect x="380" y="128" width="300" height="66" rx="13" fill="#fff" stroke="#c7d9d0" stroke-width="2"/><circle cx="405" cy="152" r="14" fill="#176b62"/><text x="405" y="157" text-anchor="middle" class="num">2</text><text x="430" y="153" class="chip">VISION COMPUTER</text><text x="430" y="176" class="note">Runs Agastya-EYE (concept).</text><path d="M525 194l-170 260" fill="none" stroke="#718b81" stroke-width="2"/>
+ <rect x="708" y="128" width="312" height="66" rx="13" fill="#fff" stroke="#ead0a9" stroke-width="2"/><circle cx="733" cy="152" r="14" fill="#c47a22"/><text x="733" y="157" text-anchor="middle" class="num">3</text><text x="758" y="153" class="chip">HEATED BLADE + SENSOR</text><text x="758" y="176" class="note">Separates glass; settings untested.</text><path d="M860 194l-24 171" fill="none" stroke="#a88355" stroke-width="2"/>
+ <rect x="1052" y="128" width="315" height="66" rx="13" fill="#fff" stroke="#ead0a9" stroke-width="2"/><circle cx="1077" cy="152" r="14" fill="#c47a22"/><text x="1077" y="157" text-anchor="middle" class="num">4</text><text x="1102" y="153" class="chip">WARM PEELING ROLLER</text><text x="1102" y="176" class="note">Proposed; EVA removal unproven.</text><path d="M1104 194l-207 264" fill="none" stroke="#a88355" stroke-width="2"/>
+ <rect x="1280" y="269" width="260" height="66" rx="13" fill="#fff" stroke="#cbd1e4" stroke-width="2"/><circle cx="1305" cy="293" r="14" fill="#596792"/><text x="1305" y="298" text-anchor="middle" class="num">5</text><text x="1330" y="294" class="chip">MAGNETIC ROTOR</text><text x="1330" y="317" class="note">Eddy-current stage concept.</text><path d="M1280 318l-164 117" fill="none" stroke="#7882a3" stroke-width="2"/>
+</g>
+
+<!-- bottom cutaway legend -->
+<rect x="55" y="812" width="1490" height="306" rx="24" fill="#fff" stroke="#d3e0d8" stroke-width="2" filter="url(#shadow)"/>
+<text x="88" y="853" class="legendhead">WHAT’S INSIDE (left to right)</text>
+<text x="1510" y="852" text-anchor="end" class="note">The container shell is cut away so the proposed internals are visible.</text>
+<g>
+ <circle cx="112" cy="897" r="14" fill="#176b62"/><text x="112" y="902" text-anchor="middle" class="num">1</text><text x="136" y="894" class="legend">Camera + lights</text><text x="136" y="914" class="note">inspect panel</text>
+ <circle cx="400" cy="897" r="14" fill="#176b62"/><text x="400" y="902" text-anchor="middle" class="num">2</text><text x="424" y="894" class="legend">Computer + panel tester</text><text x="424" y="914" class="note">triage / reuse decision</text>
+ <circle cx="755" cy="897" r="14" fill="#758747"/><text x="755" y="902" text-anchor="middle" class="num">3</text><text x="779" y="894" class="legend">Frame/junction-box arm</text><text x="779" y="914" class="note">proposed handling station</text>
+ <circle cx="1110" cy="897" r="14" fill="#c47a22"/><text x="1110" y="902" text-anchor="middle" class="num">4</text><text x="1134" y="894" class="legend">Guard + hot knife</text><text x="1134" y="914" class="note">glass/laminate split</text>
+ <circle cx="112" cy="962" r="14" fill="#c47a22"/><text x="112" y="967" text-anchor="middle" class="num">5</text><text x="136" y="959" class="legend">Warm roller</text><text x="136" y="979" class="note">EVA-peeling idea; not validated</text>
+ <circle cx="400" cy="962" r="14" fill="#596792"/><text x="400" y="967" text-anchor="middle" class="num">6</text><text x="424" y="959" class="legend">Eddy-current rotor + belt</text><text x="424" y="979" class="note">proposed metal separation</text>
+ <circle cx="755" cy="962" r="14" fill="#718b81"/><text x="755" y="967" text-anchor="middle" class="num">7</text><text x="779" y="959" class="legend">Conveyor rollers + guides</text><text x="779" y="979" class="note">move/support panel</text>
+ <circle cx="1110" cy="962" r="14" fill="#718b81"/><text x="1110" y="967" text-anchor="middle" class="num">8</text><text x="1134" y="959" class="legend">Separate collection bins</text><text x="1134" y="979" class="note">glass / laminate / metal fractions</text>
+</g>
+<rect x="88" y="1013" width="1420" height="72" rx="13" fill="#fff5e4" stroke="#ead4ac"/><text x="111" y="1041" class="chip" fill="#75561d">IMPORTANT:</text><text x="203" y="1041" class="note">This is an illustrative design, not a built machine. The heated roller’s EVA-removal result and all performance figures remain unverified.</text><text x="111" y="1066" class="note">Not to scale. The camera/software, robotic handling, thermal station, and metal separator are concept components. No heater or moving mechanism is shown as tested.</text>
+</svg>

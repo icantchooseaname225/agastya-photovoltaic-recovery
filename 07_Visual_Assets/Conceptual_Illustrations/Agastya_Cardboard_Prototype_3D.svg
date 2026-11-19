@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000">
+<defs>
+ <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#faf8f1"/><stop offset="1" stop-color="#eee9dc"/></linearGradient>
+ <linearGradient id="table" x2="0" y2="1"><stop stop-color="#d4c5a8"/><stop offset="1" stop-color="#bda886"/></linearGradient>
+ <linearGradient id="kraft" x2="0" y2="1"><stop stop-color="#e2c99d"/><stop offset="1" stop-color="#bb9666"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="14" stdDeviation="13" flood-color="#493d2c" flood-opacity=".24"/></filter>
+ <pattern id="corrugation" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M2 0V12M8 0V12" stroke="#8e714e" stroke-width=".8" opacity=".28"/></pattern>
+ <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#276b60"/></marker>
+ <style>
+ .title{font:700 38px 'Segoe UI',Arial,sans-serif;fill:#243c34}.subtitle{font:400 18px 'Segoe UI',Arial,sans-serif;fill:#5e6b5e}
+ .lab{font:700 15px 'Segoe UI',Arial,sans-serif;fill:#243c34}.desc{font:400 13px 'Segoe UI',Arial,sans-serif;fill:#4f6259}
+ .tiny{font:700 11px 'Segoe UI',Arial,sans-serif;letter-spacing:.5px}.tag{font:700 13px 'Segoe UI',Arial,sans-serif;letter-spacing:.8px}
+ </style>
+</defs>
+<!-- warm workshop backdrop -->
+<rect width="1500" height="1000" fill="url(#wall)"/>
+<path d="M0 705H1500V1000H0Z" fill="url(#table)"/>
+<path d="M0 731H1500" stroke="#b19b78" stroke-width="3" opacity=".55"/>
+<ellipse cx="760" cy="700" rx="580" ry="100" fill="#72614a" opacity=".18"/>
+<!-- heading -->
+<text x="58" y="62" class="title">AGASTYA | CARDBOARD DISPLAY MODEL</text>
+<text x="60" y="96" class="subtitle">A zero-cost, non-working mock-up made from reused packaging</text>
+<rect x="1152" y="42" width="292" height="44" rx="22" fill="#fff1d5" stroke="#d7b973" stroke-width="2"/><text x="1298" y="69" text-anchor="middle" class="tag" fill="#795615">NON-WORKING • HAND-MOVED PANEL</text>
+
+<!-- BASE: thick corrugated slab in perspective -->
+<g filter="url(#shadow)">
+ <path d="M155 550L1110 550L1275 407L320 407Z" fill="#ddc39b" stroke="#8c704b" stroke-width="4"/>
+ <path d="M155 550H1110V622H155Z" fill="#a88458" stroke="#806541" stroke-width="3"/>
+ <path d="M1110 550L1275 407V479L1110 622Z" fill="#967347" stroke="#806541" stroke-width="3"/>
+ <path d="M155 550L1110 550L1275 407L320 407Z" fill="url(#corrugation)" opacity=".85"/>
+</g>
+<!-- top work surface -->
+<path d="M183 536L1095 536L1244 420L333 420Z" fill="#e9e4d3" stroke="#968369" stroke-width="2"/>
+<!-- decorative feet and bottle-cap wheels -->
+<path d="M240 622v28M474 622v28M930 622v28M1104 605v28" stroke="#8b704b" stroke-width="10"/>
+<g fill="#514b3e" stroke="#e0d5bc" stroke-width="4"><ellipse cx="240" cy="656" rx="25" ry="14"/><ellipse cx="474" cy="656" rx="25" ry="14"/><ellipse cx="930" cy="656" rx="25" ry="14"/><ellipse cx="1104" cy="639" rx="25" ry="14"/></g>
+<!-- center conveyor, fixed paper rollers -->
+<path d="M250 515L1030 515L1170 427L390 427Z" fill="#b4c4b7" stroke="#71837a" stroke-width="2"/>
+<path d="M275 505L1022 505L1150 431L403 431Z" fill="#276b70" stroke="#1b4e53" stroke-width="3"/>
+<!-- fixed roller lines -->
+<g stroke="#ddd6c5" stroke-width="6" opacity=".95"><path d="M410 500l120-69"/><path d="M540 500l120-69"/><path d="M670 500l120-69"/><path d="M800 500l120-69"/><path d="M930 500l120-69"/></g>
+<path d="M430 470L1055 470" stroke="#f4eee0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="615" y="448" width="230" height="30" rx="15" fill="#f7f5ed" opacity=".96"/><text x="730" y="468" text-anchor="middle" class="tiny" fill="#285d58">PANEL SLIDES BY HAND</text>
+
+<!-- layered pretend solar panel on track -->
+<path d="M365 493L505 493L550 464L410 464Z" fill="#293c42" stroke="#172d31" stroke-width="3"/>
+<path d="M372 488L502 488L540 466L411 466Z" fill="#35798b"/>
+<path d="M405 488l37-22M442 488l37-22M479 488l37-22" stroke="#d6eee6" stroke-width="3"/>
+<rect x="406" y="489" width="107" height="6" fill="#e1b86e"/>
+
+<!-- Stage 1 turquoise cardboard arch -->
+<g>
+ <path d="M363 435V328L410 287V394Z" fill="#16776f" stroke="#15574f" stroke-width="3"/>
+ <path d="M363 328H474L521 287H410Z" fill="#3b9a8e" stroke="#15574f" stroke-width="3"/>
+ <path d="M474 328V435L521 394V287" fill="none" stroke="#2d877e" stroke-width="17"/>
+ <path d="M363 328h111M410 287h111" stroke="#2d877e" stroke-width="16"/>
+ <rect x="414" y="329" width="30" height="20" rx="3" fill="#31494a" stroke="#213637" stroke-width="2"/><circle cx="429" cy="350" r="6" fill="#a8d8db" stroke="#e9f2e7" stroke-width="2"/>
+ <circle cx="385" cy="338" r="4" fill="#f3d777"/><circle cx="454" cy="338" r="4" fill="#f3d777"/>
+</g>
+<!-- Stage 2 olive arch + fixed cardboard robot arm + removable frame strips -->
+<g>
+ <path d="M557 435V338L604 297V394Z" fill="#687d43" stroke="#4c6335" stroke-width="3"/>
+ <path d="M557 338H683L730 297H604Z" fill="#96a45c" stroke="#4c6335" stroke-width="3"/>
+ <path d="M683 338V435L730 394V297" fill="none" stroke="#81934f" stroke-width="17"/>
+ <path d="M557 338h126M604 297h126" stroke="#81934f" stroke-width="16"/>
+ <path d="M610 423l25-45 32-20 20 16-21 27-30 28" fill="none" stroke="#d1a64e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="635" cy="378" r="10" fill="#e7c36b" stroke="#876a31" stroke-width="2"/><circle cx="667" cy="358" r="9" fill="#e7c36b" stroke="#876a31" stroke-width="2"/>
+ <path d="M680 397l12-7 9 8-9 12-13-4z" fill="#53645a" stroke="#34453c" stroke-width="2"/>
+ <path d="M575 514l32-28 9 6-31 30zM612 517l27-25 9 7-28 27z" fill="#b39868" stroke="#7f6948" stroke-width="2"/>
+ <rect x="551" y="527" width="145" height="23" rx="5" fill="#efe4ca" stroke="#a38b62" stroke-width="2"/><text x="623" y="543" text-anchor="middle" class="tiny" fill="#66553b">FRAME + BOX TRAY</text>
+</g>
+<!-- Stage 3 orange hood with blunt mock knife and paper rollers -->
+<g>
+ <path d="M746 435V325L793 284V394Z" fill="#d98934" fill-opacity=".86" stroke="#995c28" stroke-width="3"/>
+ <path d="M746 325H906L953 284H793Z" fill="#f0b864" stroke="#995c28" stroke-width="3"/>
+ <path d="M906 325V435L953 394V284" fill="none" stroke="#dc9946" stroke-width="17"/>
+ <path d="M746 325h160M793 284h160" stroke="#dc9946" stroke-width="16"/>
+ <!-- clearly visible blunt cardboard blade -->
+ <rect x="810" y="329" width="27" height="26" rx="4" fill="#73766d" stroke="#494c45" stroke-width="2"/><path d="M821 355l-6 54h13l7-54z" fill="#ba7751" stroke="#885337" stroke-width="2"/>
+ <!-- heater is only drawn on the placard -->
+ <path d="M786 342h20" stroke="#a94d35" stroke-width="4" stroke-dasharray="4 3"/>
+ <!-- proposed rollers from rolled paper -->
+ <ellipse cx="858" cy="417" rx="19" ry="12" fill="#d48b62" stroke="#8e5645" stroke-width="3"/><path d="M839 417v-8M877 417v-8" stroke="#8e5645" stroke-width="3"/>
+ <ellipse cx="900" cy="417" rx="19" ry="12" fill="#d48b62" stroke="#8e5645" stroke-width="3"/><path d="M881 417v-8M919 417v-8" stroke="#8e5645" stroke-width="3"/>
+ <rect x="918" y="367" width="38" height="52" rx="5" fill="#e2dfcf" stroke="#857c69" stroke-width="2"/><rect x="924" y="375" width="26" height="15" fill="#596b63"/><text x="937" y="386" text-anchor="middle" font-family="Arial" font-size="7" font-weight="700" fill="#d7e5b9">TEMP</text><circle cx="928" cy="400" r="3" fill="#c65245"/><circle cx="941" cy="400" r="3" fill="#63946a"/>
+</g>
+<!-- Stage 4 purple sorting box with fixed paper rotor and splitter -->
+<g>
+ <path d="M975 435V344L1022 303V394Z" fill="#596a9c" stroke="#404e78" stroke-width="3"/>
+ <path d="M975 344H1090L1137 303H1022Z" fill="#8994b8" stroke="#404e78" stroke-width="3"/>
+ <path d="M1090 344V435L1137 394V303" fill="#4c5a86" stroke="#404e78" stroke-width="3"/>
+ <path d="M990 350h81l39-34h-81z" fill="#dce2ec" stroke="#9ba7b7" stroke-width="2"/>
+ <ellipse cx="1037" cy="348" rx="23" ry="14" fill="#b88754" stroke="#704e32" stroke-width="3"/><path d="M1014 348v27M1060 348v-27" stroke="#704e32" stroke-width="3"/>
+ <path d="M1066 387l42 24-28 24-41-23z" fill="#b39868" stroke="#7f6948" stroke-width="2"/><path d="M1035 399l-20 33-33 18 20-34z" fill="#9fc5c5" stroke="#648d8c" stroke-width="2"/>
+</g>
+<!-- Collection tubs placed along the near edge -->
+<g>
+ <path d="M255 539l-25 27-53-14 27-27z" fill="#b6d9da" stroke="#64898a" stroke-width="2"/><path d="M204 552v45l53 15v-46z" fill="#79a9ab" stroke="#64898a" stroke-width="2"/><text x="229" y="580" text-anchor="middle" class="tiny" fill="#fff">GLASS</text>
+ <path d="M393 542l-24 27-52-14 25-27z" fill="#e0c6b5" stroke="#997a66" stroke-width="2"/><path d="M342 555v39l52 16v-42z" fill="#bb9680" stroke="#997a66" stroke-width="2"/><text x="366" y="580" text-anchor="middle" class="tiny" fill="#fff">LAMINATE</text>
+ <path d="M1084 548l-20 23-47-13 22-23z" fill="#ecd799" stroke="#9d8956" stroke-width="2"/><path d="M1039 558v34l47 13v-35z" fill="#c4a756" stroke="#9d8956" stroke-width="2"/><text x="1062" y="582" text-anchor="middle" class="tiny" fill="#fff">METAL</text>
+ <path d="M1174 510l-20 22-43-12 21-23z" fill="#c9d3c4" stroke="#7e8974" stroke-width="2"/><path d="M1132 519v35l43 13v-35z" fill="#9ba796" stroke="#7e8974" stroke-width="2"/><text x="1153" y="543" text-anchor="middle" class="tiny" fill="#fff">RESIDUE</text>
+</g>
+<!-- station signs, standing above each module -->
+<g>
+ <path d="M365 273v-27M557 284v-38M746 270v-24M975 286v-40" stroke="#726348" stroke-width="2" stroke-dasharray="4 3"/>
+ <rect x="314" y="210" width="183" height="43" rx="9" fill="#e5f1ed" stroke="#6c9a8f" stroke-width="2"/><text x="405" y="228" text-anchor="middle" class="tiny" fill="#19665e">1 • INSPECT</text><text x="405" y="245" text-anchor="middle" class="desc">camera + lights</text>
+ <rect x="511" y="210" width="194" height="43" rx="9" fill="#edf0df" stroke="#99a66d" stroke-width="2"/><text x="608" y="228" text-anchor="middle" class="tiny" fill="#536a37">2 • REMOVE FRAME</text><text x="608" y="245" text-anchor="middle" class="desc">cardboard arm + tabs</text>
+ <rect x="722" y="210" width="228" height="43" rx="9" fill="#fff0da" stroke="#dda85a" stroke-width="2"/><text x="836" y="228" text-anchor="middle" class="tiny" fill="#9a5f20">3 • SEPARATE</text><text x="836" y="245" text-anchor="middle" class="desc">blunt card tool + paper rollers</text>
+ <rect x="968" y="210" width="190" height="43" rx="9" fill="#eaedf7" stroke="#8c97b6" stroke-width="2"/><text x="1063" y="228" text-anchor="middle" class="tiny" fill="#4c5d8d">4 • SORT</text><text x="1063" y="245" text-anchor="middle" class="desc">paper drum + chutes</text>
+</g>
+<!-- front plaque on machine -->
+<path d="M597 572h324v37H597z" fill="#354d48" stroke="#253b36" stroke-width="2"/><text x="759" y="597" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#f1ead8">AGASTYA</text>
+
+<!-- concise construction legend -->
+<rect x="57" y="775" width="1386" height="161" rx="22" fill="#fffdf7" stroke="#c8b995" stroke-width="2" filter="url(#shadow)"/>
+<text x="89" y="815" font-family="'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#30463c">MAKE THIS WITH REUSED MATERIALS</text>
+<g font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#4e6055">
+ <circle cx="110" cy="852" r="12" fill="#9c7b52"/><text x="110" y="856" text-anchor="middle" fill="#fff" font-weight="700">1</text><text x="130" y="857">Two-layer carton base + folded-cardboard legs.</text>
+ <circle cx="444" cy="852" r="12" fill="#276b70"/><text x="444" y="856" text-anchor="middle" fill="#fff" font-weight="700">2</text><text x="464" y="857">Fixed paper-tube rollers and side rails.</text>
+ <circle cx="760" cy="852" r="12" fill="#d98934"/><text x="760" y="856" text-anchor="middle" fill="#fff" font-weight="700">3</text><text x="780" y="857">Four colored station arches/boxes.</text>
+ <circle cx="1068" cy="852" r="12" fill="#596a9c"/><text x="1068" y="856" text-anchor="middle" fill="#fff" font-weight="700">4</text><text x="1088" y="857">Paper bins, arrows and large labels.</text>
+ <text x="89" y="900" font-size="13">Materials: scrap shipping box, cereal-box card, paper tubes, tape/glue, markers, optional foil and bottle caps.</text>
+ <text x="1410" y="900" text-anchor="end" font-size="13" font-weight="700" fill="#8a5b1d">NO HEAT • NO BLADE • NO MOTOR • NO WIRES</text>
+</g>
+<text x="64" y="972" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#59695e">Display only: rollers and stations stay fixed; move the layered paper panel by hand. Stage 3 roller and Stage 4 recovery are design concepts, not demonstrated results.</text>
+</svg>

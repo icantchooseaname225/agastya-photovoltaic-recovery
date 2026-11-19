@@ -1,0 +1,79 @@
+{
+  "architecture": "mobilenet_v2",
+  "classes": [
+    "bird_drop",
+    "clean",
+    "dust",
+    "other"
+  ],
+  "pretrained_imagenet": true,
+  "fine_tuned_last_block": false,
+  "epochs": 8,
+  "best_epoch": 8,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "seed": 42,
+  "device": "cpu",
+  "created_at": "2026-09-25T09:54:58+00:00",
+  "validation_loss": 0.8326706034796578,
+  "test_loss": 0.5707246890434852,
+  "test_metrics": {
+    "accuracy": 0.8365384615384616,
+    "macro_f1": 0.801414295392954,
+    "per_class": {
+      "bird_drop": {
+        "precision": 0.85,
+        "recall": 0.8095238095238095,
+        "f1": 0.8292682926829269
+      },
+      "clean": {
+        "precision": 0.7391304347826086,
+        "recall": 0.7727272727272727,
+        "f1": 0.7555555555555555
+      },
+      "dust": {
+        "precision": 0.5789473684210527,
+        "recall": 0.8461538461538461,
+        "f1": 0.6875
+      },
+      "other": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1": 0.9333333333333333
+      }
+    },
+    "confusion_matrix": [
+      [
+        17,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        5,
+        0
+      ],
+      [
+        2,
+        0,
+        11,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        42
+      ]
+    ]
+  },
+  "group_count": 433,
+  "split_image_counts": {
+    "train": 504,
+    "validation": 126,
+    "test": 104
+  },
+  "source_manifest_sha256": "2063f5b1eca8d28ce9c6c07e23588fe9c62b4aa4c1a8be0a7c19fbf1c6c93757"
+}

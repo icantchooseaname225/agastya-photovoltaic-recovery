@@ -1,0 +1,38 @@
+{
+  "model": "published benchmark arithmetic plus parameter sensitivity; not an AGASTYA process prediction",
+  "python_version": "3.12.14",
+  "benchmark": {
+    "citation": "Saffarian, Galvin & Firouzi (2026), Minerals Engineering 242, 110189, DOI 10.1016/j.mineng.2026.110189",
+    "feed": "delaminated, crushed and ground EoL PV cells prepared for laboratory flotation",
+    "tap_water_rougher_silver_recovery_fraction": 0.9755,
+    "tap_water_rougher_upgrade_factor": 32.2,
+    "derived_mass_pull_fraction": 0.03029503105590062
+  },
+  "scale_example": {
+    "prepared_feed_mass_kg": 1.0,
+    "concentrate_mass_g": 30.295031055900623,
+    "tail_mass_g": 969.7049689440994,
+    "silver_mass_balance_normalized_to_1_input_unit": {
+      "feed": 1.0,
+      "concentrate": 0.9755,
+      "tail": 0.024499999999999966
+    }
+  },
+  "sensitivity": {
+    "grid_step": 0.05,
+    "grid_rows": 231,
+    "e_definition": "fraction of feed silver ending in a separately accepted ECS silver-bearing product; unknown for AGASTYA",
+    "p_definition": "fraction of feed silver routed into the flotation feed after ECS; unknown for AGASTYA",
+    "route_recovery_equation": "R_total = e + p * r_f, assuming separate measured products with no double counting",
+    "break_even_equation": "r_f_required = (0.9755 - e) / p, for p > 0; this compares algebraically with the direct flotation study benchmark",
+    "parameters_are": "mathematical grid only; no values are asserted as likely or measured"
+  },
+  "limitations": [
+    "The paper feed was prepared cell material; its recovery and upgrade are literature outcomes, not AGASTYA results or guarantees.",
+    "The derived mass pull is R/U from a paired study result and does not supply an AGASTYA feed grade or silver mass.",
+    "No direct matched-feed ECS versus flotation experiment, ECS silver partition, product acceptance, size partition, or route cost is available.",
+    "The simple sequence equation assumes a single accepted ECS silver-bearing product plus a non-overlapping flotation feed; actual stream definitions and assays are required.",
+    "The grid is a deterministic parameter sweep, not a probability distribution, equipment simulation, or forecast."
+  ],
+  "validation_needed": "Measure total and silver mass in every classification/ECS/flotation stream on a homogenized representative feed; close mass and Ag balances with assay QA/QC, duplicate splits, residues and uncertainty."
+}

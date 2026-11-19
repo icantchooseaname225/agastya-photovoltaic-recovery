@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conceptual animated walkthrough of the Agastya photovoltaic module inspection and recycling workflow.">
+  <title>Agastya | Process Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Agastya simulation home"><span class="brand-mark">A</span><span>AGASTYA <small>PROCESS SIMULATION</small></span></a>
+    <div class="top-meta"><span class="live-dot"></span> CONCEPT WALKTHROUGH <span class="divider">/</span> v1.0</div>
+  </header>
+  <main id="top">
+    <aside class="legacy-banner" role="note"><strong>CURRENT ARCHITECTURE · CONCEPT ONLY</strong>Stage 1 inspection/routing; Stage 2 manual mechanical preparation; Stage 3 thermal treatment/delamination; Stage 4 silver removal/recovery. Stage 4 method and product form remain open. Assay and mass accounting validate every stage.</aside>
+    <section class="intro">
+      <div class="eyebrow">CURRENT DESIGN MAP · PV MODULE SILVER RECOVERY</div>
+      <h1>See the proposed process path<br><em>for Agastya.</em></h1>
+      <p class="lede">An interactive walkthrough of inspection, manual preparation, thermal delamination and the open silver-removal route gate. It records proposed hand-offs; it does not predict recovery.</p>
+    </section>
+    <section class="sim-shell" aria-label="Agastya system simulation">
+      <div class="sim-head">
+        <div><div class="eyebrow">SYSTEM VIEW <span id="stage-number">01 / 04</span></div><h2 id="stage-title">Inspect &amp; route</h2></div>
+        <div class="status"><span class="status-dot" id="status-dot"></span><span id="run-status">READY</span></div>
+      </div>
+      <div class="viewport">
+        <svg id="scene" viewBox="0 0 1200 500" role="img" aria-label="Animated conceptual PV recycling line">
+          <defs>
+            <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#111b22"/><stop offset="1" stop-color="#0c1318"/></linearGradient>
+            <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#60d2bd"/><stop offset="1" stop-color="#1a6e68"/></linearGradient>
+            <linearGradient id="heat" x2="0" y2="1"><stop stop-color="#ffbd72" stop-opacity=".75"/><stop offset="1" stop-color="#e26940" stop-opacity=".08"/></linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#25333a" stroke-width="1" opacity=".35"/></pattern>
+          </defs>
+          <rect width="1200" height="500" fill="url(#floor)"/><rect width="1200" height="500" fill="url(#grid)"/>
+          <path d="M0 386H1200" stroke="#304148" stroke-width="2"/><path d="M0 405H1200" stroke="#1b2a31" stroke-width="22"/>
+          <g class="station" data-stage="0" transform="translate(45 125)">
+            <rect class="machine" width="190" height="218" rx="14"/><rect class="machine-top" x="15" y="16" width="160" height="28" rx="6"/><text x="28" y="35" class="machine-label">EYE · INSPECTION</text>
+            <path d="M49 89h91l15 62H35z" fill="#183039" stroke="#39726f" stroke-width="2"/><path d="M54 96h79l10 46H43z" fill="url(#panel)"/><path d="M81 96v46M107 96v46M49 119h89" stroke="#a8eee0" opacity=".6"/>
+            <path d="M94 57v19m-22-10 12 8m31-8-12 8" stroke="#a5f2d8" stroke-width="2"/><circle cx="94" cy="72" r="5" fill="#b6ffe8" filter="url(#glow)"/>
+            <text x="23" y="181" class="machine-sub">IMAGE · ID · HUMAN REVIEW</text><text x="23" y="201" class="machine-sub dim">REUSE / HOLD / STAGE 2</text>
+          </g>
+          <g class="station" data-stage="1" transform="translate(285 125)">
+            <rect class="machine" width="190" height="218" rx="14"/><rect class="machine-top" x="15" y="16" width="160" height="28" rx="6"/><text x="28" y="35" class="machine-label">STAGE 2 · MANUAL</text>
+            <rect x="35" y="78" width="120" height="72" rx="5" fill="#20353a" stroke="#8b9d8b" stroke-width="5"/><rect x="46" y="87" width="98" height="54" fill="url(#panel)"/><path d="M35 114h-15m155 0h15M95 68v10" stroke="#d1ae72" stroke-width="6"/>
+            <path d="M42 163h108" stroke="#5c6e63" stroke-width="5"/><path d="M56 153v21m79-21v21" stroke="#6b8e78" stroke-width="5"/>
+            <text x="23" y="190" class="machine-sub">REMOVE FRAME + J-BOX</text><text x="23" y="207" class="machine-sub dim">ISOLATED · SUPERVISED</text>
+          </g>
+          <g class="station" data-stage="2" transform="translate(525 125)">
+            <rect class="machine" width="190" height="218" rx="14"/><rect class="machine-top" x="15" y="16" width="160" height="28" rx="6"/><text x="28" y="35" class="machine-label">STAGE 3 · HEAT</text>
+            <rect x="34" y="69" width="122" height="96" rx="9" fill="#1a292d" stroke="#52646a" stroke-width="3"/><rect x="47" y="80" width="96" height="66" rx="3" fill="#10191d"/>
+            <path d="M63 130h63" stroke="#dbe8d8" stroke-width="5"/><path d="M63 125c-7-15 7-18 0-31m22 31c-7-15 7-18 0-31m22 31c-7-15 7-18 0-31" fill="none" stroke="#ff9a55" stroke-width="4" filter="url(#glow)"/>
+            <rect x="64" y="151" width="60" height="9" rx="4" fill="#71d3bc"/><circle cx="54" cy="180" r="10" class="roller"/><circle cx="136" cy="180" r="10" class="roller"/>
+            <text x="23" y="205" class="machine-sub">FRONT GLASS → LAMINATE</text>
+          </g>
+          <g class="station" data-stage="3" transform="translate(765 125)">
+            <rect class="machine" width="190" height="218" rx="14"/><rect class="machine-top" x="15" y="16" width="160" height="28" rx="6"/><text x="28" y="35" class="machine-label">STAGE 4 · ROUTE GATE</text>
+            <rect x="35" y="76" width="120" height="74" rx="10" fill="#1b2a2d" stroke="#79c9b0" stroke-width="2"/>
+            <path d="M55 95h80M55 112h57M55 129h68" stroke="#90b9aa" stroke-width="3"/>
+            <circle cx="136" cy="112" r="11" fill="none" stroke="#f0bf78" stroke-width="3"/><path d="M136 106v8m0 5v1" stroke="#f0bf78" stroke-width="2"/>
+            <text x="23" y="181" class="machine-sub">METHOD NOT SELECTED</text><text x="23" y="201" class="machine-sub dim">PRODUCT FORM OPEN</text>
+          </g>
+          <path d="M235 330H285M475 330H525M715 330H765" class="flow-line"/>
+          <g id="material" transform="translate(0 0)"><rect x="0" y="0" width="30" height="10" rx="4" fill="url(#panel)"/><circle cx="-4" cy="5" r="3" fill="#dbd4ba"/><circle cx="34" cy="5" r="3" fill="#dbd4ba"/></g>
+          <g transform="translate(248 76)"><rect width="490" height="27" rx="13" fill="#18262b" stroke="#2b4147"/><text x="17" y="18" class="overlay-label">MATERIAL LINE</text><text x="149" y="18" class="overlay-copy" id="material-state">TRACEABLE FEED · ROUTE OPEN</text></g>
+          <g transform="translate(39 442)"><circle cx="6" cy="5" r="5" fill="#56d9bd"/><text x="20" y="9" class="legend">MATERIAL FLOW</text><circle cx="162" cy="5" r="5" fill="#f2a35c"/><text x="176" y="9" class="legend">THERMAL PROCESS</text><circle cx="345" cy="5" r="5" fill="#cfbd70"/><text x="359" y="9" class="legend">ROUTE DECISION</text></g>
+          <text x="1147" y="469" text-anchor="end" class="watermark">CONCEPTUAL · NOT A PERFORMANCE PREDICTION</text>
+        </svg>
+        <div class="scene-caption" id="scene-caption">A panel is photographed, identified and reviewed. EYE records the human-approved route; it does not command a sorter.</div>
+      </div>
+      <div class="controls">
+        <div class="transport"><button id="play" class="primary" aria-label="Play simulation">▶ <span>Run walkthrough</span></button><button id="step" class="secondary">Next stage <b>→</b></button><button id="reset" class="icon-button" aria-label="Reset simulation" title="Reset">↺</button></div>
+        <div class="speed-control"><label for="speed">FLOW SPEED</label><input id="speed" type="range" min="1" max="5" value="3"><span id="speed-label">1×</span></div>
+      </div>
+      <div class="stage-tabs" role="tablist" aria-label="Select process stage">
+        <button class="stage-tab active" data-index="0"><span>01</span>Inspect</button><button class="stage-tab" data-index="1"><span>02</span>Prepare</button><button class="stage-tab" data-index="2"><span>03</span>Separate glass</button><button class="stage-tab" data-index="3"><span>04</span>Silver route</button>
+      </div>
+    </section>
+    <section class="details-grid">
+      <article class="detail-card"><div class="card-kicker">CURRENT OPERATION</div><h3 id="operation-title">Inspect &amp; route</h3><p id="operation-copy">Capture identity and condition evidence, record measurements, and have an operator review the route. Uncertain modules remain on hold for review.</p><div class="tag-row"><span class="tag" id="operation-tag">HUMAN REVIEW</span><span class="tag subtle" id="eye-tag">EYE RECORDS EVENT</span></div></article>
+      <article class="detail-card"><div class="card-kicker">WHAT THE SIMULATION MEANS</div><h3>Visual process model</h3><p>This animation illustrates material movement and stage hand-offs. It does not calculate throughput, separation efficiency, temperatures, energy, recovery, or safety. Replace assumptions with approved designs and measured trial data.</p><div class="note-line"><span class="info-mark">i</span><span>Stage 3 is a literature-based thermal reference. Stage 4 route and product form remain open. Assays validate every stage.</span></div></article>
+      <article class="detail-card accent-card"><div class="card-kicker">MATERIAL PASSPORT</div><h3>One panel. Linked records.</h3><p>Agastya-EYE preserves the panel identity and appends stage events. Sampling, assays, mass accounting and uncertainty analysis apply across every stage.</p><div class="record-pills"><span>panel_id</span><span>stage event</span><span>measured outputs</span></div></article>
+    </section>
+    <footer><span>AGASTYA · PV MODULE CIRCULARITY</span><span>DESIGN STUDY · OCT 2026</span></footer>
+  </main>
+  <script src="simulation.js"></script>
+</body>
+</html>

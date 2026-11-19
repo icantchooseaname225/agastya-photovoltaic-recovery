@@ -1,0 +1,54 @@
+{
+  "generated_on": "2026-10-10",
+  "dataset_path": "Agastya_Physics_Simulation_2026-10-10.csv",
+  "dataset_schema_version": "2.0",
+  "computation_software": {
+    "python": "CPython 3.14.4",
+    "numpy": "2.5.3",
+    "python_standard_library": [
+      "csv",
+      "json",
+      "itertools",
+      "math",
+      "collections",
+      "pathlib"
+    ],
+    "solver": "Custom five-node 1-D thermal resistance/capacitance model, integrated with explicit forward Euler; scenario/mass-balance and lognormal calculations run in Python."
+  },
+  "experiment_register_path": "experiment_register.csv",
+  "data_dictionary_path": "data_dictionary.csv",
+  "all_rows_reference_documented_experiment_and_procedure": true,
+  "total_records": 147912,
+  "record_counts": {
+    "stage2_manual_mass_balance": 384,
+    "stage3_material_mass_balance": 1152,
+    "stage3_thermal_case_summary": 5040,
+    "stage3_thermal_time_trace": 1944,
+    "stage4_size_sensitivity": 129024,
+    "stage4_literature_Ag_scenarios": 10368
+  },
+  "stage2_stage3_input_mass_range_kg": [
+    8.6,
+    27.869999999999997
+  ],
+  "stage3_thermal_cases": 5040,
+  "stage3_peak_EVA_node_temperature_range_C": [
+    15.649040183984233,
+    261.53493769529047
+  ],
+  "stage3_contact_energy_range_J_per_m2_assumed_contact_area": [
+    1379.740302358994,
+    1724155.1954459872
+  ],
+  "stage3_max_abs_energy_balance_error_pct": 9.218250553530688e-12,
+  "stage3_time_step_refinement_max_peak_EVA_difference_C": 0.00902271983773062,
+  "stage4_log_normal_fines_mass_fraction_range": [
+    0.0,
+    1.0
+  ],
+  "stage4_literature_Ag_scenario_count": 10368,
+  "all_values_are_simulated_or_scenario_calculations": true,
+  "physical_sample_count": 0,
+  "scenario_rows_are_physical_samples": false,
+  "measured_Agastya_trial_rows": 0
+}

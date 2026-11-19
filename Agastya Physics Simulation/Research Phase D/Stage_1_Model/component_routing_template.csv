@@ -1,0 +1,2 @@
+run_id,parent_module_id,child_stream_id,component_route,technology_confirmed,initial_mass_g,stream_mass_g,documented_loss_g,mass_standard_uncertainty_g,scale_id,calibration_check,photo_or_record_id,Ag_assay_mass_fraction,Ag_assay_method,retained_sample_id,notes
+,,,,,,,,,,,,,,,"Not measured; blanks are unknown, not zero"

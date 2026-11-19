@@ -1,0 +1,97 @@
+# AGASTYA – RESEARCH LOGBOOK
+
+## DAY 31 – Consolidation of Expert Feedback and Refinement of Research Parameters
+
+**Date: 16 November 2026**
+
+**Objective:** To review the technical feedback received from researchers and institutions and identify how it should influence the next phase of AGASTYA's development.
+
+Today, I went back through the correspondence I had received from researchers working in materials science, metallurgy and solar-panel recycling. I wanted to move beyond simply collecting responses and understand how their suggestions could be incorporated into the actual design of AGASTYA.
+
+One of the most useful responses was from Professor Koen Binnemans of KU Leuven. He explained that a practical leaching process must satisfy three important requirements: reasonable reagent cost, chemical stability and recyclability. This made me reconsider how I was evaluating the final silver-recovery stage. A process cannot be considered successful simply because it can extract silver. It must also be economically sensible, manageable in terms of waste, and suitable for the relatively small quantity of material being processed.
+
+I also revisited the response from the Materials Research Centre at MNIT Jaipur. The Centre informed me that its FESEM-EDS instrument was not working at the time and provided a contact for its AAS facility. This highlighted an important distinction in our research: examining where silver occurs in a material is different from measuring the total silver concentration in a representative sample.
+
+I began organizing these observations into three research requirements:
+
+1. Establish the composition and construction of the incoming solar-panel material.
+2. Determine how the different material fractions can be characterized and accounted for.
+3. Evaluate the final recovery method using technical, economic and environmental criteria together.
+
+**Connection to AGASTYA:** These findings are relevant to the transition from mechanical preparation and material separation to the final silver-recovery stage. They also reinforce the need for a proper mass balance rather than assuming that a particular quantity of silver will be recovered.
+
+**Outcome:** I developed a clearer set of criteria for evaluating the proposed recovery process. No physical panel processing or silver assay was carried out during this work.
+
+**Next step:** Contact additional specialists regarding module construction, characterization methods and the suitability of different recycling approaches for a small-scale system.
+
+---
+
+## DAY 32 – Exploring Wet and Thermal Recycling Approaches
+
+**Date: 17 November 2026**
+
+**Objective:** To understand how the choice between wet and thermal recycling approaches changes when designing a small and portable recovery system.
+
+Today, I contacted Professor Alexandros Charitos at TU Bergakademie Freiberg, Germany. His research group's work on recovering valuable materials from end-of-life products appeared relevant to the challenges faced by AGASTYA.
+
+In my email, I raised a question that has become increasingly important during the design process: how does an engineer decide between a wet chemical process and a thermal process when dealing with a relatively small and mixed waste stream?
+
+I also asked whether the answer changes when the system is intended to be portable rather than designed for an industrial recycling facility.
+
+This question is important because AGASTYA is not intended to reproduce an entire industrial recycling plant on a smaller scale. It needs to have a clearly defined process, manageable equipment requirements and a realistic material-handling system.
+
+I used this question to identify several parameters that should be considered when comparing potential approaches:
+
+- Equipment size and overall system footprint.
+- Energy consumption and operating requirements.
+- Cost of materials, reagents and consumables.
+- Environmental impact and management of waste streams.
+- Compatibility with the downstream silver-recovery stage.
+
+I also considered how these choices relate to our existing process architecture. Mechanical preparation and separation should produce identifiable material fractions, while the final recovery stage should be evaluated independently rather than assuming that one treatment automatically makes the entire process viable.
+
+**Connection to AGASTYA:** This comparison will help determine whether the final stages of the system should prioritize a mechanically driven separation route, a suitable supervised recovery process, or a combination of different approaches. It will also help prevent unnecessary complexity in the design.
+
+**Outcome:** A new technical enquiry was sent to Professor Charitos. The response is still awaited, and no particular treatment route has been selected on the basis of this enquiry.
+
+**Next step:** Compare the available approaches using a common set of engineering and environmental criteria, then incorporate suitable findings into AGASTYA's process-design model.
+
+---
+
+## DAY 33 – Industry Outreach, Composite-Material Sorting and Research Coordination
+
+**Date: 18 November 2026**
+
+**Objective:** To obtain industry-level information about solar-module construction and investigate whether AI-assisted material sorting could contribute to AGASTYA's process architecture.
+
+Today was particularly useful because I received a response from Waaree's Research and Development team.
+
+Mr. Parthasarathy from Waaree acknowledged the AGASTYA research project and offered to help by sharing relevant publicly available information about solar-module construction, cell technologies, metallization and interconnection designs.
+
+This is important because one of the problems in designing a solar-panel recycling system is that modules should not automatically be treated as identical. Their construction, cell technology, electrical contacts and material layers need to be documented before making assumptions about how they will behave during processing.
+
+I replied to Waaree with a more specific list of information that would help our research. I requested relevant public datasheets and technical references concerning cell technology, silver-bearing metallization, interconnections and the general module layer structure.
+
+I also contacted Dr. Alexia Tischberger-Aldrian at Montanuniversität Leoben, Austria, regarding the KiRAMET project. The project introduced me to another interesting possibility: using AI to assist with the sorting of composite waste.
+
+Solar panels are themselves composite structures, containing glass, polymers, silicon and metallic components joined together. I wanted to understand how an AI-based sorting system identifies the composition of different materials and whether this approach depends on the material being relatively uniform.
+
+I began considering how this concept might relate to AGASTYA. AI-assisted classification could potentially help organize already separated material fractions, but visual classification alone cannot establish their silver concentration. Elemental characterization and a representative assay would still be necessary.
+
+I also returned to my earlier correspondence with MNIT Jaipur. Since the Centre had provided two slightly different telephone numbers for its AAS contact, I sent a clarification email requesting the correct official contact and information about external sample-analysis requirements.
+
+**Connection to AGASTYA:**
+
+Today's work directly contributes to three aspects of the project:
+
+1. **Feed characterization:** Waaree's response may provide real-world information to improve our assumptions about the solar modules entering the system.
+2. **Intelligent material classification:** The KiRAMET enquiry may help us investigate whether AI-assisted identification can complement the mechanical separation stages.
+3. **Verification of recovery:** The MNIT correspondence is helping identify a possible route for future silver analysis through a suitably approved laboratory.
+
+These developments can be incorporated into our existing four-stage process architecture. The incoming material must first be understood and routed correctly; the mechanical preparation stages must generate identifiable fractions; and the final silver-recovery section must be supported by appropriate characterization and measurement.
+
+**Outcome:** I received an encouraging response from Waaree R&D, sent a technical follow-up, contacted Montanuniversität Leoben and clarified the AAS contact issue with MNIT Jaipur.
+
+No physical processing, laboratory assay or measured silver-recovery result was obtained today.
+
+**Next step:** Organize any technical information received from Waaree, investigate the applicability of AI-assisted sorting, and continue identifying a suitable supervised laboratory route for future material characterization.

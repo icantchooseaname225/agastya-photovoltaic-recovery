@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="840" viewBox="0 0 1120 840">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="38" font-family="Arial,sans-serif" font-size="24" font-weight="700">Stage 2 perimeter reach screen (top view)</text>
+<text x="32" y="64" font-family="Arial,sans-serif" font-size="14" fill="#444">Illustrative panel and base assumptions; dashed circles show nominal radial reach only</text>
+<circle cx="560.0" cy="535.0" r="180.0" fill="none" stroke="#4e79a7" stroke-width="2" stroke-dasharray="8 7" opacity="0.85"/>
+<circle cx="560.0" cy="535.0" r="225.0" fill="none" stroke="#f28e2b" stroke-width="2" stroke-dasharray="8 7" opacity="0.85"/>
+<circle cx="560.0" cy="535.0" r="270.0" fill="none" stroke="#59a14f" stroke-width="2" stroke-dasharray="8 7" opacity="0.85"/>
+<circle cx="560.0" cy="535.0" r="300.0" fill="none" stroke="#b07aa1" stroke-width="2" stroke-dasharray="8 7" opacity="0.85"/>
+<rect x="389.1" y="319.9" width="341.7" height="170.1" rx="5" fill="#f4f7fa" fill-opacity="0.94" stroke="#223344" stroke-width="3"/>
+<text x="560.0" y="405.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="15">PV module plan</text>
+<circle cx="389.1" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 1</title></circle>
+<circle cx="404.0" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 2</title></circle>
+<circle cx="418.9" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 3</title></circle>
+<circle cx="433.7" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 4</title></circle>
+<circle cx="448.6" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 5</title></circle>
+<circle cx="463.4" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 6</title></circle>
+<circle cx="478.3" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 7</title></circle>
+<circle cx="493.1" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 8</title></circle>
+<circle cx="508.0" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 9</title></circle>
+<circle cx="522.9" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 10</title></circle>
+<circle cx="537.7" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 11</title></circle>
+<circle cx="552.6" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 12</title></circle>
+<circle cx="567.4" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 13</title></circle>
+<circle cx="582.3" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 14</title></circle>
+<circle cx="597.1" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 15</title></circle>
+<circle cx="612.0" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 16</title></circle>
+<circle cx="626.9" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 17</title></circle>
+<circle cx="641.7" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 18</title></circle>
+<circle cx="656.6" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 19</title></circle>
+<circle cx="671.4" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 20</title></circle>
+<circle cx="686.3" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 21</title></circle>
+<circle cx="701.1" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 22</title></circle>
+<circle cx="716.0" cy="490.1" r="2.1" fill="#253746"><title>near_long task point 23</title></circle>
+<circle cx="730.9" cy="490.1" r="2.1" fill="#253746"><title>far_short task point 24</title></circle>
+<circle cx="730.9" cy="475.9" r="2.1" fill="#253746"><title>far_short task point 25</title></circle>
+<circle cx="730.9" cy="461.7" r="2.1" fill="#253746"><title>far_short task point 26</title></circle>
+<circle cx="730.9" cy="447.5" r="2.1" fill="#253746"><title>far_short task point 27</title></circle>
+<circle cx="730.9" cy="433.4" r="2.1" fill="#253746"><title>far_short task point 28</title></circle>
+<circle cx="730.9" cy="419.2" r="2.1" fill="#253746"><title>far_short task point 29</title></circle>
+<circle cx="730.9" cy="405.0" r="2.1" fill="#253746"><title>far_short task point 30</title></circle>
+<circle cx="730.9" cy="390.8" r="2.1" fill="#253746"><title>far_short task point 31</title></circle>
+<circle cx="730.9" cy="376.6" r="2.1" fill="#253746"><title>far_short task point 32</title></circle>
+<circle cx="730.9" cy="362.5" r="2.1" fill="#253746"><title>far_short task point 33</title></circle>
+<circle cx="730.9" cy="348.3" r="2.1" fill="#253746"><title>far_short task point 34</title></circle>
+<circle cx="730.9" cy="334.1" r="2.1" fill="#253746"><title>far_short task point 35</title></circle>
+<circle cx="730.9" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 36</title></circle>
+<circle cx="716.0" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 37</title></circle>
+<circle cx="701.1" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 38</title></circle>
+<circle cx="686.3" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 39</title></circle>
+<circle cx="671.4" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 40</title></circle>
+<circle cx="656.6" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 41</title></circle>
+<circle cx="641.7" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 42</title></circle>
+<circle cx="626.9" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 43</title></circle>
+<circle cx="612.0" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 44</title></circle>
+<circle cx="597.1" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 45</title></circle>
+<circle cx="582.3" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 46</title></circle>
+<circle cx="567.4" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 47</title></circle>
+<circle cx="552.6" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 48</title></circle>
+<circle cx="537.7" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 49</title></circle>
+<circle cx="522.9" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 50</title></circle>
+<circle cx="508.0" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 51</title></circle>
+<circle cx="493.1" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 52</title></circle>
+<circle cx="478.3" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 53</title></circle>
+<circle cx="463.4" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 54</title></circle>
+<circle cx="448.6" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 55</title></circle>
+<circle cx="433.7" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 56</title></circle>
+<circle cx="418.9" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 57</title></circle>
+<circle cx="404.0" cy="319.9" r="2.1" fill="#253746"><title>far_long task point 58</title></circle>
+<circle cx="389.1" cy="319.9" r="2.1" fill="#253746"><title>near_short task point 59</title></circle>
+<circle cx="389.1" cy="334.1" r="2.1" fill="#253746"><title>near_short task point 60</title></circle>
+<circle cx="389.1" cy="348.3" r="2.1" fill="#253746"><title>near_short task point 61</title></circle>
+<circle cx="389.1" cy="362.5" r="2.1" fill="#253746"><title>near_short task point 62</title></circle>
+<circle cx="389.1" cy="376.6" r="2.1" fill="#253746"><title>near_short task point 63</title></circle>
+<circle cx="389.1" cy="390.8" r="2.1" fill="#253746"><title>near_short task point 64</title></circle>
+<circle cx="389.1" cy="405.0" r="2.1" fill="#253746"><title>near_short task point 65</title></circle>
+<circle cx="389.1" cy="419.2" r="2.1" fill="#253746"><title>near_short task point 66</title></circle>
+<circle cx="389.1" cy="433.4" r="2.1" fill="#253746"><title>near_short task point 67</title></circle>
+<circle cx="389.1" cy="447.5" r="2.1" fill="#253746"><title>near_short task point 68</title></circle>
+<circle cx="389.1" cy="461.7" r="2.1" fill="#253746"><title>near_short task point 69</title></circle>
+<circle cx="389.1" cy="475.9" r="2.1" fill="#253746"><title>near_short task point 70</title></circle>
+<circle cx="389.1" cy="490.1" r="2.1" fill="#253746"><title>near_short task point 71</title></circle>
+<circle cx="560.0" cy="535.0" r="8" fill="#d62728" stroke="#ffffff" stroke-width="2"/>
+<text x="573.0" y="540.0" font-family="Arial,sans-serif" font-size="14" fill="#8c1d18">arm base</text>
+<text x="32" y="708" font-family="Arial,sans-serif" font-size="14" font-weight="700">Nominal reach circles</text>
+<line x1="32" y1="735" x2="80" y2="735" stroke="#4e79a7" stroke-width="3" stroke-dasharray="8 7"/>
+<text x="90" y="740" font-family="Arial,sans-serif" font-size="14">1.2 m</text>
+<line x1="282" y1="735" x2="330" y2="735" stroke="#f28e2b" stroke-width="3" stroke-dasharray="8 7"/>
+<text x="340" y="740" font-family="Arial,sans-serif" font-size="14">1.5 m</text>
+<line x1="532" y1="735" x2="580" y2="735" stroke="#59a14f" stroke-width="3" stroke-dasharray="8 7"/>
+<text x="590" y="740" font-family="Arial,sans-serif" font-size="14">1.8 m</text>
+<line x1="782" y1="735" x2="830" y2="735" stroke="#b07aa1" stroke-width="3" stroke-dasharray="8 7"/>
+<text x="840" y="740" font-family="Arial,sans-serif" font-size="14">2.0 m</text>
+<text x="32" y="785" font-family="Arial,sans-serif" font-size="13" fill="#444">Reach circles ignore height, link orientation, singularities, collisions, tool approach, force, payload, and safety limits.</text>
+</svg>

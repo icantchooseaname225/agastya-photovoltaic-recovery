@@ -1,0 +1,20 @@
+{
+  "status": "exploratory_research_only_not_for_live_eye_triage",
+  "modality": "HDR",
+  "architecture": "frozen torchvision MobileNetV2 ImageNet embedding + dual-form ridge regression",
+  "training_samples": 84,
+  "training_cells": [
+    "0.1",
+    "0.2"
+  ],
+  "ridge_alpha": 100.0,
+  "input_size": [
+    224,
+    224
+  ],
+  "backbone_weights_url": "https://download.pytorch.org/models/mobilenet_v2-7ebf99e0.pth",
+  "source_doi": "10.17632/pxyzzkbs4b.1",
+  "source_license": "CC BY 4.0",
+  "evaluation_report": "D:\\Agastya\\Agastya-EYE\\datasets\\processed\\pv_degradation_benchmark\\hdr_benchmark_report.json",
+  "warning": "Research benchmark artifact only; not integrated with live EYE triage or field images."
+}

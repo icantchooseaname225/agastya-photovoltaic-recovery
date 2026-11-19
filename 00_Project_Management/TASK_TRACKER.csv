@@ -1,0 +1,2 @@
+task_id,area,task,status,dependency_or_owner,verified_output,next_action
+MASTER_LIST,Project management,Use MASTER_TASK_LIST.md as the current task tracker,NEEDS REVIEW,The master list is authoritative; no separate task statuses are maintained,00_Project_Management/MASTER_TASK_LIST.md,Update MASTER_TASK_LIST.md and PROJECT_STATUS.md only

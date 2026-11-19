@@ -1,0 +1,27 @@
+{
+  "run_id": "AGASTYA-PHASE-B-ACCOUNTING-001",
+  "run_utc": "2026-10-10T17:42:20.886158+00:00",
+  "model": "Deterministic literature-normalized inventory arithmetic; not a physics solver",
+  "software": {
+    "python": "3.14.4",
+    "dependencies": "Python standard library only",
+    "numpy_used": false,
+    "external_solver_used": false
+  },
+  "input": "preliminary_material_inventory.csv",
+  "outputs": [
+    "reference_inventory_arithmetic.csv"
+  ],
+  "scenario_count": 2,
+  "physical_samples": 0,
+  "stage_1_yield": null,
+  "stage_2_liberation": null,
+  "stage_3_partition": null,
+  "stage_4_assay": null,
+  "interpretation": "Values reproduce published normalized composition benchmarks only. They are not Agastya measurements, model predictions, recovery yields, or assay results.",
+  "accounting_functions_defined": [
+    "mass_closure_residual(input mass, outputs, documented loss)",
+    "stage_recovery_percent(target-stream Ag mass, stage-input Ag mass)",
+    "silver_grade_percent(concentrate Ag mass, total concentrate mass)"
+  ]
+}

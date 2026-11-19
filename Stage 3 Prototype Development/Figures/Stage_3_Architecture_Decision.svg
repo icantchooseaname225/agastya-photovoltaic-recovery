@@ -1,0 +1,21 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">
+ <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#47647e"/></marker></defs>
+ <rect width="1600" height="620" fill="#fff"/>
+ <text x="800" y="54" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#17365D">AGASTYA — current four-stage process</text>
+ <text x="800" y="92" text-anchor="middle" font-family="Arial" font-size="19" fill="#425466">Conceptual process map only • no physical recovery validation is documented</text>
+ <g font-family="Arial" text-anchor="middle">
+  <rect x="55" y="180" width="330" height="220" rx="18" fill="#D9EAF7" stroke="#17365D" stroke-width="3"/>
+  <text x="220" y="230" font-size="26" font-weight="700" fill="#17365D">Stage 1</text><text x="220" y="276" font-size="21" fill="#1f2937">Inspection &amp; routing</text><text x="220" y="321" font-size="16" fill="#425466">Identify • isolate • route</text>
+  <rect x="445" y="180" width="330" height="220" rx="18" fill="#D9EAF7" stroke="#17365D" stroke-width="3"/>
+  <text x="610" y="230" font-size="26" font-weight="700" fill="#17365D">Stage 2</text><text x="610" y="276" font-size="21" fill="#1f2937">Manual mechanical prep</text><text x="610" y="321" font-size="16" fill="#425466">Frame • J-box • cables</text>
+  <rect x="835" y="150" width="330" height="280" rx="18" fill="#E2F0D9" stroke="#548235" stroke-width="3"/>
+  <text x="1000" y="205" font-size="26" font-weight="700" fill="#385723">Stage 3</text><text x="1000" y="254" font-size="21" fill="#1f2937">Thermal delamination</text><text x="1000" y="300" font-size="17" fill="#425466">Reference: guarded hot knife</text><text x="1000" y="343" font-size="16" fill="#425466">Glass + cell/EVA/backsheet</text><text x="1000" y="382" font-size="15" fill="#8a3c12">Not validated by AGASTYA</text>
+  <rect x="1225" y="150" width="330" height="280" rx="18" fill="#FCE4D6" stroke="#C55A11" stroke-width="3"/>
+  <text x="1390" y="205" font-size="26" font-weight="700" fill="#843C0C">Stage 4</text><text x="1390" y="254" font-size="21" fill="#1f2937">Silver removal/recovery</text><text x="1390" y="300" font-size="16" fill="#425466">Route + feed interface open</text><text x="1390" y="343" font-size="16" fill="#425466">Product form to be specified</text><text x="1390" y="382" font-size="15" fill="#8a3c12">No silver recovered</text>
+ </g>
+ <path d="M386 290H437M776 290H827M1166 290H1217" stroke="#47647e" stroke-width="5" marker-end="url(#arrow)"/>
+ <rect x="85" y="500" width="1430" height="72" rx="12" fill="#F2F2F2" stroke="#8996A3" stroke-width="2"/>
+ <text x="800" y="529" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#17365D">Cross-stage validation</text>
+ <text x="800" y="555" text-anchor="middle" font-family="Arial" font-size="16" fill="#1f2937">Sampling • assay • mass balance • uncertainty • chain of custody</text>
+</svg>

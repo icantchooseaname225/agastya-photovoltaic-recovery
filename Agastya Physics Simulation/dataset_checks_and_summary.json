@@ -1,0 +1,93 @@
+{
+  "schema_version": "2.0",
+  "base_dataset_records": 147912,
+  "followup_dataset_records": 52168,
+  "total_simulation_or_scenario_records": 200080,
+  "base_rows_by_experiment": {
+    "EXP-S2-01": 384,
+    "EXP-S3-01": 1152,
+    "EXP-S3-02": 5040,
+    "EXP-S3-03": 1944,
+    "EXP-S4-01": 129024,
+    "EXP-S4-02": 10368
+  },
+  "followup_rows_by_experiment": {
+    "EXP-CAP-01": 36,
+    "EXP-S3-04": 32,
+    "EXP-S3-05": 64,
+    "EXP-S4-03": 196,
+    "EXP-S4-04": 51840
+  },
+  "data_dictionary_data_rows": 109,
+  "registered_experiments": 11,
+  "computation_software": {
+    "python": "CPython 3.14.4",
+    "numpy": "2.5.3",
+    "python_standard_library": [
+      "csv",
+      "json",
+      "itertools",
+      "math",
+      "collections",
+      "pathlib"
+    ],
+    "solver": "Custom five-node 1-D thermal resistance/capacitance model, integrated with explicit forward Euler; scenario/mass-balance and lognormal calculations run in Python."
+  },
+  "followup_computation_software": {
+    "python": "CPython 3.14.4",
+    "numpy": "2.5.3",
+    "python_standard_library": [
+      "csv",
+      "json",
+      "itertools",
+      "math",
+      "statistics.NormalDist",
+      "importlib.util"
+    ],
+    "solver": "Custom five-node 1-D thermal resistance/capacitance model with explicit forward Euler for thermal studies; Python standard-library scenario arithmetic for capacity, inverse lognormal cuts and conditional Ag calculations."
+  },
+  "physical_trial_rows": 0,
+  "base_field_count": 62,
+  "followup_field_count": 47,
+  "all_rows_carry_experiment_and_procedure_ids": true,
+  "numeric_ranges": {
+    "base_peak_EVA_temperature_C": [
+      15.64904,
+      261.53494
+    ],
+    "base_contact_energy_J_m2": [
+      1379.7403,
+      1724155.2
+    ],
+    "base_stage4_fines_fraction": [
+      0.0,
+      1.0
+    ],
+    "followup_ideal_capacity_panels_8h": [
+      32.0,
+      576.0
+    ],
+    "followup_max_dt_peak_EVA_delta_C": 0.15454065,
+    "followup_cooldown_heat_J_m2": [
+      61000.0886,
+      1178524.92
+    ],
+    "followup_cooldown_heat_at_contact_off_J_m2": [
+      193311.372,
+      1178524.92
+    ],
+    "followup_cooldown_heat_after_300s_J_m2": [
+      61000.0886,
+      303562.766
+    ],
+    "followup_inverse_screen_cut_mm": [
+      0.0183861369,
+      43.5110433
+    ],
+    "followup_conditional_fines_grade_wt_pct": [
+      0.139386699,
+      51.3381818
+    ]
+  },
+  "note": "Every row is virtual, scenario, or literature-normalized arithmetic. It contains zero physical Agastya trial measurements."
+}

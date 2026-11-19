@@ -1,0 +1,238 @@
+{
+  "phase": "E",
+  "run_date": "2026-10-13",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.22000-SP0",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "pillow": "12.3.0"
+  },
+  "PE-SIM-001": {
+    "source_data": "D:\\Agastya\\Agastya Physics Simulation\\Agastya_Physics_Simulation_2026-10-10.csv",
+    "filter": "record_type=thermal_case_summary and experiment_id=EXP-S3-02",
+    "row_count": 5040,
+    "factorial_design_balanced": true,
+    "interpretation": "Equal-weight main-effect variance decomposition of a deterministic designed sweep; unallocated share comprises interactions and any numerical residual, not uncertainty probability.",
+    "metrics": {
+      "Peak EVA temperature (\u00b0C)": {
+        "range": [
+          15.64904,
+          261.53494
+        ],
+        "mean": 68.1153379561508,
+        "top_three_factors": [
+          {
+            "factor": "Dwell (s)",
+            "sum_squares": 4554276.989933798,
+            "share_of_total_variance_pct": 41.50335068349341,
+            "levels": 7,
+            "level_means": {
+              "0.1": 32.61821401805555,
+              "0.25": 40.80958404027778,
+              "0.5": 49.847759145833336,
+              "1.0": 60.4544754125,
+              "2.0": 72.67433357222222,
+              "5.0": 96.70952097777779,
+              "10.0": 123.6934785263889
+            }
+          },
+          {
+            "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+            "sum_squares": 3931059.460705941,
+            "share_of_total_variance_pct": 35.82393862208077,
+            "levels": 4,
+            "level_means": {
+              "100": 34.91803060555556,
+              "300": 50.19322844444444,
+              "1000": 79.71030782857143,
+              "3000": 107.63978494603174
+            }
+          },
+          {
+            "factor": "Blade setpoint (\u00b0C)",
+            "sum_squares": 391681.09460656863,
+            "share_of_total_variance_pct": 3.5694091205873884,
+            "levels": 5,
+            "level_means": {
+              "180": 57.606868519841264,
+              "200": 61.811491441468256,
+              "220": 66.01539409623015,
+              "250": 72.31982269444444,
+              "300": 82.82311302876984
+            }
+          }
+        ],
+        "unallocated_share_pct": 16.736717962404864
+      },
+      "Peak cell temperature (\u00b0C)": {
+        "range": [
+          15.06389,
+          251.95826
+        ],
+        "mean": 55.63249344087302,
+        "top_three_factors": [
+          {
+            "factor": "Dwell (s)",
+            "sum_squares": 4535470.371075375,
+            "share_of_total_variance_pct": 51.29017632844543,
+            "levels": 7,
+            "level_means": {
+              "0.1": 26.045707195833334,
+              "0.25": 29.40699648333333,
+              "0.5": 35.250425104166666,
+              "1.0": 44.31420552638889,
+              "2.0": 56.852592470833336,
+              "5.0": 83.4835432513889,
+              "10.0": 114.07398405416667
+            }
+          },
+          {
+            "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+            "sum_squares": 1931907.3396538824,
+            "share_of_total_variance_pct": 21.847319019652527,
+            "levels": 4,
+            "level_means": {
+              "100": 32.174955784920634,
+              "300": 43.162411682539684,
+              "1000": 64.05418957063492,
+              "3000": 83.13841672539682
+            }
+          },
+          {
+            "factor": "Ambient (\u00b0C)",
+            "sum_squares": 242505.66178533173,
+            "share_of_total_variance_pct": 2.7424185665370993,
+            "levels": 3,
+            "level_means": {
+              "15": 47.13702774464286,
+              "25": 55.63233256904761,
+              "35": 64.12812000892858
+            }
+          }
+        ],
+        "unallocated_share_pct": 21.47341277621905
+      },
+      "Net contact energy (J m\u207b\u00b2)": {
+        "range": [
+          1379.7403,
+          1724155.2
+        ],
+        "mean": 214399.56459956348,
+        "top_three_factors": [
+          {
+            "factor": "Dwell (s)",
+            "sum_squares": 265195663878034.66,
+            "share_of_total_variance_pct": 55.197763381251086,
+            "levels": 7,
+            "level_means": {
+              "0.1": 11966.810810138888,
+              "0.25": 29152.01482111111,
+              "0.5": 56334.87220319444,
+              "1.0": 107031.21954444444,
+              "2.0": 198702.77618749999,
+              "5.0": 421095.3028111111,
+              "10.0": 676513.9558194445
+            }
+          },
+          {
+            "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+            "sum_squares": 94706197831202.77,
+            "share_of_total_variance_pct": 19.712125840145266,
+            "levels": 4,
+            "level_means": {
+              "100": 50150.76069055556,
+              "300": 127054.50111801586,
+              "1000": 273461.6411436508,
+              "3000": 406931.3554460317
+            }
+          },
+          {
+            "factor": "Blade setpoint (\u00b0C)",
+            "sum_squares": 9713307536415.814,
+            "share_of_total_variance_pct": 2.021725556157598,
+            "levels": 5,
+            "level_means": {
+              "180": 162083.56718085316,
+              "200": 183006.06657232143,
+              "220": 203930.83451626985,
+              "250": 235322.4864082341,
+              "300": 287654.8683201389
+            }
+          }
+        ],
+        "unallocated_share_pct": 22.952444244493915
+      }
+    }
+  },
+  "PE-SIM-002": {
+    "model": "1D finite-volume extension of the historical five-layer thermal RC model; uniform subdivisions within layers; zero-capacity algebraic blade/interface node retained; backward Euler with Picard iterations for nonlinear surface radiation.",
+    "case_count": 4,
+    "cells_per_layer": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "time_step_s": 0.0005,
+    "rows": 20,
+    "maximum_energy_residual_abs_pct": 6.204830911390529e-10,
+    "minimum_explicit_dt_row_sum_ratio": 0.0021576205506897207,
+    "maximum_explicit_dt_row_sum_ratio": 544.6512460270093,
+    "solver_note": "The 0.5 ms explicit stability ratio exceeds unity on refined meshes because of silicon's small control volumes. The completed refinement uses backward Euler; this ratio is retained to explain why explicit integration was rejected.",
+    "max_N1_vs_original_absolute_difference": {
+      "peak_eva_C": 0.0036079502353629778,
+      "peak_cell_C": 0.004389574385839978,
+      "net_contact_energy_J_m2": 42.46931280218996
+    },
+    "N16_results": [
+      {
+        "case_id": "low_short",
+        "peak_eva_C": 19.83251585064524,
+        "peak_cell_C": 15.647941486314211,
+        "net_contact_energy_J_m2": 8077.353879844438
+      },
+      {
+        "case_id": "nominal",
+        "peak_eva_C": 104.25146372301126,
+        "peak_cell_C": 61.883465942523344,
+        "net_contact_energy_J_m2": 270378.0390217248
+      },
+      {
+        "case_id": "long_moderate",
+        "peak_eva_C": 85.27787286343809,
+        "peak_cell_C": 61.293979675993,
+        "net_contact_energy_J_m2": 273261.1596357366
+      },
+      {
+        "case_id": "high_bound",
+        "peak_eva_C": 276.0452674248327,
+        "peak_cell_C": 228.15081938959185,
+        "net_contact_energy_J_m2": 1562904.6194637355
+      }
+    ],
+    "limitations": [
+      "No experimental validation; all material and boundary inputs are inherited assumptions.",
+      "One-dimensional conduction only; no moving blade, spatial contact variation, delamination/fracture, EVA kinetics, volatile emissions, or actual feedstock.",
+      "The spatial mesh refines the same model form and cannot establish its physical correctness."
+    ]
+  },
+  "PE-SIM-003": {
+    "model": "Same backward-Euler spatially refined model at 16 control volumes per layer group; timestep-only comparison for nominal and high-bound selected conditions.",
+    "rows": 6,
+    "time_steps_s": [
+      0.001,
+      0.0005,
+      0.00025
+    ],
+    "reference_time_step_s": 0.00025,
+    "maximum_absolute_relative_difference_0p5ms_vs_0p25ms_pct": {
+      "peak_eva_C": 0.001073217827399388,
+      "peak_cell_C": 0.0011328646744115612,
+      "net_contact_energy_J_m2": 0.0012521449114501991
+    },
+    "maximum_energy_residual_abs_pct": 7.528334852286153e-10,
+    "validation": "Numerical timestep sensitivity only; no physical measurements."
+  }
+}

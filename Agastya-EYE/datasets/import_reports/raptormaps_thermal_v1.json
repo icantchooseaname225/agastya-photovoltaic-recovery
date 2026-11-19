@@ -1,0 +1,68 @@
+{
+  "source_id": "raptormaps_infrared_solar_modules",
+  "source_version": "88e2d1febbcefe401c17ec80b8973f36a02a1653",
+  "source_url": "https://github.com/RaptorMaps/InfraredSolarModules",
+  "license": "MIT (repository-declared; see source LICENSE)",
+  "archive_sha256": "b82c706bc719b045ac4f8930570d81767a8a170d0998ca3e09283b585db05b5e",
+  "image_count": 20000,
+  "trainable_image_records": 19988,
+  "unique_images": 19978,
+  "trainable_unique_images": 19972,
+  "exact_duplicate_images": 22,
+  "ambiguous_duplicate_groups": 6,
+  "ambiguous_duplicate_records": 12,
+  "class_counts": {
+    "train": {
+      "cell": 1314,
+      "cell_multi": 900,
+      "cracking": 655,
+      "diode": 1048,
+      "diode_multi": 123,
+      "hot_spot": 174,
+      "hot_spot_multi": 172,
+      "no_anomaly": 7000,
+      "offline_module": 575,
+      "shadowing": 731,
+      "soiling": 142,
+      "vegetation": 1146
+    },
+    "validation": {
+      "cell": 281,
+      "cell_multi": 193,
+      "cracking": 141,
+      "diode": 224,
+      "diode_multi": 26,
+      "hot_spot": 37,
+      "hot_spot_multi": 37,
+      "no_anomaly": 1500,
+      "offline_module": 123,
+      "shadowing": 157,
+      "soiling": 31,
+      "vegetation": 246
+    },
+    "test": {
+      "cell": 281,
+      "cell_multi": 193,
+      "cracking": 141,
+      "diode": 224,
+      "diode_multi": 26,
+      "hot_spot": 37,
+      "hot_spot_multi": 37,
+      "no_anomaly": 1500,
+      "offline_module": 123,
+      "shadowing": 157,
+      "soiling": 31,
+      "vegetation": 246
+    }
+  },
+  "split_method": "stratified random split by exact-image SHA-256; source has no physical module IDs",
+  "seed": 42,
+  "research_limitations": [
+    "Image-level split only; physical-panel/site independent performance cannot be estimated.",
+    "Thermal crops are 40x24 pixels and are not visible-RGB ESP32-CAM images.",
+    "Source labels do not include separate burned or broken classes, defect boxes, or severity.",
+    "Thermal pixel values are normalized grayscale, not calibrated temperature readings.",
+    "Six identical-pixel groups have conflicting source class labels and are excluded from training."
+  ],
+  "imported_at": "2026-09-26T09:04:47+00:00"
+}

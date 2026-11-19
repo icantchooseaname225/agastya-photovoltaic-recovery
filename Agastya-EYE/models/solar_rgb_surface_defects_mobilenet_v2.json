@@ -1,0 +1,192 @@
+{
+  "architecture": "mobilenet_v2_multilabel",
+  "classes": [
+    "black_border",
+    "broken",
+    "hot_spot",
+    "no_electricity",
+    "scratch"
+  ],
+  "modality": "visible_rgb",
+  "task": "image_level_multilabel_defect_screening_derived_from_source_boxes",
+  "input_size": [
+    224,
+    224
+  ],
+  "source_model": "models\\solar_mobilenet_v2.pth",
+  "source_model_sha256": "f3ec1062eea65c8af2e4c58608e1ff1996bed082b66e66437667337719995211",
+  "dataset": {
+    "source_id": "pv_multi_defect_unverified",
+    "source_url": "https://github.com/CCNUZFW/PV-Multi-Defect",
+    "source_commit": "2c4df0c1477032d6b0dd9372a517cdbfd6a09e09",
+    "archive_sha256": "9828728712ea6a819d81b2de907f5cf659396b9a0d7765a015e29e7d3a07ab0e",
+    "source_license_status": "UNDECLARED; not suitable for redistribution pending permission",
+    "research_only": true,
+    "source_images": 1108,
+    "source_annotation_files": 1106,
+    "annotations_without_image": 0,
+    "images_without_annotation": 2,
+    "annotated_records": 1106,
+    "unique_annotated_pixel_hashes": 1045,
+    "duplicate_conflict_groups_excluded": 60,
+    "duplicate_conflict_records_excluded": 120,
+    "deduplicated_images_used": 985,
+    "empty_annotation_images": 1,
+    "class_names": [
+      "black_border",
+      "broken",
+      "hot_spot",
+      "no_electricity",
+      "scratch"
+    ],
+    "class_box_counts": {
+      "no_electricity": 136,
+      "scratch": 1335,
+      "hot_spot": 1032,
+      "broken": 86,
+      "black_border": 246
+    },
+    "class_image_counts": {
+      "no_electricity": 126,
+      "scratch": 627,
+      "hot_spot": 137,
+      "broken": 74,
+      "black_border": 155
+    },
+    "split_image_counts": {
+      "train": 689,
+      "validation": 148,
+      "test": 148
+    },
+    "split_class_box_counts": {
+      "train": {
+        "no_electricity": 95,
+        "scratch": 967,
+        "hot_spot": 658,
+        "black_border": 168,
+        "broken": 60
+      },
+      "validation": {
+        "scratch": 199,
+        "hot_spot": 165,
+        "broken": 11,
+        "black_border": 40,
+        "no_electricity": 19
+      },
+      "test": {
+        "scratch": 169,
+        "hot_spot": 209,
+        "no_electricity": 22,
+        "black_border": 38,
+        "broken": 15
+      }
+    },
+    "split_method": "grouped exact-image SHA-256; deterministic multilabel greedy split; no physical panel/site IDs",
+    "seed": 42,
+    "created_at": "2026-09-26T10:00:06+00:00",
+    "limitations": [
+      "The repository does not declare a dataset-specific license; do not redistribute pending permission.",
+      "Source labels are hot_spot, scratch, no_electricity, black_border, and broken; no explicit burnt class.",
+      "Exact duplicate images with disagreeing box annotations are quarantined from modeling.",
+      "No physical panel/site identifiers exist; image-level held-out performance is not field generalization.",
+      "Annotations are not severity scores, calibrated temperatures, or electrical measurements."
+    ]
+  },
+  "seed": 42,
+  "device": "cpu",
+  "epochs_requested": 4,
+  "epochs_run": 4,
+  "best_epoch": 4,
+  "batch_size": 32,
+  "validation_loss": 0.8631824738270527,
+  "validation_thresholds": [
+    0.5,
+    0.5,
+    0.55,
+    0.65,
+    0.45
+  ],
+  "test_metrics": {
+    "test_loss": 0.820886450844842,
+    "test_metrics_validation_thresholds": {
+      "macro_f1": 0.6341409669316646,
+      "exact_match_accuracy": 0.40540540540540543,
+      "per_class": {
+        "black_border": {
+          "precision": 0.29411764705882354,
+          "recall": 0.6521739130434783,
+          "f1": 0.4054054054054054
+        },
+        "broken": {
+          "precision": 0.38461538461538464,
+          "recall": 0.45454545454545453,
+          "f1": 0.41666666666666663
+        },
+        "hot_spot": {
+          "precision": 0.5714285714285714,
+          "recall": 0.9523809523809523,
+          "f1": 0.7142857142857142
+        },
+        "no_electricity": {
+          "precision": 0.75,
+          "recall": 0.7894736842105263,
+          "f1": 0.7692307692307692
+        },
+        "scratch": {
+          "precision": 0.768595041322314,
+          "recall": 0.9893617021276596,
+          "f1": 0.8651162790697674
+        }
+      }
+    },
+    "test_metrics_fixed_0_5": {
+      "macro_f1": 0.6099587010946037,
+      "exact_match_accuracy": 0.39864864864864863,
+      "per_class": {
+        "black_border": {
+          "precision": 0.29411764705882354,
+          "recall": 0.6521739130434783,
+          "f1": 0.4054054054054054
+        },
+        "broken": {
+          "precision": 0.38461538461538464,
+          "recall": 0.45454545454545453,
+          "f1": 0.41666666666666663
+        },
+        "hot_spot": {
+          "precision": 0.5384615384615384,
+          "recall": 1.0,
+          "f1": 0.7000000000000001
+        },
+        "no_electricity": {
+          "precision": 0.48717948717948717,
+          "recall": 1.0,
+          "f1": 0.6551724137931034
+        },
+        "scratch": {
+          "precision": 0.8090909090909091,
+          "recall": 0.9468085106382979,
+          "f1": 0.8725490196078431
+        }
+      }
+    }
+  },
+  "split_image_counts": {
+    "train": 689,
+    "validation": 148,
+    "test": 148
+  },
+  "research_only": true,
+  "image_level_thresholds_are_not_safety_calibration": true,
+  "localization": false,
+  "severity_estimation": false,
+  "electrical_measurement": false,
+  "limitations": [
+    "Model predicts image-level label presence; it does not use bbox coordinates to localize defects.",
+    "Source labels do not contain a separate burnt class; bright spot is not a calibrated thermal hotspot.",
+    "Dataset-specific license is undeclared and requires permission before redistribution/publication.",
+    "No physical panel/site IDs; test scores are not estimates of field performance.",
+    "The image-level score is not electrical, thermal, severity, or reuse evidence."
+  ],
+  "created_at": "2026-09-26T10:22:23+00:00"
+}

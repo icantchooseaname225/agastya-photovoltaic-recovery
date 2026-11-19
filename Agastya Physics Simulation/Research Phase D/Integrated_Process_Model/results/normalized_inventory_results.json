@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "run_label": "normalized literature inventory; not an AGASTYA assay",
+  "model_scope": "stream accounting and reference unit conversion only; no separation physics",
+  "normalized_literature_inventory": [
+    {
+      "id": "review_scenario_300ppm",
+      "source_basis": "300 ppm by mass; review-derived scenario with unresolved denominator",
+      "source_register_id": "E09",
+      "reported_value": 300.0,
+      "reported_unit": "mg_per_kg",
+      "normalized_feed_mass_kg": 1.0,
+      "normalized_ag_inventory_g": 0.3,
+      "status": "normalized literature arithmetic; not AGASTYA measurement"
+    },
+    {
+      "id": "dias_publisher_abstract_600gt",
+      "source_basis": "600 g/t reported for the study-specific feed in the publisher abstract",
+      "source_register_id": "E08",
+      "reported_value": 600.0,
+      "reported_unit": "g_per_tonne",
+      "normalized_feed_mass_kg": 1.0,
+      "normalized_ag_inventory_g": 0.6,
+      "status": "normalized literature arithmetic; not AGASTYA measurement"
+    },
+    {
+      "id": "secondary_excerpt_630gt_unresolved",
+      "source_basis": "630 g/t wording in secondary excerpt; relationship to 600 g/t is unresolved",
+      "source_register_id": "E08",
+      "reported_value": 630.0,
+      "reported_unit": "g_per_tonne",
+      "normalized_feed_mass_kg": 1.0,
+      "normalized_ag_inventory_g": 0.63,
+      "status": "normalized literature arithmetic; not AGASTYA measurement"
+    }
+  ],
+  "measured_agastya_process": {
+    "feed_ag_mass_g": null,
+    "target_mass_yield_fraction": null,
+    "target_ag_grade_wt_percent": null,
+    "target_ag_recovery_fraction": null,
+    "mass_balance_residual_kg": null,
+    "ag_balance_residual_g": null,
+    "output_stream_ag_mass_g": null,
+    "status": "not calculable until measured feed/output masses and assays are supplied"
+  },
+  "interpretation": "All measured-process fields are intentionally unknown because no physical AGASTYA stream or assay is documented. Null is not zero. Reference cases are unit-normalized literature arithmetic only."
+}

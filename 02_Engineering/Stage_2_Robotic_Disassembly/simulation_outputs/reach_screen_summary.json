@@ -1,0 +1,79 @@
+{
+  "run_id": "S2-REACH-20261119-01",
+  "model_type": "2D top-view radial reach screen",
+  "created_by": "robot_workcell_reach_model.py",
+  "python_version": "3.14.10",
+  "geometry_assumptions": {
+    "panel_length_mm": 2278.0,
+    "panel_width_mm": 1134.0,
+    "panel_aspect_orientation": "length on x axis; centered at origin",
+    "robot_base_x_mm": 0.0,
+    "robot_base_y_mm": -867.0,
+    "base_standoff_from_near_long_edge_mm": 300.0,
+    "perimeter_sampling_spacing_mm": 100.0,
+    "reach_values_mm": [
+      1200.0,
+      1500.0,
+      1800.0,
+      2000.0
+    ]
+  },
+  "results": {
+    "sampled_perimeter_points": 71,
+    "maximum_sampled_base_radius_mm": 1831.305,
+    "minimum_nominal_radial_reach_for_all_sampled_points_mm": 1831.305,
+    "95th_percentile_sampled_radius_mm_nearest_rank": 1771.402,
+    "coverage_by_reach": [
+      {
+        "nominal_reach_mm": 1200,
+        "sampled_points_reachable": 25,
+        "sampled_points_total": 71,
+        "sampled_perimeter_coverage_percent": 35.21
+      },
+      {
+        "nominal_reach_mm": 1500,
+        "sampled_points_reachable": 47,
+        "sampled_points_total": 71,
+        "sampled_perimeter_coverage_percent": 66.2
+      },
+      {
+        "nominal_reach_mm": 1800,
+        "sampled_points_reachable": 69,
+        "sampled_points_total": 71,
+        "sampled_perimeter_coverage_percent": 97.18
+      },
+      {
+        "nominal_reach_mm": 2000,
+        "sampled_points_reachable": 71,
+        "sampled_points_total": 71,
+        "sampled_perimeter_coverage_percent": 100.0
+      }
+    ],
+    "edge_summary": {
+      "far_long": {
+        "sampled_points": 23,
+        "max_radius_mm": 1831.305
+      },
+      "far_short": {
+        "sampled_points": 12,
+        "max_radius_mm": 1758.289
+      },
+      "near_long": {
+        "sampled_points": 23,
+        "max_radius_mm": 1177.846
+      },
+      "near_short": {
+        "sampled_points": 13,
+        "max_radius_mm": 1831.305
+      }
+    }
+  },
+  "limitations": [
+    "Reachability means only planar base-to-point radius is within a scalar reach value.",
+    "No robot link geometry, joint limits, inverse kinematics, tool orientation, singularity, or collision checks.",
+    "No vertical dimension, end-effector design, payload, torque, force, speed, repeatability, cycle-time, or safety model.",
+    "Sampled point coverage is geometric point coverage, not process success probability or production performance.",
+    "Panel dimensions and base standoff are illustrative assumptions pending a measured AGASTYA feed and workcell layout."
+  ],
+  "interpretation": "Screening evidence for choosing between a fixed base, panel indexer, or linear robot rail. It is not a robot selection or validated motion plan."
+}

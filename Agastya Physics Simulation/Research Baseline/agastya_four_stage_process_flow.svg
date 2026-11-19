@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="690" viewBox="0 0 1500 690" role="img" aria-labelledby="title desc">
+  <title id="title">Agastya four-stage research flow</title>
+  <desc id="desc">Four-stage flow from identified crystalline silicon module through disassembly, liberation, electrostatic separation, and assay and mass accounting. Every material stream is tracked.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowDash" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .stage { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .head { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 15px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .stream { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .small { font: 400 13px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .white { fill: #ffffff; }
+      .line { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #64748b; stroke-width: 2; stroke-dasharray: 8 7; fill: none; marker-end: url(#arrowDash); }
+    </style>
+  </defs>
+  <rect width="1500" height="690" fill="#f8fafc"/>
+  <text x="50" y="55" class="title">AGASTYA | Four-stage research architecture</text>
+  <text x="50" y="84" class="subtitle">Latest charter numbering. Stream names are planned identifiers; no physical Agastya feed or process yield is verified.</text>
+
+  <rect x="45" y="190" width="165" height="130" rx="16" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="127" y="224" text-anchor="middle" class="stage">S0</text>
+  <text x="127" y="253" text-anchor="middle" class="head">Identified</text>
+  <text x="127" y="278" text-anchor="middle" class="body">c-Si module</text>
+  <text x="127" y="301" text-anchor="middle" class="small">source + mass + type</text>
+
+  <rect x="260" y="145" width="250" height="220" rx="18" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="385" y="182" text-anchor="middle" class="stage">STAGE 1</text>
+  <text x="385" y="215" text-anchor="middle" class="head">Disassembly</text>
+  <text x="385" y="244" text-anchor="middle" class="body">Component routing</text>
+  <text x="282" y="284" class="small">Separate and weigh:</text>
+  <text x="282" y="307" class="small">glass • frame • J-box/cables</text>
+  <text x="282" y="330" class="small">cell-bearing laminate</text>
+
+  <rect x="555" y="145" width="250" height="220" rx="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="680" y="182" text-anchor="middle" class="stage">STAGE 2</text>
+  <text x="680" y="215" text-anchor="middle" class="head">Mechanical</text>
+  <text x="680" y="241" text-anchor="middle" class="head">liberation</text>
+  <text x="577" y="284" class="small">Measure size, shape and class</text>
+  <text x="577" y="307" class="small">Ag-bearing contact / Si pieces</text>
+  <text x="577" y="330" class="small">Cu, glass and polymer residue</text>
+
+  <rect x="850" y="145" width="250" height="220" rx="18" fill="#ccfbf1" stroke="#14b8a6" stroke-width="3"/>
+  <text x="975" y="182" text-anchor="middle" class="stage">STAGE 3</text>
+  <text x="975" y="215" text-anchor="middle" class="head">Electrostatic</text>
+  <text x="975" y="241" text-anchor="middle" class="head">separation</text>
+  <text x="872" y="284" class="small">Candidate to test, not proven</text>
+  <text x="872" y="307" class="small">Field + charge + particle motion</text>
+  <text x="872" y="330" class="small">Ag, Cu and Al all conductive</text>
+
+  <rect x="1145" y="145" width="300" height="220" rx="18" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="1295" y="182" text-anchor="middle" class="stage">STAGE 4</text>
+  <text x="1295" y="215" text-anchor="middle" class="head">Assay &amp; accounting</text>
+  <text x="1168" y="260" class="small">Measure feed, concentrate, rejects</text>
+  <text x="1168" y="284" class="small">Ag mass • recovery • grade</text>
+  <text x="1168" y="308" class="small">Balance residual • uncertainty</text>
+  <text x="1168" y="336" class="small">Concentrate is not refined silver</text>
+
+  <path d="M210 255 H260" class="line"/>
+  <path d="M510 255 H555" class="line"/>
+  <path d="M805 255 H850" class="line"/>
+  <path d="M1100 255 H1145" class="line"/>
+  <text x="530" y="235" text-anchor="middle" class="stream">S1c cell-bearing feed</text>
+  <text x="825" y="235" text-anchor="middle" class="stream">S2 particle population</text>
+  <text x="1122" y="235" text-anchor="middle" class="stream">S3 outputs</text>
+
+  <rect x="260" y="420" width="1185" height="170" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="290" y="456" class="head">Trace every output stream to its parent feed</text>
+  <text x="290" y="488" class="body">S1: glass | hardware | laminate</text>
+  <text x="290" y="515" class="body">S2: Ag-bearing particles | Si-rich particles | Cu/glass/polymer/other residue</text>
+  <text x="290" y="542" class="body">S3: candidate concentrate | middlings | rejects</text>
+  <text x="290" y="569" class="body">S4: dry mass + validated Ag assay for every representative stream</text>
+
+  <path d="M385 365 V420" class="dash"/>
+  <path d="M680 365 V420" class="dash"/>
+  <path d="M975 365 V420" class="dash"/>
+  <path d="M1295 365 V420" class="dash"/>
+
+  <text x="50" y="635" class="small">Optional thermal delamination is an upstream pretreatment from legacy work; it is not the new Stage 3.</text>
+  <text x="50" y="658" class="small">Current verified Agastya physical samples and assays: 0. Missing inputs remain unknown; no stage yield is asserted.</text>
+</svg>

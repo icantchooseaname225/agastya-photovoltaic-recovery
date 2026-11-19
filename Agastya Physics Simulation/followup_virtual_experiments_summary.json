@@ -1,0 +1,59 @@
+{
+  "generated_on": "2026-10-10",
+  "dataset_path": "followup_virtual_experiments.csv",
+  "computation_software": {
+    "python": "CPython 3.14.4",
+    "numpy": "2.5.3",
+    "python_standard_library": [
+      "csv",
+      "json",
+      "itertools",
+      "math",
+      "statistics.NormalDist",
+      "importlib.util"
+    ],
+    "solver": "Custom five-node 1-D thermal resistance/capacitance model with explicit forward Euler for thermal studies; Python standard-library scenario arithmetic for capacity, inverse lognormal cuts and conditional Ag calculations."
+  },
+  "total_records": 52168,
+  "record_counts_by_experiment": {
+    "EXP-CAP-01": 36,
+    "EXP-S3-04": 32,
+    "EXP-S3-05": 64,
+    "EXP-S4-03": 196,
+    "EXP-S4-04": 51840
+  },
+  "stage3_convergence": {
+    "case_count": 8,
+    "time_steps_s": [
+      0.01,
+      0.005,
+      0.0025,
+      0.00125
+    ],
+    "max_abs_peak_EVA_delta_from_finest_dt_C": 0.15454065005930318
+  },
+  "conditional_ag_grade": {
+    "base_laminate_scenarios": 1152,
+    "panel_Ag_inputs_g": [
+      10,
+      20,
+      30
+    ],
+    "literature_partition_fractions": [
+      0.7,
+      0.8,
+      0.9412
+    ],
+    "assumed_fines_mass_yields": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.6
+    ]
+  },
+  "all_values_are_virtual_model_or_scenario_calculations": true,
+  "physical_sample_count": 0,
+  "scenario_rows_are_physical_samples": false,
+  "measured_Agastya_trial_rows": 0
+}

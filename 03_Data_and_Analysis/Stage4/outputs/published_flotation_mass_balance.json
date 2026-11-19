@@ -1,0 +1,13 @@
+{
+  "study_feed_mass_scale_kg": 1.0,
+  "silver_recovery_fraction": 0.9755,
+  "upgrade_factor": 32.2,
+  "derived_mass_pull_fraction": 0.03029503105590062,
+  "derived_concentrate_mass_g_per_1kg_feed": 30.295031055900623,
+  "derived_tail_mass_g_per_1kg_feed": 969.7049689440994,
+  "normalized_silver_input_units": 1.0,
+  "normalized_silver_to_concentrate_units": 0.9755,
+  "normalized_silver_to_tail_units": 0.024499999999999966,
+  "check_mass_output_fraction": 1.0,
+  "check_normalized_silver_balance": 1.0
+}

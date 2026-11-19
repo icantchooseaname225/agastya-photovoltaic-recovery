@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+database/*.sqlite3
+database/*.sqlite3-shm
+database/*.sqlite3-wal
+images/*
+datasets/raw/*
+datasets/processed/*
+datasets/.cache/
+models/*.pth
+models/*.npz
+models/solar_mobilenet_v2.json
+models/solar_thermal_mobilenet_v2.json
+models/solar_thermal_surface_defects_mobilenet_v2.json
+models/solar_grayscale_crop_surface_defects_mobilenet_v2.json
+firmware/agastya_eye/secrets.h

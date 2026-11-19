@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "run_label": "normalized literature inventory; not an AGASTYA assay",
+  "normalized_feed_mass_kg": 1.0,
+  "ag_grade_references": [
+    {
+      "id": "review_scenario_300ppm",
+      "source_basis": "300 ppm by mass; review-derived scenario with unresolved denominator",
+      "value": 300.0,
+      "unit": "mg_per_kg",
+      "source_register_id": "E09"
+    },
+    {
+      "id": "dias_publisher_abstract_600gt",
+      "source_basis": "600 g/t reported for the study-specific feed in the publisher abstract",
+      "value": 600.0,
+      "unit": "g_per_tonne",
+      "source_register_id": "E08"
+    },
+    {
+      "id": "secondary_excerpt_630gt_unresolved",
+      "source_basis": "630 g/t wording in secondary excerpt; relationship to 600 g/t is unresolved",
+      "value": 630.0,
+      "unit": "g_per_tonne",
+      "source_register_id": "E08"
+    }
+  ],
+  "measured_process": {
+    "feed": {
+      "mass_kg": null,
+      "ag_grade_wt_percent": null
+    },
+    "output_streams": [],
+    "documented_mass_loss_kg": null,
+    "documented_ag_loss_g": null,
+    "target_stream_id": null
+  },
+  "interpretation": "All measured-process fields are intentionally unknown because no physical AGASTYA stream or assay is documented. Null is not zero. Reference cases are unit-normalized literature arithmetic only."
+}

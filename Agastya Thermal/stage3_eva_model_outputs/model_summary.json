@@ -1,0 +1,83 @@
+{
+  "model": "1D explicit finite-difference heat diffusion in a homogeneous EVA slab",
+  "property_source": "Tom\u0161i\u010d et al. (2025; first published 2024), Advanced Theory and Simulations 8(3), 2401026, DOI 10.1002/adts.202401026, Table 1",
+  "python_version": "3.12.14",
+  "inputs": {
+    "thermal_conductivity_W_mK": 0.34,
+    "density_kg_m3": 951.0,
+    "specific_heat_J_kgK": 1400.0,
+    "thickness_m": 0.0005,
+    "initial_temperature_C": 25.0,
+    "hot_face_boundary_temperature_C": 100.0,
+    "reverse_face_boundary": "insulated, zero gradient",
+    "nodes": 51,
+    "dx_m": 1e-05,
+    "dt_s": 7.831712168914368e-05,
+    "end_time_s": 5.0,
+    "time_steps": 63843
+  },
+  "derived": {
+    "thermal_diffusivity_m2_s": 2.5537028691602825e-07,
+    "fourier_number": 0.19999865836194117,
+    "characteristic_thickness_diffusion_time_s": 0.978970588235294,
+    "uniform_slab_sensible_energy_to_boundary_temperature_J_m2": 49927.5
+  },
+  "snapshots": [
+    {
+      "time_s": 0.0,
+      "mean_temperature_C": 25.0,
+      "rear_face_temperature_C": 25.0,
+      "sensible_energy_added_J_m2": 0.0
+    },
+    {
+      "time_s": 0.04996632363767367,
+      "mean_temperature_C": 44.483501671254814,
+      "rear_face_temperature_C": 25.29109005192365,
+      "sensible_energy_added_J_m2": 12728.357617329762
+    },
+    {
+      "time_s": 0.10001096439703648,
+      "mean_temperature_C": 52.33655974340694,
+      "rear_face_temperature_C": 29.27629059503398,
+      "sensible_energy_added_J_m2": 18034.16451111858
+    },
+    {
+      "time_s": 0.24998825243174663,
+      "mean_temperature_C": 67.97288470126514,
+      "rear_face_temperature_C": 49.88992138619002,
+      "sensible_energy_added_J_m2": 28514.223125876986
+    },
+    {
+      "time_s": 0.49997650486349327,
+      "mean_temperature_C": 83.17034585408697,
+      "rear_face_temperature_C": 73.60214849221775,
+      "sensible_energy_added_J_m2": 38675.65971725432
+    },
+    {
+      "time_s": 1.0000313268486756,
+      "mean_temperature_C": 95.34851034930864,
+      "rear_face_temperature_C": 92.70388248623347,
+      "sensible_energy_added_J_m2": 46817.6436606146
+    },
+    {
+      "time_s": 1.9999843365756622,
+      "mean_temperature_C": 99.64452946064397,
+      "rear_face_temperature_C": 99.44242489527379,
+      "sensible_energy_added_J_m2": 49689.84230466187
+    },
+    {
+      "time_s": 5.0,
+      "mean_temperature_C": 99.99984141454964,
+      "rear_face_temperature_C": 99.99975124999321,
+      "sensible_energy_added_J_m2": 49927.393974187806
+    }
+  ],
+  "limitations": [
+    "Idealized constant-property 1D EVA slab only; property values are literature inputs, not measured AGASTYA material values.",
+    "Prescribed 100 C hot-face temperature is an ideal boundary condition, not a hot-knife temperature or contact model.",
+    "No glass, cells, backsheet, adhesive chemistry, moisture, contact resistance, moving knife, foam roller, peel/fracture, convection, losses, power, throughput, emissions, or separation-quality model.",
+    "The calculated energy is sensible heat within the idealized layer and excludes equipment losses and other layers.",
+    "No experimental validation; outputs do not establish safe operating conditions or delamination."
+  ],
+  "validation_needed": "Measure temperature-dependent properties and boundary/contact histories on approved coupons; compare instrumented profiles and energy with a qualified supervised setup."
+}

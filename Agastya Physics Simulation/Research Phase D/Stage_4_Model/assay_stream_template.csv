@@ -1,0 +1,2 @@
+run_id,parent_stream_id,stream_id,stream_role,stream_mass_g,mass_standard_uncertainty_g,aliquot_id,aliquot_mass_g,assay_method,analyte,reported_basis,assay_mass_fraction,assay_standard_uncertainty,LOD,LOQ,blank_result,reference_material_result,duplicate_result,lab_method_validation_reference,retained_sample_id,documented_loss_g,notes
+,,,,,,,,,,,,,,,,,,,,,"Not measured; blanks are unknown, not zero"

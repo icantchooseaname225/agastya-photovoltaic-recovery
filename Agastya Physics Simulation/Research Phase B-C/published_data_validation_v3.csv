@@ -1,0 +1,12 @@
+﻿case_id,reference,equation,metric,reproduced_value,check,limitation
+SFF-01,Saffarian 2026 rounded mean,110 × 0.75%,feed Ag mass,0.825000 g,reproduced,Prepared cell feed; not whole panel.
+SFF-02,Saffarian 2026 rounded mean,3.11 × 24.0%,concentrate Ag mass,0.746400 g,reproduced,Rounded table means.
+SFF-03,Saffarian 2026 rounded mean,106.74 × 0.019%,tail Ag mass,0.0202806 g,reproduced,Low tail assay is sensitive to rounding.
+SFF-04,Saffarian 2026 rounded mean,100 × (1 − tail Ag/feed Ag),tail-depletion recovery,97.5417%,close to reported 97.55%,Rounded table means; source reports per-test calculations.
+SFF-05,Saffarian 2026 rounded mean,100 × concentrate Ag/feed Ag,ratio-of-means concentrate recovery,90.4727%,diagnostic only,Not a substitute for the mean of replicate-level recovery.
+SFF-06,Saffarian 2026 rounded mean,100 × (concentrate Ag + tail Ag)/feed Ag,ratio-of-means Ag closure,92.9310%,diagnostic only,Residual 0.0583194 g; raw replicate data needed.
+SFF-07,Saffarian 2026 rounded mean,110 − 3.11 − 106.74,total mass residual,0.1500 g,rounded mean row,Separately averaged/rounded values.
+SFF-08,Saffarian 2026 rounded mean,24.0 / 0.75,ratio-of-means upgrade,32.00×,diagnostic only,Mean of ratios can differ from ratio of mean assays.
+COMP-01,Mulazzani 2022 review scenario,"1 kg × 300 ppm / 1,000,000",normalized inventory,0.300 g/kg,arithmetic only,Secondary-source scenario; sample/denominator provenance unresolved; not AGASTYA assay.
+DIAS-ABSTRACT-01,Dias et al. 2016 publisher abstract,1 kg × 600 g/t,normalized inventory,0.600 g/kg,arithmetic only,Publisher abstract wording; distinct study basis; not AGASTYA assay.
+DIAS-EXCERPT-01,Dias et al. 2016 secondary conclusion excerpt,1 kg × 630 g/t,normalized excerpt arithmetic,0.630 g/kg,unresolved source discrepancy,630 g/t has not been independently re-extracted from the full-text conclusion; do not treat as verified input.

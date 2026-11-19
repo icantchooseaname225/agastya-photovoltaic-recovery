@@ -1,0 +1,94 @@
+# Python caches and isolated environments
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+**/venv/
+**/env/
+
+# Node/build caches
+**/node_modules/
+Agastya Thermal/.stage3-build/
+**/dist/
+**/build/
+
+# Local scratch and generated inventories
+work/
+
+# AGASTYA-EYE local captures, downloaded archives, image corpora and generated weights
+Agastya-EYE/images/
+Agastya-EYE/database/
+Agastya-EYE/datasets/.cache/
+Agastya-EYE/datasets/raw/**/images/
+Agastya-EYE/datasets/raw/**/JPEGImages/
+Agastya-EYE/datasets/raw/**/*.zip
+Agastya-EYE/datasets/processed/**/images/
+Agastya-EYE/datasets/processed/**/JPEGImages/
+Agastya-EYE/models/*.pt
+Agastya-EYE/models/*.pth
+Agastya-EYE/models/*.onnx
+
+# Large reproducible virtual datasets; retain source, metadata and summaries
+Agastya Physics Simulation/Agastya_Physics_Simulation_2026-10-10.csv
+Agastya Physics Simulation/followup_virtual_experiments.csv
+
+# Personal correspondence/contact records and application packages
+AGASTYA_Outreach_Contacts.csv
+AGASTYA_Outreach_Tracker.xlsx
+AGASTYA_Research_Outreach_Dossier.docx
+00_Project_Management/Outreach_Dossier_Source/
+IRIS/
+AGASTYA_IRIS_Application_Package.zip
+
+# Credentials and local secrets
+**/secrets.h
+**/.env
+**/.env.*
+!**/.env.example
+**/*token*.txt
+**/*credential*
+
+# Local full path/size inventory; contains every dataset path and is not a source deliverable
+00_Project_Management/file_inventory.csv
+
+# Private institutional outreach review and individual correspondence drafts
+00_Project_Management/Private_Outreach_Review_2026-11-19/
+
+# Initial GitHub publication excludes submission bundles, archived duplicates,
+# original third-party photos, local editor state, and office/PDF binaries not yet
+# screened for personal information, metadata, and redistribution rights
+NCSC District Level Final/
+district level final/
+99_Archive/
+08_Reports/
+printables/
+07_Visual_Assets/01_Original_Photographs/
+.vscode/
+**/*.pdf
+**/*.docx
+**/*.pptx
+**/*.xlsx
+**/*.zip
+**/*.pt
+**/*.pth
+**/*.onnx
+**/*file_inventory*.csv
+**/Project_File_Inventory_*.csv
+
+# Dataset manifests, raw report previews, and public-contact lead note are not part of the initial code/research upload
+Agastya-EYE/datasets/image_groups.csv
+Agastya Physics Simulation/REAL_TEST_READINESS.md
+Agastya Physics Simulation/resource_inventory_and_leads.csv
+Agastya Physics Simulation/Research Phase E/Reports/QA_Previews/
+Agastya Physics Simulation/Research Phase E/Simulation_Campaign/figures/*.png
+Stage 3 Prototype Development/Figures/*.png
+
+# Generated contact sheets and poster previews are replaceable QA output
+05_Presentation/Working_Drafts/Presentation_QA/
+06_NCSC_Display/QA/
+05_Presentation/Working_Drafts/Build_Utilities/.validate_agastya_temp.py
+
+# Generated document-inspection exports
+**/*.inspect.ndjson

@@ -1,0 +1,321 @@
+{
+  "experiment_id": "PE-SIM-001",
+  "records": 5040,
+  "factor_level_counts": {
+    "Blade setpoint (\u00b0C)": [
+      "180",
+      "200",
+      "220",
+      "250",
+      "300"
+    ],
+    "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)": [
+      "100",
+      "1000",
+      "300",
+      "3000"
+    ],
+    "Dwell (s)": [
+      "0.1",
+      "0.25",
+      "0.5",
+      "1.0",
+      "10.0",
+      "2.0",
+      "5.0"
+    ],
+    "Ambient (\u00b0C)": [
+      "15",
+      "25",
+      "35"
+    ],
+    "Total EVA thickness (mm)": [
+      "0.9",
+      "1.16"
+    ],
+    "Property set": [
+      "Lizcano2024_A1",
+      "Tomsic2025_Table1"
+    ],
+    "Interface resistance (m\u00b2 K W\u207b\u00b9)": [
+      "0.0",
+      "0.0001",
+      "0.0005"
+    ]
+  },
+  "metrics": {
+    "Peak EVA temperature (\u00b0C)": {
+      "mean": 68.1153379561508,
+      "minimum": 15.64904,
+      "maximum": 261.53494,
+      "total_sum_squares": 10973275.446276467,
+      "main_effects": [
+        {
+          "factor": "Dwell (s)",
+          "sum_squares": 4554276.989933798,
+          "share_of_total_variance_pct": 41.50335068349341,
+          "levels": 7,
+          "level_means": {
+            "0.1": 32.61821401805555,
+            "0.25": 40.80958404027778,
+            "0.5": 49.847759145833336,
+            "1.0": 60.4544754125,
+            "2.0": 72.67433357222222,
+            "5.0": 96.70952097777779,
+            "10.0": 123.6934785263889
+          }
+        },
+        {
+          "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+          "sum_squares": 3931059.460705941,
+          "share_of_total_variance_pct": 35.82393862208077,
+          "levels": 4,
+          "level_means": {
+            "100": 34.91803060555556,
+            "300": 50.19322844444444,
+            "1000": 79.71030782857143,
+            "3000": 107.63978494603174
+          }
+        },
+        {
+          "factor": "Blade setpoint (\u00b0C)",
+          "sum_squares": 391681.09460656863,
+          "share_of_total_variance_pct": 3.5694091205873884,
+          "levels": 5,
+          "level_means": {
+            "180": 57.606868519841264,
+            "200": 61.811491441468256,
+            "220": 66.01539409623015,
+            "250": 72.31982269444444,
+            "300": 82.82311302876984
+          }
+        },
+        {
+          "factor": "Ambient (\u00b0C)",
+          "sum_squares": 209166.8054104502,
+          "share_of_total_variance_pct": 1.9061474072577502,
+          "levels": 3,
+          "level_means": {
+            "15": 60.22539570238096,
+            "25": 68.11523191726191,
+            "35": 76.00538624880951
+          }
+        },
+        {
+          "factor": "Total EVA thickness (mm)",
+          "sum_squares": 27034.908295667752,
+          "share_of_total_variance_pct": 0.2463704518129219,
+          "levels": 2,
+          "level_means": {
+            "0.9": 70.43138396309523,
+            "1.16": 65.79929194920635
+          }
+        },
+        {
+          "factor": "Property set",
+          "sum_squares": 18953.106647240973,
+          "share_of_total_variance_pct": 0.17272059504960555,
+          "levels": 2,
+          "level_means": {
+            "Lizcano2024_A1": 66.17612754126985,
+            "Tomsic2025_Table1": 70.05454837103174
+          }
+        },
+        {
+          "factor": "Interface resistance (m\u00b2 K W\u207b\u00b9)",
+          "sum_squares": 4536.917995683013,
+          "share_of_total_variance_pct": 0.04134515731328437,
+          "levels": 3,
+          "level_means": {
+            "0.0": 67.20455917559524,
+            "0.0001": 67.71741924107143,
+            "0.0005": 69.42403545178571
+          }
+        }
+      ],
+      "unallocated_interaction_and_residual_share_pct": 16.736717962404864
+    },
+    "Peak cell temperature (\u00b0C)": {
+      "mean": 55.63249344087302,
+      "minimum": 15.06389,
+      "maximum": 251.95826,
+      "total_sum_squares": 8842766.189828854,
+      "main_effects": [
+        {
+          "factor": "Dwell (s)",
+          "sum_squares": 4535470.371075375,
+          "share_of_total_variance_pct": 51.29017632844543,
+          "levels": 7,
+          "level_means": {
+            "0.1": 26.045707195833334,
+            "0.25": 29.40699648333333,
+            "0.5": 35.250425104166666,
+            "1.0": 44.31420552638889,
+            "2.0": 56.852592470833336,
+            "5.0": 83.4835432513889,
+            "10.0": 114.07398405416667
+          }
+        },
+        {
+          "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+          "sum_squares": 1931907.3396538824,
+          "share_of_total_variance_pct": 21.847319019652527,
+          "levels": 4,
+          "level_means": {
+            "100": 32.174955784920634,
+            "300": 43.162411682539684,
+            "1000": 64.05418957063492,
+            "3000": 83.13841672539682
+          }
+        },
+        {
+          "factor": "Ambient (\u00b0C)",
+          "sum_squares": 242505.66178533173,
+          "share_of_total_variance_pct": 2.7424185665370993,
+          "levels": 3,
+          "level_means": {
+            "15": 47.13702774464286,
+            "25": 55.63233256904761,
+            "35": 64.12812000892858
+          }
+        },
+        {
+          "factor": "Blade setpoint (\u00b0C)",
+          "sum_squares": 197319.43538375443,
+          "share_of_total_variance_pct": 2.231422058978735,
+          "levels": 5,
+          "level_means": {
+            "180": 48.17244481646825,
+            "200": 51.15832324107143,
+            "220": 54.143114970238095,
+            "250": 58.61815781349206,
+            "300": 66.07042636309524
+          }
+        },
+        {
+          "factor": "Total EVA thickness (mm)",
+          "sum_squares": 29576.2135843301,
+          "share_of_total_variance_pct": 0.3344678910356051,
+          "levels": 2,
+          "level_means": {
+            "0.9": 58.054950116666674,
+            "1.16": 53.210036765079366
+          }
+        },
+        {
+          "factor": "Property set",
+          "sum_squares": 4207.397653271897,
+          "share_of_total_variance_pct": 0.047580107434157186,
+          "levels": 2,
+          "level_means": {
+            "Lizcano2024_A1": 54.71881892460317,
+            "Tomsic2025_Table1": 56.546167957142856
+          }
+        },
+        {
+          "factor": "Interface resistance (m\u00b2 K W\u207b\u00b9)",
+          "sum_squares": 2936.0859150218002,
+          "share_of_total_variance_pct": 0.033203251697403825,
+          "levels": 3,
+          "level_means": {
+            "0.0": 56.357440751190474,
+            "0.0001": 55.96260453988096,
+            "0.0005": 54.57743503154762
+          }
+        }
+      ],
+      "unallocated_interaction_and_residual_share_pct": 21.47341277621905
+    },
+    "Net contact energy (J m\u207b\u00b2)": {
+      "mean": 214399.56459956348,
+      "minimum": 1379.7403,
+      "maximum": 1724155.2,
+      "total_sum_squares": 480446394261172.4,
+      "main_effects": [
+        {
+          "factor": "Dwell (s)",
+          "sum_squares": 265195663878034.66,
+          "share_of_total_variance_pct": 55.197763381251086,
+          "levels": 7,
+          "level_means": {
+            "0.1": 11966.810810138888,
+            "0.25": 29152.01482111111,
+            "0.5": 56334.87220319444,
+            "1.0": 107031.21954444444,
+            "2.0": 198702.77618749999,
+            "5.0": 421095.3028111111,
+            "10.0": 676513.9558194445
+          }
+        },
+        {
+          "factor": "Contact conductance (W m\u207b\u00b2 K\u207b\u00b9)",
+          "sum_squares": 94706197831202.77,
+          "share_of_total_variance_pct": 19.712125840145266,
+          "levels": 4,
+          "level_means": {
+            "100": 50150.76069055556,
+            "300": 127054.50111801586,
+            "1000": 273461.6411436508,
+            "3000": 406931.3554460317
+          }
+        },
+        {
+          "factor": "Blade setpoint (\u00b0C)",
+          "sum_squares": 9713307536415.814,
+          "share_of_total_variance_pct": 2.021725556157598,
+          "levels": 5,
+          "level_means": {
+            "180": 162083.56718085316,
+            "200": 183006.06657232143,
+            "220": 203930.83451626985,
+            "250": 235322.4864082341,
+            "300": 287654.8683201389
+          }
+        },
+        {
+          "factor": "Ambient (\u00b0C)",
+          "sum_squares": 366186749071.07874,
+          "share_of_total_variance_pct": 0.07621802420521827,
+          "levels": 3,
+          "level_means": {
+            "15": 224838.96071642858,
+            "25": 214399.86731178573,
+            "35": 203959.8657704762
+          }
+        },
+        {
+          "factor": "Property set",
+          "sum_squares": 175320132618.61453,
+          "share_of_total_variance_pct": 0.03649109135020584,
+          "levels": 2,
+          "level_means": {
+            "Lizcano2024_A1": 220297.50835980158,
+            "Tomsic2025_Table1": 208501.6208393254
+          }
+        },
+        {
+          "factor": "Interface resistance (m\u00b2 K W\u207b\u00b9)",
+          "sum_squares": 11994792313.529757,
+          "share_of_total_variance_pct": 0.0024965932634327032,
+          "levels": 3,
+          "level_means": {
+            "0.0": 215870.84806690476,
+            "0.0001": 215059.04737065476,
+            "0.0005": 212268.79836113093
+          }
+        },
+        {
+          "factor": "Total EVA thickness (mm)",
+          "sum_squares": 3532574038.924076,
+          "share_of_total_variance_pct": 0.0007352691332727031,
+          "levels": 2,
+          "level_means": {
+            "0.9": 215236.76681373015,
+            "1.16": 213562.36238539682
+          }
+        }
+      ],
+      "unallocated_interaction_and_residual_share_pct": 22.952444244493915
+    }
+  }
+}

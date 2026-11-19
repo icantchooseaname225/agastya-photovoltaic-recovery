@@ -1,0 +1,22 @@
+{
+  "run_id": "AGASTYA-LITERATURE-ARITHMETIC-V3",
+  "executed_utc": "2026-10-11T14:13:31.586550+00:00",
+  "software": "CPython 3.12.14 standard library",
+  "script": "agastya_scenario_model_v3.py",
+  "input": "evidence_database_v2.csv",
+  "output": "scenario_results_v3.csv",
+  "model_class": "source-qualified normalized arithmetic; not a physics/chemistry solver or process simulation",
+  "physical_samples": 0,
+  "scenarios": [
+    "REF-COMP-2022-300PPM-1KG",
+    "REF-DIAS-2016-ABSTRACT-600GT-1KG",
+    "REF-DIAS-2016-SECONDARY-630GT-1KG"
+  ],
+  "process_stage_predictions": false,
+  "limitations": [
+    "300 ppm review composition scenario has unresolved source population and denominator provenance.",
+    "Dias publisher abstract says 600 g/t; 630 g/t is retained only as an unresolved secondary-excerpt discrepancy.",
+    "No Agastya panels, coupons, particles, assays, stream masses or separator inputs were provided.",
+    "All stage outcomes, recovery, grade, purity, uncertainty and process mass balance are blank by design."
+  ]
+}

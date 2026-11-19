@@ -1,0 +1,16 @@
+{
+  "run_id": "AGASTYA-SCENARIO-MODEL-V2-001",
+  "run_utc": "2026-10-11T11:33:23.453251+00:00",
+  "python": "3.14.4",
+  "numpy_used": false,
+  "model_class": "Deterministic reference arithmetic plus symbolic unknown-stage relationships",
+  "evidence_input": "evidence_database_v2.csv",
+  "outputs": [
+    "scenario_results_v2.csv",
+    "sensitivity_analysis_v2.csv"
+  ],
+  "normalized_scenarios": 2,
+  "physical_samples": 0,
+  "solver_run": false,
+  "unknown_parameters_left_blank": true
+}

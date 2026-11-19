@@ -1,0 +1,26 @@
+﻿case_id,implementation,expected,actual,status,note
+ORIG-MASS-01,Phase A mass residual,1.0 - (0.2 + 0.3) - 0.1 = 0.4 kg,0.4 kg,PASS,
+ORIG-REC-01,Phase A recovery,0.35 / 0.5 = 70%,70%,PASS,
+ORIG-GRADE-01,Phase A grade,0.2 / 1.0 = 20%,20%,PASS,
+ORIG-REC-OVER-100,Phase A validation gap,reject recovery >100%,accepted/returned a value,FAIL,FAIL records missing guard in preserved Phase A implementation
+ORIG-GRADE-OVER-100,Phase A validation gap,reject grade >100%,accepted/returned a value,FAIL,FAIL records missing guard in preserved Phase A implementation
+ORIG-NAN,Phase A validation gap,reject non-finite mass,accepted/returned a value,FAIL,FAIL records missing guard in preserved Phase A implementation
+UNIT-PPM-300,Phase B/C independent arithmetic,0.0003,0.0003,PASS,
+UNIT-PPM-630,Phase B/C independent arithmetic,0.00063,0.00063,PASS,
+UNIT-MF-ROUNDTRIP,Phase B/C independent arithmetic,300.0,300.0,PASS,
+UNIT-PCT-ROUNDTRIP,Phase B/C independent arithmetic,25.0,25.0,PASS,
+UNIT-AG-MASS,Phase B/C independent arithmetic,0.0003,0.0003,PASS,
+UNIT-RECOVERY,Phase B/C independent arithmetic,70.0,70.0,PASS,
+UNIT-GRADE,Phase B/C independent arithmetic,20.0,20.0,PASS,
+UNIT-CUMULATIVE,Phase B/C independent arithmetic,40.0,40.0,PASS,
+UNIT-NEGATIVE-MASS,Phase B/C input guard,reject negative mass,rejected,PASS,
+UNIT-AG-OVER-100-PCT,Phase B/C input guard,reject recovery above 100%,rejected,PASS,
+UNIT-ZERO-INPUT-AG,Phase B/C input guard,reject undefined recovery with zero Ag input,rejected,PASS,
+UNIT-GRADE-OVER-100-PCT,Phase B/C input guard,reject Ag mass above total product mass,rejected,PASS,
+UNIT-MISSING,Phase B/C input guard,reject missing concentration,rejected,PASS,
+UNIT-NAN,Phase B/C input guard,reject non-finite concentration,rejected,PASS,
+UNIT-INVALID-UNIT,Phase B/C input guard,reject inconsistent unit,rejected,PASS,
+UNIT-DUPLICATE-STREAM,Phase B/C input guard,reject duplicate stream identifier,rejected,PASS,
+UNIT-MISSING-DESTINATION,Phase B/C input guard,reject missing stream destination,rejected,PASS,
+REFERENCE-PUB-COMP-2022,Read-only Phase A output reproduction,300 ppm and 0.3 g Ag per normalized kg,300 ppm and 0.3 g,PASS,Separate literature scenarios; not a pooled estimate
+REFERENCE-DIAS-2016,Read-only Phase A output reproduction,630 ppm and 0.63 g Ag per normalized kg,630 ppm and 0.63 g,PASS,Separate literature scenarios; not a pooled estimate

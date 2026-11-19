@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Agastya project",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -90, "left": 310, "attrs": { "pins": "full" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 160, "left": 330, "attrs": { "value": "560", "label": "Tool temp sim" } },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 260, "left": 330, "attrs": { "value": "400", "label": "Interface temp sim" } },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 370, "left": 325, "attrs": { "color": "green", "label": "Timer" } }
+  ],
+  "connections": [
+    [ "uno:5V", "lcd:VDD", "red", [] ], [ "uno:GND.1", "lcd:VSS", "black", [] ], [ "uno:GND.1", "lcd:RW", "black", [] ], [ "uno:GND.1", "lcd:V0", "black", [] ],
+    [ "uno:12", "lcd:RS", "blue", [] ], [ "uno:11", "lcd:E", "blue", [] ], [ "uno:5", "lcd:D4", "green", [] ], [ "uno:4", "lcd:D5", "green", [] ], [ "uno:3", "lcd:D6", "green", [] ], [ "uno:2", "lcd:D7", "green", [] ],
+    [ "uno:5V", "lcd:A", "red", [] ], [ "uno:GND.1", "lcd:K", "black", [] ],
+    [ "uno:5V", "pot1:VCC", "red", [] ], [ "uno:GND.1", "pot1:GND", "black", [] ], [ "uno:A0", "pot1:SIG", "orange", [] ],
+    [ "uno:5V", "pot2:VCC", "red", [] ], [ "uno:GND.1", "pot2:GND", "black", [] ], [ "uno:A1", "pot2:SIG", "orange", [] ],
+    [ "uno:7", "btn:1.l", "green", [] ], [ "uno:GND.1", "btn:2.l", "black", [] ]
+  ],
+  "dependencies": {}
+}

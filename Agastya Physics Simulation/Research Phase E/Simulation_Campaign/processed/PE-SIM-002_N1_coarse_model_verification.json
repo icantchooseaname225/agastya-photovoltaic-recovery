@@ -1,0 +1,110 @@
+[
+  {
+    "case_id": "low_short",
+    "five_node_baseline": {
+      "peak_eva_C": 18.10304736355782,
+      "peak_cell_C": 16.438790268815733,
+      "net_contact_energy_J_m2": 7894.856065371792,
+      "energy_residual_pct_of_contact_energy": -4.492835977684642e-13,
+      "final_node_temperatures_C": [
+        15.87674054240121,
+        18.10304736355782,
+        16.438790268815733,
+        15.408231585314438,
+        15.243890041117588
+      ]
+    },
+    "finite_volume_N1": {
+      "peak_eva_C": 18.101818913489687,
+      "peak_cell_C": 16.438357122757488,
+      "net_contact_energy_J_m2": 7894.780036277378,
+      "energy_residual_pct_of_contact_energy": -1.4492415616051054e-11
+    },
+    "differences": {
+      "peak_eva_C": -0.0012284500681332133,
+      "peak_cell_C": -0.0004331460582456259,
+      "net_contact_energy_J_m2": -0.07602909441447991
+    }
+  },
+  {
+    "case_id": "nominal",
+    "five_node_baseline": {
+      "peak_eva_C": 79.9848874187368,
+      "peak_cell_C": 63.76661420127237,
+      "net_contact_energy_J_m2": 243830.49856855653,
+      "energy_residual_pct_of_contact_energy": 3.580827332215465e-13,
+      "final_node_temperatures_C": [
+        56.96845505109632,
+        79.9848874187368,
+        63.76661420127237,
+        51.22146634556966,
+        48.55755257719488
+      ]
+    },
+    "finite_volume_N1": {
+      "peak_eva_C": 79.98264626629823,
+      "peak_cell_C": 63.76470921798545,
+      "net_contact_energy_J_m2": 243819.99210703225,
+      "energy_residual_pct_of_contact_energy": -5.789253641399298e-12
+    },
+    "differences": {
+      "peak_eva_C": -0.002241152438571703,
+      "peak_cell_C": -0.0019049832869200145,
+      "net_contact_energy_J_m2": -10.50646152428817
+    }
+  },
+  {
+    "case_id": "long_moderate",
+    "five_node_baseline": {
+      "peak_eva_C": 71.71145367086109,
+      "peak_cell_C": 61.5169329658255,
+      "net_contact_energy_J_m2": 262242.5061443317,
+      "energy_residual_pct_of_contact_energy": -9.988253924268141e-14,
+      "final_node_temperatures_C": [
+        58.9205946376969,
+        71.71145367086109,
+        61.5169329658255,
+        53.16618679174539,
+        45.02544874788738
+      ]
+    },
+    "finite_volume_N1": {
+      "peak_eva_C": 71.71093595076405,
+      "peak_cell_C": 61.51654896700635,
+      "net_contact_energy_J_m2": 262238.63928654644,
+      "energy_residual_pct_of_contact_energy": 8.30591051459019e-11
+    },
+    "differences": {
+      "peak_eva_C": -0.0005177200970365448,
+      "peak_cell_C": -0.00038399881914585876,
+      "net_contact_energy_J_m2": -3.8668577852658927
+    }
+  },
+  {
+    "case_id": "high_bound",
+    "five_node_baseline": {
+      "peak_eva_C": 247.2663042753333,
+      "peak_cell_C": 218.75224482387566,
+      "net_contact_energy_J_m2": 1484101.1948659867,
+      "energy_residual_pct_of_contact_energy": 2.823898801690604e-13,
+      "final_node_temperatures_C": [
+        228.55882480457822,
+        247.2663042753333,
+        218.75224482387566,
+        193.90081720093428,
+        169.49008876630586
+      ]
+    },
+    "finite_volume_N1": {
+      "peak_eva_C": 247.26269632509795,
+      "peak_cell_C": 218.74785524948982,
+      "net_contact_energy_J_m2": 1484058.7255531845,
+      "energy_residual_pct_of_contact_energy": -8.209936286628676e-11
+    },
+    "differences": {
+      "peak_eva_C": -0.0036079502353629778,
+      "peak_cell_C": -0.004389574385839978,
+      "net_contact_energy_J_m2": -42.46931280218996
+    }
+  }
+]
