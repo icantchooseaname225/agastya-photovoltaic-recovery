@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-11-20 — Day 41 Stage 2 CAD/electronics/economics
+
+- Added a Fusion API script for a static 2 m four-axis arm envelope, AutoCAD R12 concept DXFs, and SVG previews. The desktop app bridge did not expose Autodesk windows, so the Fusion script was not run and the DXFs were not opened in AutoCAD.
+- Added a separate low-load classroom electronics scaffold, pin map, safety boundary and a catalogue-based India price comparison. No motors, power supply, safety device, robot or process-cell cost were selected; no hardware was powered.
+- Created matching Day 41 full/short logbook drafts in first person and updated the engineering/status/index files. All dimensions and costs remain preliminary.
+
 ## 2026-11-20 — Day 40 logbook and EYE validation
 
 - Added matching Day 40 full and short logbook entries in a natural first-person draft style; the AI-assisted status remains visible for owner review. The index now directs future entries from Day 40 onward to use the same full/short pairing without filling in missing days.

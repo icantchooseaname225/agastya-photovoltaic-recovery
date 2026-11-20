@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#223}.title{font-size:18px;font-weight:bold}.label{font-size:13px}.small{font-size:11px}.box{fill:#f2f4f6;stroke:#475569;stroke-width:1.5}</style>
+<text x="24" y="30" class="title">AGASTYA Stage 2 — two distinct electrical scopes</text>
+<text x="24" y="58" class="label">Process cell (upper): safety-rated robot controller architecture; all devices TBD</text>
+<rect class="box" x="25" y="100" width="190" height="84" rx="4"/>
+<text x="37" y="125" class="label">Facility supply</text>
+<text x="37" y="147" class="small">isolation / ratings TBD</text>
+<rect class="box" x="285" y="100" width="200" height="84" rx="4"/>
+<text x="297" y="125" class="label">Safety relay / PLC</text>
+<text x="297" y="147" class="small">guard + E-stop</text>
+<text x="297" y="165" class="small">STO per OEM design</text>
+<rect class="box" x="555" y="100" width="210" height="84" rx="4"/>
+<text x="567" y="125" class="label">Robot controller</text>
+<text x="567" y="147" class="small">joint drives / OEM selected</text>
+<rect class="box" x="835" y="100" width="220" height="84" rx="4"/>
+<text x="847" y="125" class="label">Four-axis arm</text>
+<text x="847" y="147" class="small">payload and axes TBD</text>
+<rect class="box" x="25" y="235" width="190" height="84" rx="4"/>
+<text x="37" y="260" class="label">E-stop + guard</text>
+<text x="37" y="282" class="small">hardwired, reviewed</text>
+<rect class="box" x="285" y="235" width="200" height="84" rx="4"/>
+<text x="297" y="260" class="label">AGASTYA-EYE</text>
+<text x="297" y="282" class="small">inspection only</text>
+<text x="297" y="300" class="small">not a safety input</text>
+<rect class="box" x="555" y="235" width="210" height="84" rx="4"/>
+<text x="567" y="260" class="label">Cell sequence</text>
+<text x="567" y="282" class="small">reviewed discrete request</text>
+<line x1="215" y1="142" x2="285" y2="142" stroke="#a34b36" stroke-width="2"/>
+<line x1="485" y1="142" x2="555" y2="142" stroke="#a34b36" stroke-width="2"/>
+<line x1="765" y1="142" x2="835" y2="142" stroke="#334155" stroke-width="2"/>
+<line x1="120" y1="184" x2="120" y2="235" stroke="#a34b36" stroke-width="2"/>
+<line x1="215" y1="277" x2="555" y2="277" stroke="#357a68" stroke-width="2"/>
+<line x1="485" y1="277" x2="555" y2="277" stroke="#357a68" stroke-width="2"/>
+<text x="24" y="355" class="label">Low-load classroom demonstrator only (lower): use an unloaded guarded fixture; not for PV process tasks</text>
+<rect class="box" x="25" y="390" width="210" height="88" rx="4"/>
+<text x="38" y="420" class="label">Arduino Mega</text>
+<text x="38" y="444" class="small">logic / manual jog scaffold</text>
+<rect class="box" x="315" y="390" width="210" height="88" rx="4"/>
+<text x="328" y="420" class="label">PCA9685 (optional)</text>
+<text x="328" y="444" class="small">PWM signals only</text>
+<rect class="box" x="610" y="390" width="210" height="88" rx="4"/>
+<text x="623" y="420" class="label">Separate servo supply</text>
+<text x="623" y="444" class="small">voltage/current TBD</text>
+<rect class="box" x="900" y="390" width="155" height="88" rx="4"/>
+<text x="913" y="420" class="label">J1–J4 servos</text>
+<text x="913" y="444" class="small">light demo only</text>
+<line x1="235" y1="434" x2="315" y2="434" stroke="#334155" stroke-width="2"/>
+<line x1="525" y1="434" x2="900" y2="434" stroke="#334155" stroke-width="2"/>
+<line x1="820" y1="455" x2="900" y2="455" stroke="#a34b36" stroke-width="2"/>
+<text x="25" y="520" class="small">E-stop NC contact should also drop a suitably rated servo-power device; GPIO reports state only.</text>
+<text x="25" y="540" class="small">Power removal may let a gravity axis fall. Add a mechanical catch/support and adult-reviewed guards.</text>
+<text x="25" y="580" class="small">Architecture sketch only — not a certified safety circuit, electrical schematic or mains-wiring guide.</text>
+</svg>

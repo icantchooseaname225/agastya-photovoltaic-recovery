@@ -88,3 +88,13 @@ Sign in through Git Credential Manager or GitHub Desktop, then push local `main`
 - The software EYE work is wrapped up. Physical Uno/Nano serial and guarded-servo verification remains open; do not describe simulator results as hardware tests.
 - Day 40 includes the owner-reported CSIR-NML response and follow-up; the email thread remains unchecked. No visit, collaboration, sample acceptance or experimental testing is confirmed.
 - The final post-sync status and logbook reconciliation was pushed normally. Local `main` and remote `origin/main` were verified to match, and the working tree was clean.
+
+## Day 41 continuation — 20 November 2026
+
+- Prepared a concept-only 2 m four-axis Stage 2 arm envelope, Fusion API creation/export script, AutoCAD R12 plan/side/detail DXF, and electrical architecture DXF/SVG.
+- Fusion and AutoCAD are installed but did not expose targetable windows through the app bridge. The Fusion script was not executed; no F3D/STEP file is claimed. AutoCAD DXFs were not visually reviewed inside AutoCAD.
+- Added a low-load, manual-jog Arduino scaffold and provisional pin map, separate from any future process-arm safety controller. It was not compiled or connected to hardware.
+- Added a current India educational-kit price screen and explained why it cannot price the 2 m process arm. No quote, purchase, ROI or process-cell cost is claimed.
+- Current CAD basis: assumed 2,278 × 1,134 mm panel, 300 mm base stand-off, 1,100 mm upper link and 900 mm forearm. Replace with measured dimensions and force/tool data before kinematic, structural, electrical or safety decisions.
+- Next: run/inspect the Fusion script and DXFs in their native apps, measure the accepted module and actual tools, then compare an arm/toolchanger against rail/indexer and dedicated mechanisms.
+- The 441-path Day 41 publish candidate was screened and synced to the public repository with a normal push; remote `main` was verified to match local `main`. No force-push was used.

@@ -1,4 +1,4 @@
-# GitHub staged-file review â€” 20 November 2026
+# GitHub staged-file review — 20 November 2026
 
 ## Repository and gate
 
@@ -9,14 +9,14 @@
 
 ## Reviewed project set summary
 
-- Reviewed tracked-file count, including this manifest: **425**.
-- Aggregate working-tree file bytes, including this review: **2,945,479 bytes**.
+- Reviewed tracked-file count, including this manifest: **441**.
+- Aggregate working-tree file bytes, including this review: **3,050,242 bytes**.
 - Largest individual file: less than 10 MiB; this is the sum of individual file sizes, not the compressed Git object-store size.
 - The manifest is included in the committed local project set. Its size is shown in the final table row.
 
 ## Privacy and content review
 
-- Screened candidate text/code files for email-address patterns, owner-profile paths, credential assignments, GitHub token patterns, bearer tokens, and private-key headers. No email or credential matches remain in the candidate set; all owner-profile paths found in project-facing records were replaced by `%USERPROFILE%` or removed from reproduction commands.
+- Screened the expanded tracked and new candidate text/code files for email-address patterns, owner-profile paths, GitHub token patterns, bearer tokens, and private-key headers. No matches were found; owner-profile paths in project-facing records were replaced by `%USERPROFILE%` or removed from reproduction commands.
 - The `secrets.example.h` template contains only obvious placeholders (`YOUR_WIFI_PASSWORD`, `REPLACE_WITH_A_RANDOM_TOKEN...`) and a private-network example address. The actual `secrets.h` file is Git-ignored.
 - Two phone-pattern matches were false positives: a tender URL identifier in a Day 29 source link and a prefix of a SHA-256 hash in the EYE dataset source record.
 - Excluded by `.gitignore`: private correspondence and the six enquiry drafts; outreach contact/tracker files and the public-contact lead CSV; raw image corpora, dataset group manifest, archives and model weights; local path inventories; generated QA contact sheets and inspection exports; the IRIS/submission and NCSC final packages; archive snapshots; presentation/printable binaries; and unreviewed PDF/Word/PowerPoint/Excel files.
@@ -32,7 +32,7 @@
 | `00_Project_Management/DECISION_LOG.md` | 186 |
 | `00_Project_Management/DECISIONS_LOG.md` | 3,919 |
 | `00_Project_Management/DUPLICATE_AND_CLEANUP_REPORT.md` | 3,964 |
-| `00_Project_Management/FILE_CATALOG.csv` | 50,499 |
+| `00_Project_Management/FILE_CATALOG.csv` | 57,041 |
 | `00_Project_Management/file_inventory_summary.md` | 1,673 |
 | `00_Project_Management/FILE_MIGRATION_LOG.csv` | 23,925 |
 | `00_Project_Management/FINAL_CONSISTENCY_AUDIT_2026-10-11.md` | 8,831 |
@@ -40,7 +40,7 @@
 | `00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md` | 5,867 |
 | `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-19.md` | 31,555 |
 | `00_Project_Management/link_check_results.csv` | 44,652 |
-| `00_Project_Management/MASTER_TASK_LIST.md` | 11,344 |
+| `00_Project_Management/MASTER_TASK_LIST.md` | 11,513 |
 | `00_Project_Management/MIGRATION_PLAN_2026-10-11.md` | 3,273 |
 | `00_Project_Management/MILESTONES.md` | 299 |
 | `00_Project_Management/OPEN_QUESTIONS.md` | 4,503 |
@@ -63,23 +63,37 @@
 | `01_Research/Scientific_References/README.md` | 191 |
 | `01_Research/Separation_Methods/README.md` | 307 |
 | `01_Research/Stage_4_Flotation_Reagent_Investigation/AGASTYA_FROTH_FLOTATION_REAGENT_FEASIBILITY_REPORT.md` | 10,949 |
-| `02_Engineering/ENGINEERING_OVERVIEW.md` | 4,333 |
+| `02_Engineering/ENGINEERING_OVERVIEW.md` | 4,998 |
 | `02_Engineering/README.md` | 458 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/AGASTYA_STAGE2_ARM_CONCEPT_PREVIEW.svg` | 5,751 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/AGASTYA_STAGE2_ARM_CONCEPT.dxf` | 13,097 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/AGASTYA_STAGE2_ELECTRICAL_ARCHITECTURE_PREVIEW.svg` | 4,086 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/AGASTYA_STAGE2_ELECTRICAL_ARCHITECTURE.dxf` | 9,209 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/generate_stage2_arm_package.py` | 18,014 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/README.md` | 1,411 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/Fusion/Stage2_Arm_Concept/README.md` | 1,672 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/Fusion/Stage2_Arm_Concept/Stage2_Arm_Concept.manifest` | 375 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/cad/Fusion/Stage2_Arm_Concept/Stage2_Arm_Concept.py` | 7,254 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/electronics/STAGE2_ARM_BENCH_DEMO.ino` | 6,794 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/electronics/STAGE2_BENCH_ARM_PIN_MAP.csv` | 1,804 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/electronics/STAGE2_ELECTRONICS_DESIGN_BASIS.md` | 3,557 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/generate_workcell_plan_dxf.py` | 4,187 |
-| `02_Engineering/Stage_2_Robotic_Disassembly/README.md` | 819 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/README.md` | 1,320 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/robot_workcell_reach_model.py` | 13,245 |
-| `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan.dxf` | 6,497 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan_notes.md` | 1,061 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan.dxf` | 6,497 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/model_report.md` | 2,931 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/perimeter_task_points.csv` | 5,234 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/reach_envelope.svg` | 9,687 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/reach_screen_summary.json` | 2,811 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ARM_CONCEPT_BASIS_2026-11-20.md` | 4,418 |
+| `02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ROBOT_ECONOMIC_SCREEN_2026-11-20.md` | 5,974 |
 | `02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ROBOTIC_DISASSEMBLY_FEASIBILITY_2026-11-19.md` | 7,900 |
 | `03_Data_and_Analysis/DATA_AND_ANALYSIS_GUIDE.md` | 4,468 |
 | `03_Data_and_Analysis/README.md` | 387 |
 | `03_Data_and_Analysis/Sensitivity_Analysis/README.md` | 516 |
-| `03_Data_and_Analysis/Stage4/outputs/ecs_flotation_break_even.svg` | 3,463 |
 | `03_Data_and_Analysis/Stage4/outputs/ecs_flotation_break_even_grid.csv` | 8,619 |
+| `03_Data_and_Analysis/Stage4/outputs/ecs_flotation_break_even.svg` | 3,463 |
 | `03_Data_and_Analysis/Stage4/outputs/model_summary.json` | 2,475 |
 | `03_Data_and_Analysis/Stage4/outputs/published_flotation_mass_balance.json` | 518 |
 | `03_Data_and_Analysis/Stage4/README.md` | 1,705 |
@@ -91,7 +105,7 @@
 | `04_Logbook/Day_01_to_05/DAY_03_SHORT_ENTRY.md` | 1,027 |
 | `04_Logbook/Day_01_to_05/DAY_04_SHORT_ENTRY.md` | 1,058 |
 | `04_Logbook/Day_01_to_05/DAY_05_SHORT_ENTRY.md` | 1,201 |
-| `04_Logbook/Logbook_Index.md` | 10,109 |
+| `04_Logbook/Logbook_Index.md` | 10,449 |
 | `04_Logbook/Originals_Before_Concise_Edit_2026-10-13/PROJECT_LOGBOOK_DAY_24.md` | 3,786 |
 | `04_Logbook/Originals_Before_Concise_Edit_2026-10-13/PROJECT_LOGBOOK_DAY_25.md` | 2,272 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_10.md` | 2,858 |
@@ -121,6 +135,7 @@
 | `04_Logbook/PROJECT_LOGBOOK_DAY_38.md` | 4,129 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_39.md` | 7,341 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_40.md` | 4,447 |
+| `04_Logbook/PROJECT_LOGBOOK_DAY_41.md` | 5,847 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_5_8.md` | 5,355 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_9.md` | 2,434 |
 | `04_Logbook/Short Versions/DAY_06.md` | 475 |
@@ -154,16 +169,17 @@
 | `04_Logbook/Short Versions/DAY_38_SHORT_ENTRY.md` | 1,470 |
 | `04_Logbook/Short Versions/DAY_39_SHORT_ENTRY.md` | 2,014 |
 | `04_Logbook/Short Versions/DAY_40_SHORT_ENTRY.md` | 2,226 |
+| `04_Logbook/Short Versions/DAY_41_SHORT_ENTRY.md` | 2,479 |
 | `04_Logbook/Short Versions/DAY31-32-33 COMBINED.txt` | 8,952 |
 | `04_Logbook/Short Versions/README.md` | 1,737 |
-| `05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER.csv` | 8,560 |
 | `05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER_2026-10-20.csv` | 11,040 |
-| `05_Presentation/Final_Presentation/AGASTYA_VISUAL_ASSET_REGISTER.csv` | 5,588 |
+| `05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER.csv` | 8,560 |
 | `05_Presentation/Final_Presentation/AGASTYA_VISUAL_ASSET_REGISTER_2026-10-20.csv` | 5,307 |
+| `05_Presentation/Final_Presentation/AGASTYA_VISUAL_ASSET_REGISTER.csv` | 5,588 |
 | `05_Presentation/Final_Presentation/README.md` | 1,516 |
 | `05_Presentation/PRESENTATION_GUIDE.md` | 2,792 |
-| `05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES.md` | 8,216 |
 | `05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES_2026-10-20.md` | 12,364 |
+| `05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES.md` | 8,216 |
 | `05_Presentation/Presentation_Script/README.md` | 329 |
 | `05_Presentation/Working_Drafts/build_agastya_presentations.js` | 36,609 |
 | `05_Presentation/Working_Drafts/Build_Utilities/.build_agastya_enhanced.js` | 48,500 |
@@ -200,16 +216,16 @@
 | `09_Software_and_Environment/REPRODUCIBILITY_GUIDE.md` | 1,918 |
 | `09_Software_and_Environment/SOFTWARE_INVENTORY.md` | 2,648 |
 | `09_Software_and_Environment/SOFTWARE_REPAIR_REPORT_2026-10-26.md` | 3,623 |
+| `Agastya Physics Simulation/Agastya_Physics_Simulation_2026-10-10_metadata.json` | 1,826 |
 | `Agastya Physics Simulation/Agastya_Physics_Simulation_2026-10-10.md` | 11,889 |
 | `Agastya Physics Simulation/Agastya_Physics_Simulation_2026-10-10.py` | 41,055 |
-| `Agastya Physics Simulation/Agastya_Physics_Simulation_2026-10-10_metadata.json` | 1,826 |
 | `Agastya Physics Simulation/build_dataset_docs.py` | 27,532 |
 | `Agastya Physics Simulation/data_dictionary.csv` | 30,084 |
 | `Agastya Physics Simulation/dataset_checks_and_summary.json` | 2,604 |
 | `Agastya Physics Simulation/experiment_register.csv` | 12,352 |
-| `Agastya Physics Simulation/followup_virtual_experiments.py` | 20,226 |
 | `Agastya Physics Simulation/followup_virtual_experiments_metadata.json` | 1,489 |
 | `Agastya Physics Simulation/followup_virtual_experiments_summary.json` | 1,489 |
+| `Agastya Physics Simulation/followup_virtual_experiments.py` | 20,226 |
 | `Agastya Physics Simulation/PROCEDURES_AND_RESULTS.md` | 16,742 |
 | `Agastya Physics Simulation/README.md` | 3,618 |
 | `Agastya Physics Simulation/Research Baseline/agastya_four_stage_process_flow.svg` | 6,037 |
@@ -312,9 +328,9 @@
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/processed/PE-SIM-002_spatial_refinement.csv` | 5,527 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/processed/PE-SIM-003_timestep_refinement.csv` | 1,429 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/processed/phase_e_experiment_summary.json` | 8,787 |
-| `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/raw/PE-SIM-002_failed_explicit_dt0p5ms.csv` | 4,149 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/raw/PE-SIM-002_failed_explicit_dt0p5ms_N1_comparison.json` | 3,326 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/raw/PE-SIM-002_failed_explicit_dt0p5ms_summary.json` | 7,713 |
+| `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/raw/PE-SIM-002_failed_explicit_dt0p5ms.csv` | 4,149 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Campaign/README.md` | 959 |
 | `Agastya Physics Simulation/Research Phase E/Simulation_Register.csv` | 6,564 |
 | `Agastya Simulation/index.html` | 10,393 |
@@ -336,7 +352,7 @@
 | `Agastya Thermal/stage3_eva_transient_1d.py` | 6,860 |
 | `Agastya Thermal/STAGE3_EVA_TRANSIENT_MODEL_README.md` | 1,710 |
 | `AGASTYA_ARCHITECTURE.md` | 8,111 |
-| `AGASTYA_PROJECT_INDEX.md` | 6,203 |
+| `AGASTYA_PROJECT_INDEX.md` | 6,844 |
 | `Agastya-EYE/.gitignore` | 401 |
 | `Agastya-EYE/app.py` | 55,731 |
 | `Agastya-EYE/datasets/import_reports/github_solarpanel_inspection.json` | 14,740 |
@@ -437,11 +453,11 @@
 | `Build Files and Steps/Stage 4/STAGE4_RESEARCH_COMPLETION_BRIEF_2026-10-08.md` | 16,349 |
 | `Build Files and Steps/Stage 4/STAGE4_SOFTWARE_AND_MODEL_RESEARCH.md` | 11,847 |
 | `Build Files and Steps/Stage 4/STAGE4_TRIAL_LOG_TEMPLATE.csv` | 625 |
-| `CHANGELOG.md` | 21,706 |
-| `PROJECT_STATUS.md` | 7,727 |
+| `CHANGELOG.md` | 22,415 |
+| `PROJECT_STATUS.md` | 8,171 |
 | `PROJECT_UNDERSTANDING_AUDIT.md` | 268 |
 | `README.md` | 1,855 |
-| `SESSION_HANDOFF.md` | 13,502 |
+| `SESSION_HANDOFF.md` | 14,893 |
 | `Stage 3 Prototype Development/ARCHITECTURE_RECONCILIATION.md` | 3,601 |
 | `Stage 3 Prototype Development/Figures/Stage_3_Architecture_Decision.svg` | 3,012 |
 | `Stage 3 Prototype Development/README.md` | 2,960 |
@@ -450,8 +466,8 @@
 | `Stage 3 Prototype Development/Stage_3_Decision_Report.md` | 6,933 |
 | `STAGE3_STAGE4_INTERFACE.md` | 5,904 |
 | `START_HERE.md` | 3,372 |
-| `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md` | 32,723 |
+| `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md` | 34,342 |
 
 ## Synchronization status
 
-This complete path/size manifest describes the current reviewed local `main` source tree. The initial set was published with a regular push; see the repository-preparation record for synchronization history. Keep using regular non-force pushes.
+This complete path/size manifest describes the reviewed Day 41 source tree, including the Stage 2 concept package and paired logbook drafts. The update was published to public `main` with a regular non-force push, and remote `main` was checked against local `main` after synchronization. See the repository-preparation record for the initial publication history.
