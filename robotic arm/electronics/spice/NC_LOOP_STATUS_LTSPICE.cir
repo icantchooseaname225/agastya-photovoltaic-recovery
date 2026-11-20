@@ -1,0 +1,10 @@
+* AGASTYA Stage 2 - isolated NC loop status example only
+* 5 V logic pull-up; NC auxiliary contact closes to signal ground in healthy state.
+* A control pulse opens the modeled contact at 5 ms. This is NOT a safety-rated stop.
+VLOGIC VCC 0 5
+RPU VCC MCU_STATUS 10k
+VTRIP CTRL 0 PULSE(0 5 5m 1u 1u 5m 10m)
+SNC MCU_STATUS 0 CTRL 0 SWNC
+.model SWNC SW(Ron=0.5 Roff=1G Vt=2.5 Vh=0.1)
+.tran 0 20m 0 10u
+.end

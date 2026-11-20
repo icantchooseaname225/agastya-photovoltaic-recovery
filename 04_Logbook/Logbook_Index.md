@@ -44,10 +44,11 @@ This index links the surviving full and shortened records. “Full” means the 
 | 39 | [Day 39](PROJECT_LOGBOOK_DAY_39.md) ([Word](PROJECT_LOGBOOK_DAY_39.docx)) | [Day 39 short](Short%20Versions/DAY_39_SHORT_ENTRY.md) ([Word](Short%20Versions/DAY_39_SHORT_ENTRY.docx)) | 19–20 November 2026; AI-assisted digital continuation repairing/verifying local EYE and preparing optional Arduino gate; owner review pending; no physical hardware test. |
 | 40 | [Day 40](PROJECT_LOGBOOK_DAY_40.md) | [Day 40 short](Short%20Versions/DAY_40_SHORT_ENTRY.md) | 20 November 2026; AI-assisted digital continuation reviewing EYE validation and recording the owner-reported CSIR-NML response and visit follow-up; owner review pending; no physical hardware test or confirmed collaboration. |
 | 41 | [Day 41](PROJECT_LOGBOOK_DAY_41.md) | [Day 41 short](Short%20Versions/DAY_41_SHORT_ENTRY.md) | 20 November 2026; AI-assisted Stage 2 arm CAD/electronics and economic desk study; Fusion/AutoCAD apps not accessible for native review, no physical test; owner review pending. |
+| 42 | [Day 42](PROJECT_LOGBOOK_DAY_42.md) | [Day 42 short](Short%20Versions/DAY_42_SHORT_ENTRY.md) | 20 November 2026; AI-assisted Stage 2 mesh, IK/electronics models and economics checks; 12 Node tests passed; native CAD and physical review remain open. |
 
 ## Recent full records
 
-Day 41 is the newest full/short pair and remains an AI-assisted draft pending owner review; it records concept-only Stage 2 CAD/electronics work and a catalogue-based economic screen, with no native Fusion/AutoCAD review or physical test. Day 40 records local software-validation work and the owner's summary of a CSIR-NML response about a possible visit. The email thread has not been independently checked; no visit, collaboration or test is confirmed. Day 39 records the EYE software repair and Arduino compile checks, also without a physical hardware test. Days 34–38 remain paired digital continuations. Days 31–33 are present only in a combined short record; missing full entries were not reconstructed. Days 29–30 document scenario simulations only, not physical results. Day 22 is excluded because only a short note survives and no full record or supporting source was located.
+Day 42 is the newest full/short pair and remains an AI-assisted draft pending owner review; it records a generated arm-envelope mesh, executed idealized IK and NC-loop models, economics arithmetic and 12 passing Node checks. Fusion/AutoCAD in-app review and all physical tests remain open. Day 41 records the initial Stage 2 concept CAD/electronics and catalogue screen. Day 40 records local software-validation work and the owner's summary of a CSIR-NML response about a possible visit. The email thread has not been independently checked; no visit, collaboration or test is confirmed. Day 39 records the EYE software repair and Arduino compile checks, also without a physical hardware test. Days 34–38 remain paired digital continuations. Days 31–33 are present only in a combined short record; missing full entries were not reconstructed. Days 29–30 document scenario simulations only, not physical results. Day 22 is excluded because only a short note survives and no full record or supporting source was located.
 
 ## Architecture and historical crosswalks
 
@@ -73,5 +74,3 @@ From Day 40 onward, keep each full entry and short counterpart together. Write i
 - [Phase 4 pre-update copies](../99_Archive/Logbook_Phase4_Before_Update_2026-10-23/)
 - [Phase 5 pre-update copies](../99_Archive/Logbook_Phase5_Before_Update_2026-10-23/)
 - [Earlier Day 24–25 source copies](Originals_Before_Concise_Edit_2026-10-13/)
-
-

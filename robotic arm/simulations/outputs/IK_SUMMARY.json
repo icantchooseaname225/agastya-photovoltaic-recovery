@@ -1,0 +1,40 @@
+{
+  "runId": "S2-3D-PLANAR-IK-2026-11-20-01",
+  "evidence": "Simulated from stated geometry; not validated against a physical robot.",
+  "software": "Node.js v24.22.3; built-in modules only",
+  "model": {
+    "architecture": "base yaw plus shoulder, elbow and wrist pitch",
+    "linkLengthsMm": [
+      1100,
+      900
+    ],
+    "baseXYmm": [
+      0,
+      -867
+    ],
+    "shoulderZmm": 730,
+    "targetPlaneZmm": 0,
+    "reachableAnnulusMm": [
+      200,
+      2000
+    ],
+    "branchSelection": "minimum |shoulder pitch| + |elbow pitch|; no joint stops"
+  },
+  "inputs": {
+    "taskPointCount": 71
+  },
+  "results": {
+    "reachableTaskPoints": 71,
+    "totalTaskPoints": 71,
+    "coveragePercent": 100,
+    "maxShoulderToTargetMm": 1971.44,
+    "maxForwardKinematicsClosureErrorMm": 2.5421e-13
+  },
+  "limitations": [
+    "The 71 points represent an illustrative 2278 x 1134 mm panel and 300 mm standoff, not measured feed.",
+    "Task points are projected into a radial vertical plane and base yaw is solved separately.",
+    "No collision, joint limits, actuator curves, deflection, backlash, repeatability, tool pose, speed or acceleration are included.",
+    "Payload torque excludes links, wrist, tool, acceleration, friction, duty and design factors.",
+    "This is not a robot selection or safe motion plan."
+  ]
+}

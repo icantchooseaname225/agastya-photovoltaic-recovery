@@ -1,0 +1,4 @@
+state,closed,meaning,inputV,currentA,interpretation
+healthy NC contact,true,normal loop,0.00024998750062496874,0.0004999750012499375,closed NC contact
+E-stop pressed / auxiliary contact open,false,status fault,5,0,"open loop: trip, broken wire, or disconnected contact"
+broken/disconnected wire,false,fail-high status fault,5,0,"open loop: trip, broken wire, or disconnected contact"

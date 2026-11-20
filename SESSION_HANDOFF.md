@@ -6,6 +6,24 @@ AGASTYA is an automated end-of-life PV silver-recovery research system. The curr
 
 This remains an engineering desk study and computational project. No AGASTYA robot, hot-knife/foam-roller station, liberation or silver-recovery process, assay, product, recovered silver, throughput, cost or environmental benefit has been physically validated. Historical calculations and published results are not AGASTYA measurements.
 
+## Work completed in the 20 November continuation
+
+- Created the requested top-level robotic arm and agastya economics packages and copied the existing Stage 2 concept materials into them.
+- Generated a nine-component OBJ/MTL and 556-triangle STL from the editable envelope generator, plus a parametric source and the existing Fusion API script. Fusion was present in the app list, but a stable inspectable UI could not be established; no Fusion-native F3D/STEP export is claimed. The AutoCAD DXFs were not reviewed inside AutoCAD.
+- Executed the two-link IK/forward-closure screen for the 71 existing illustrative panel-edge points. It found 71/71 within the ideal 200–2,000 mm annulus, with 1,971.44 mm maximum shoulder distance and about 2.54e-13 mm maximum equation closure error. Unlimited joint travel, free yaw, rigid links and no collision are assumed.
+- Executed a simple 5 V / 10 kohm / 0.5 ohm NC status-divider model. A closed contact gives about 0.00025 V and an open loop gives 5 V. Added a standard LTspice transient netlist and static syntax check; the LTspice application itself was not run. The Arduino sketch was not compiled or connected.
+- Added a catalogue-price arithmetic model and an all-null process economics input template. The ₹14,066 / ₹14,315 subtotals reproduce the listed educational components only; process arm cost, cost per panel and payback remain unset.
+- All 13 Node tests pass. No physical arm, circuit, panel or recovery experiment was performed. Day 42 full and short AI-assisted draft entries and package readmes are present.
+- Day 40 still records the owner-reported NML reply and visit inquiry; no new correspondence, confirmed visit, collaboration or sample test occurred in this continuation.
+
+## Immediate continuation
+
+1. Review the refreshed path/size manifest and privacy screen, then commit and push only the intended AGASTYA changes to the owner-selected public main using a normal push; verify remote main.
+2. Open the DXFs in AutoCAD and execute/review the Fusion script in the native app before claiming app-generated artifacts; add F3D/STEP only if the model passes visual review.
+3. Replace assumed panel/tool inputs and perform joint-limit, collision, load and safety analysis with a qualified reviewer before any powered build.
+4. Compare a rail/indexer or dedicated fixture against a long-reach arm and gather comparable written India quotes before updating process economics.
+5. Keep physical de-framing, thermal, liberation and silver-recovery work gated on an approved sample, facility, assay and waste route.
+
 ## Work completed in the 19 November continuation
 
 - Audited the project tree and current documentation, prior model records, logbook chronology, software availability and version-control state. The workspace contains roughly 47,500 files; the EYE image corpus and older generated/scratch data account for substantial storage. This was a structured audit of the project records, not a visual review of every image or duplicate.

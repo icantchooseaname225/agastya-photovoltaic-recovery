@@ -1,6 +1,6 @@
 # AGASTYA project index
 
-**Last updated:** 20 November 2026 (Day 41 Stage 2 concept continuation)
+**Last updated:** 20 November 2026 (Day 42 Stage 2 simulation continuation)
 **Current architecture:** Stage 1 vision-based triage → Stage 2 robotic mechanical disassembly → Stage 3 hot-knife/foam-roller thermal separation → Stage 4 liberation, separation and silver recovery. See [current architecture](AGASTYA_ARCHITECTURE.md).
 
 The current 19 November project-owner direction supersedes the 16 October manual Stage 2 baseline. Earlier stage maps and the 14 October electrostatic package remain preserved in `99_Archive/` as historical work. See the [current process architecture](AGASTYA_ARCHITECTURE.md).
@@ -23,8 +23,8 @@ The current 19 November project-owner direction supersedes the 16 October manual
 - [Engineering overview](02_Engineering/ENGINEERING_OVERVIEW.md)
 - [Stage 2 robotic disassembly feasibility](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ROBOTIC_DISASSEMBLY_FEASIBILITY_2026-11-19.md)
 - [Stage 2 concept CAD plan and generator](02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan_notes.md)
-- [Stage 2 arm concept basis](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ARM_CONCEPT_BASIS_2026-11-20.md), [Fusion script](02_Engineering/Stage_2_Robotic_Disassembly/cad/Fusion/Stage2_Arm_Concept/README.md), and [AutoCAD drawings](02_Engineering/Stage_2_Robotic_Disassembly/cad/AutoCAD/README.md)
-- [Stage 2 electronics design basis](02_Engineering/Stage_2_Robotic_Disassembly/electronics/STAGE2_ELECTRONICS_DESIGN_BASIS.md) and [economic screen](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ROBOT_ECONOMIC_SCREEN_2026-11-20.md)
+- [Packaged robotic-arm CAD, electronics and simulations](robotic%20arm/README.md), with OBJ/STL/SCAD mesh sources and a 71-point idealized IK screen. The [Fusion API source](robotic%20arm/cad/Fusion/README.md) is prepared but not run; no F3D/STEP export exists. [Original Stage 2 basis](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ARM_CONCEPT_BASIS_2026-11-20.md) remains the design-history source.
+- [Stage 2 bench electronics models](robotic%20arm/electronics/README.md) and [economic screen/model](agastya%20economics/README.md)
 - [Stage 1 servo-gate control-interface demo](Agastya-EYE/demos/servo_gate/README.md)
 - [Stage 3 roller/liberation placement review](Build%20Files%20and%20Steps/Stage%203/STAGE3_ROLLER_AND_LIBERATION_PLACEMENT_REASSESSMENT_2026-11-19.md)
 - [Stage 4 architecture reassessment](Build%20Files%20and%20Steps/Stage%204/STAGE4_ARCHITECTURE_REASSESSMENT_2026-11-19.md)
@@ -49,7 +49,7 @@ The current 19 November project-owner direction supersedes the 16 October manual
 ## Project records and communication
 
 - [Logbook index](04_Logbook/Logbook_Index.md) — original entries remain historical; no undocumented activity was backfilled.
-- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_41.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_41_SHORT_ENTRY.md) — AI-assisted first-person draft of Stage 2 CAD/electronics/economic desk work; no native app review or physical test. [Day 40](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
+- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_42.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_42_SHORT_ENTRY.md) — AI-assisted first-person draft of generated concept mesh, executed idealized IK/NC-loop models and economic arithmetic; 13 software checks passed, with no native CAD or physical validation. [Day 40](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
 - [Session handoff](SESSION_HANDOFF.md) — current changes, checks and next action for continuation.
 - [GitHub repository preparation](00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md) — repository state, current manifest and first-push outcome.
 - [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md) — current path/size inventory and exclusion rationale for the initial public sync.
@@ -64,10 +64,3 @@ The current 19 November project-owner direction supersedes the 16 October manual
 ## Evidence boundary
 
 The 200,080 historical simulation rows are virtual scenarios/time histories, not physical samples or replicates. New thermal outputs are from an idealized EVA slab and the Stage 4 sweep is algebraic; neither establishes process quality, safety or AGASTYA performance. No AGASTYA thermal station, Stage 3 trial, Stage 4 silver-removal trial, assay, or recovered silver is documented. Published yields, settings and costs remain attributed to their source processes.
-
-
-
-
-
-
-

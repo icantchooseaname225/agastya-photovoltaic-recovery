@@ -1,0 +1,13 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "id": "",
+  "author": "AGASTYA project draft",
+  "description": {
+    "English": "Creates a four-axis Stage 2 arm geometry envelope for concept review. No joints, motors, loads or fabrication details are validated."
+  },
+  "version": "0.1.0",
+  "runOnStartup": false,
+  "supportedOS": "windows",
+  "editEnabled": true
+}

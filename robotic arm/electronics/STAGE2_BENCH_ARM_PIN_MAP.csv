@@ -1,0 +1,17 @@
+Function,Arduino Mega pin,Signal/connection,Notes
+J1 base yaw servo signal,D2,Servo signal,Servo positive and ground connect to a separately rated servo rail; not Mega 5V
+J2 shoulder pitch servo signal,D3,Servo signal,No servo selected; confirm range/current datasheet before use
+J3 elbow pitch servo signal,D4,Servo signal,No servo selected; confirm range/current datasheet before use
+J4 wrist/tool pitch servo signal,D5,Servo signal,No tool or load selected
+External E-stop state,D22,NC contact to GND with INPUT_PULLUP,Status only; a separate correctly rated hardware device must cut servo power
+Safety-relay status,D23,Isolated NC auxiliary contact to GND with INPUT_PULLUP,Required by this sketch before enable; not a safety function
+J1 minimum limit,D30,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J1 maximum limit,D31,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J2 minimum limit,D32,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J2 maximum limit,D33,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J3 minimum limit,D34,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J3 maximum limit,D35,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J4 minimum limit,D36,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+J4 maximum limit,D37,NC switch to GND,Open/high is treated as fault; add a mechanical stop
+Signal reference,GND,Common signal reference,Connect controller ground to servo signal ground as required by selected hardware; keep motor current return separate from logic traces
+Servo power rail,External supply,Voltage/current TBD from selected actuator data,Use its own fuse and hardware stop device; never power servos from Mega 5V

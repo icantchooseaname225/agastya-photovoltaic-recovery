@@ -92,3 +92,8 @@ Stage 3 Prototype Development/Figures/*.png
 
 # Generated document-inspection exports
 **/*.inspect.ndjson
+
+# Temporary one-point debugging artifacts from Stage 2 model development
+robotic arm/tests/onepoint.csv
+robotic arm/tests/tmpout/
+robotic arm/tests/outputs/

@@ -1,0 +1,24 @@
+{
+  "currency": "INR",
+  "evidence": "Template only; unknown entries intentionally null.",
+  "inputs": {
+    "installedCapexInr": null,
+    "annualPanels": null,
+    "serviceRevenuePerPanelInr": null,
+    "silverBearingRevenuePerPanelInr": null,
+    "otherRevenuePerPanelInr": null,
+    "reagentPerPanelInr": null,
+    "energyPerPanelInr": null,
+    "waterPerPanelInr": null,
+    "labourAnnualInr": null,
+    "maintenanceAnnualInr": null,
+    "transportAnnualInr": null,
+    "disposalAnnualInr": null
+  },
+  "requiredEvidence": [
+    "written equipment quotes including tax, installation, guarding and commissioning",
+    "measured throughput and uptime",
+    "measured panel mass and silver-bearing product assay / verified receiver price",
+    "measured energy, water, reagent, labour, transport and disposal costs"
+  ]
+}

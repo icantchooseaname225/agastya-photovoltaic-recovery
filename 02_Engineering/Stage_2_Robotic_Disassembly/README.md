@@ -10,3 +10,7 @@ Current design direction: automated mechanical disassembly using a robotic arm a
 - [Separate electronics design basis](electronics/STAGE2_ELECTRONICS_DESIGN_BASIS.md) and [Stage 2 economic screen](STAGE2_ROBOT_ECONOMIC_SCREEN_2026-11-20.md).
 
 No robot, fixture, actuator or power system has been selected or physically tested. The new Fusion script was not run in this session, and the DXF was not inspected inside AutoCAD. All 2D/3D geometries and economic comparisons are illustrative; no manufacturing, motion or cost conclusion is established.
+
+## Packaged continuation
+
+The top-level [robotic arm package](../../robotic%20arm/README.md) now contains generated OBJ/STL concept geometry, the Fusion API source and parametric envelope source, the executed two-link IK screen, the NC-loop status model and software checks. The top-level [agastya economics package](../../agastya%20economics/README.md) contains the copied price review and a reproducible catalogue/plant-input model. See the package READMEs for generated outputs and limitations. Fusion-native F3D/STEP and in-app AutoCAD review remain pending.

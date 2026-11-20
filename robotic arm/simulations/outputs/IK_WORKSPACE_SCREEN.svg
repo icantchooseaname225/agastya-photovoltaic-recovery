@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="700" viewBox="0 0 1080 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="36" y="42" font-family="Arial" font-size="24" font-weight="bold">Arm side-plane inverse-kinematics screen</text>
+<text x="36" y="70" font-family="Arial" font-size="14" fill="#444">Links: 1100 + 900 mm; shoulder z=730 mm; target plane z=0 mm</text>
+<circle cx="250" cy="365" r="480" fill="none" stroke="#90a4ae" stroke-dasharray="7 6" stroke-width="2"/>
+<line x1="36" y1="365" x2="1030" y2="365" stroke="#888"/>
+<circle cx="250" cy="365" r="7" fill="#d32f2f"/>
+<text x="260" y="353" font-family="Arial" font-size="13">shoulder</text>
+<text x="36" y="650" font-family="Arial" font-size="13" fill="#444">Points collapse to radial side-plane reach. Collision, limits and tool approach are excluded.</text></svg>

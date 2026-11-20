@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-11-20 — Stage 2 model package, economics calculator and Day 42 logbook
+
+- Added top-level robotic arm and agastya economics packages with package guides, source files, generated outputs and tests.
+- Generated a nine-component arm-envelope OBJ/MTL and 556-triangle STL; added editable parametric source. The Fusion API script remains unexecuted and no F3D/STEP export is claimed.
+- Executed the ideal two-link IK screen for 71 illustrative task points and a payload-only moment sweep; added a simple NC-loop status divider model and LTspice transient netlist. The LTspice file was not run, the Arduino sketch was not compiled, and no hardware was connected.
+- Added transparent catalogue-price arithmetic and a null-input plant economics calculator that refuses to invent process cost or payback.
+- Added paired Day 42 full and short entries. Thirteen Node software checks passed; no physical test or process validation occurred.
+
 ## 2026-11-20 — Day 41 Stage 2 CAD/electronics/economics
 
 - Added a Fusion API script for a static 2 m four-axis arm envelope, AutoCAD R12 concept DXFs, and SVG previews. The desktop app bridge did not expose Autodesk windows, so the Fusion script was not run and the DXFs were not opened in AutoCAD.
@@ -152,14 +160,3 @@
 - Rebuilt the master at 19 slides and reselected the concise deck at 15 slides so it retains the project workstreams, process, thermal/model evidence, candidate routes, accounting, software, status, validation plan, references and conclusion.
 - Regenerated both PPTX files, speaker notes, slide evidence register and visual register. Structural XML checks found 19/19 and 15/15 slides with notes and no replacement glyphs; the master has two illustrative photos and the concise version has one.
 - Updated current project guides and catalog descriptions. Target-application visual review remains pending; all PDFs in root `printables/` remain unapproved working layouts.
-
-
-
-
-
-
-
-
-
-
-

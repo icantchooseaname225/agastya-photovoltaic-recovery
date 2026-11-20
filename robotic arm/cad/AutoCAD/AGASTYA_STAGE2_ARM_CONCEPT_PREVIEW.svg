@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#223;}.title{font-size:17px;font-weight:bold}.small{font-size:12px}.tiny{font-size:9px}</style>
+<text x="20" y="28" class="title">AGASTYA Stage 2 arm envelope — plan view (concept only)</text>
+<text x="20" y="48" class="small">2278 × 1134 mm assumed panel; 300 mm stand-off; nominal 2 m reach circle</text>
+<circle cx="470.0" cy="445.37" r="165.0" fill="none" stroke="#b99a34" stroke-width="1.4" stroke-dasharray="5 4"/>
+<circle cx="470.0" cy="445.37" r="220.0" fill="none" stroke="#2b799c" stroke-width="1.4" stroke-dasharray=""/>
+<rect x="344.71" y="287.63" width="250.57999999999998" height="124.74000000000001" fill="#e9f1f5" stroke="#31465a" stroke-width="2"/>
+<text x="398.5" y="350.0" class="small">supported PV module</text>
+<circle cx="344.71" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="355.60473" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="366.49957" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="377.3943" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="388.28914" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="399.18387" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="410.07871" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="420.97344" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="431.86828" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="442.76301" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="453.65785" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="464.55258" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="475.44742" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="486.34215" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="497.23699" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="508.13172" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="519.02656" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="529.92129" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="540.81613" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="551.71086" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="562.6057" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="573.50043" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="584.39527" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="412.37" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="401.975" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="391.58" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="381.185" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="370.79" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="360.395" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="350.0" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="339.605" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="329.21" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="318.815" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="308.42" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="298.025" r="2" fill="#b64242"/>
+<circle cx="595.29" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="584.39527" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="573.50043" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="562.6057" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="551.71086" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="540.81613" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="529.92129" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="519.02656" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="508.13172" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="497.23699" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="486.34215" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="475.44742" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="464.55258" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="453.65785" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="442.76301" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="431.86828" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="420.97344" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="410.07871" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="399.18387" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="388.28914" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="377.3943" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="366.49957" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="355.60473" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="287.63" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="298.025" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="308.42" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="318.815" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="329.21" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="339.605" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="350.0" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="360.395" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="370.79" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="381.185" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="391.58" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="401.975" r="2" fill="#b64242"/>
+<circle cx="344.71" cy="412.37" r="2" fill="#b64242"/>
+<rect x="461.0" y="436.37" width="18" height="18" fill="#b54c37" stroke="#5d2520"/>
+<line x1="470.0" y1="445.37" x2="470.0" y2="324.37" stroke="#8d4533" stroke-width="9"/>
+<line x1="470.0" y1="324.37" x2="470.0" y2="225.37" stroke="#d27946" stroke-width="8"/>
+<circle cx="470.0" cy="324.37" r="12.65" fill="#fff" stroke="#543" stroke-width="2"/>
+<circle cx="470.0" cy="445.37" r="9.02" fill="#fff" stroke="#543" stroke-width="2"/>
+<text x="22" y="628" class="small">Straight arm pose is illustrative. Reach circle is a 2D distance screen, not validated motion.</text>
+<text x="22" y="649" class="tiny">No link collisions, IK, tool pose, load/force, guarding, material or actuator selection.</text>
+</svg>

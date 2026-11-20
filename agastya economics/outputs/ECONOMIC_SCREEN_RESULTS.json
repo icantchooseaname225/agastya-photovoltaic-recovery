@@ -1,0 +1,45 @@
+{
+  "priceCheckDate": "2026-11-20",
+  "currency": "INR",
+  "catalogueTotals": {
+    "acebottKitInr": 5019,
+    "robokitsKitInr": 13600,
+    "fourServoSubtotalInr": 10316,
+    "megaInr": 3750,
+    "fourServosPlusMegaInr": 14066,
+    "fourServosMegaAndOptionalPwmInr": 14315
+  },
+  "excludedCosts": [
+    "servo supply and power distribution",
+    "hardwired safety relay and rated E-stop devices",
+    "fuses, wiring and enclosure",
+    "mechanical structure, fixtures and fabrication",
+    "delivery, tax, commissioning, guarding and maintenance"
+  ],
+  "processArm": {
+    "capexInr": null,
+    "costPerPanelInr": null,
+    "paybackYears": null,
+    "status": "NOT_ESTIMATED: process-arm specifications and measured operating data are absent"
+  },
+  "plantModel": {
+    "status": "NOT_CALCULABLE",
+    "missingInputs": [
+      "installedCapexInr",
+      "annualPanels",
+      "serviceRevenuePerPanelInr",
+      "silverBearingRevenuePerPanelInr",
+      "otherRevenuePerPanelInr",
+      "reagentPerPanelInr",
+      "energyPerPanelInr",
+      "waterPerPanelInr",
+      "labourAnnualInr",
+      "maintenanceAnnualInr",
+      "transportAnnualInr",
+      "disposalAnnualInr"
+    ],
+    "annualNetCashflowInr": null,
+    "paybackYears": null
+  },
+  "conclusion": "Educational catalogue values are bounded comparison points only. They do not price the 2 m process-arm concept. No vendor quote, machine purchase, production revenue, ROI or payback is established."
+}

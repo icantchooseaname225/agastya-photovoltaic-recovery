@@ -1,0 +1,6 @@
+id,description,unit_price_inr,quantity,extended_price_inr,source,boundary
+ACEBOTT-4DOF,ACEBOTT ESP32 4-DOF educational arm kit,5019,1,5019,https://robu.in/product/acebott-esp32-4-dof-robot-arm-kit/,Listing title/spec conflict noted in source review; verify contents/specs. Classroom benchmark only.
+ROBOKITS-6DOF,Robokits 6-DOF DIY arm kit,13600,1,13600,https://robokits.co.in/robot-kits/robotic-arm-kit/robotic-arm-6-dof-diy-kit-with-usb-servo-controller-and-software,Listing says 350 mm reach and 100 g max payload; not process-arm evidence.
+HIWONDER-HPS-2027,Hiwonder HPS-2027 servo listing,2579,4,10316,https://robu.in/product-category/hiwonder-servo-motor-and-accessories/,Listing label is not used as a verified torque rating; voltage/current/duty data are missing.
+ARDUINO-MEGA,Arduino Mega 2560 listing,3750,1,3750,https://robu.in/product-category/classic-family/,Controller-price reference only; not a safety controller.
+PCA9685-OPTION,PCA9685 16-channel PWM board listing (optional),249,1,249,https://robu.in/product-category/servo-motor-driver/,PWM signal generation only; does not power servos or provide a safety function.

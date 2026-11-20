@@ -1,0 +1,36 @@
+{
+  "model": "5 V pull-up through 10 kohm; NC contact to signal ground; contact represented as 0.5 ohm when closed and open circuit otherwise.",
+  "evidence": "Executed DC circuit-equation model in Node.js; LTspice netlist is supplied but not executed here.",
+  "results": [
+    {
+      "state": "healthy NC contact",
+      "closed": true,
+      "meaning": "normal loop",
+      "inputV": 0.00024998750062496874,
+      "currentA": 0.0004999750012499375,
+      "interpretation": "closed NC contact"
+    },
+    {
+      "state": "E-stop pressed / auxiliary contact open",
+      "closed": false,
+      "meaning": "status fault",
+      "inputV": 5,
+      "currentA": 0,
+      "interpretation": "open loop: trip, broken wire, or disconnected contact"
+    },
+    {
+      "state": "broken/disconnected wire",
+      "closed": false,
+      "meaning": "fail-high status fault",
+      "inputV": 5,
+      "currentA": 0,
+      "interpretation": "open loop: trip, broken wire, or disconnected contact"
+    }
+  ],
+  "limitations": [
+    "This is a single-channel status-input model, not a safety relay or safety function.",
+    "It cannot detect every possible fault: a short to ground can look like a healthy closed contact.",
+    "The example relay must independently interrupt a correctly rated servo supply; software status is not that interruption.",
+    "No actual Mega input thresholds, noise immunity, EMC, isolation, relay ratings, wiring length or power rail are qualified."
+  ]
+}
