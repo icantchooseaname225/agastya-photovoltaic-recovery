@@ -3,14 +3,14 @@
 ## Repository and gate
 
 - Local branch: `main`; remote name: `origin`; URL: `https://github.com/icantchooseaname225/agastya-photovoltaic-recovery.git`.
-- Remote checkpoint: empty, default branch `main`, visibility `public`; the owner has directed that the repository remain public.
-- Current reviewed source tree is consolidated on local `main`; the remote has no branch refs and remains public by owner direction.
-- A regular Git push may be attempted after this review. If Git Credential Manager requests sign-in, finish authentication and repeat the normal push; do not force-push.
+- Remote checkpoint: public repository; the initial reviewed tree was published on `main` by a regular push. See the repository-preparation record for the first verified revision.
+- The current reviewed source tree is consolidated on local `main`; any follow-up changes should use regular non-force pushes.
+- This manifest reflects the current tracked source tree after the initial sync; it records exact paths and working-tree sizes for review.
 
 ## Reviewed project set summary
 
 - Reviewed tracked-file count, including this manifest: **425**.
-- Aggregate working-tree file bytes, including this review: **2,944,916 bytes**.
+- Aggregate working-tree file bytes, including this review: **2,944,875 bytes**.
 - Largest individual file: less than 10 MiB; this is the sum of individual file sizes, not the compressed Git object-store size.
 - The manifest is included in the committed local project set. Its size is shown in the final table row.
 
@@ -32,15 +32,15 @@
 | `00_Project_Management/DECISION_LOG.md` | 186 |
 | `00_Project_Management/DECISIONS_LOG.md` | 3,919 |
 | `00_Project_Management/DUPLICATE_AND_CLEANUP_REPORT.md` | 3,964 |
-| `00_Project_Management/FILE_CATALOG.csv` | 50,505 |
+| `00_Project_Management/FILE_CATALOG.csv` | 50,499 |
 | `00_Project_Management/file_inventory_summary.md` | 1,673 |
 | `00_Project_Management/FILE_MIGRATION_LOG.csv` | 23,925 |
 | `00_Project_Management/FINAL_CONSISTENCY_AUDIT_2026-10-11.md` | 8,831 |
 | `00_Project_Management/generate_file_inventory.py` | 2,145 |
-| `00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md` | 5,613 |
+| `00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md` | 5,648 |
 | `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-19.md` | 31,555 |
 | `00_Project_Management/link_check_results.csv` | 44,652 |
-| `00_Project_Management/MASTER_TASK_LIST.md` | 11,409 |
+| `00_Project_Management/MASTER_TASK_LIST.md` | 11,344 |
 | `00_Project_Management/MIGRATION_PLAN_2026-10-11.md` | 3,273 |
 | `00_Project_Management/MILESTONES.md` | 299 |
 | `00_Project_Management/OPEN_QUESTIONS.md` | 4,503 |
@@ -120,7 +120,7 @@
 | `04_Logbook/PROJECT_LOGBOOK_DAY_37.md` | 2,391 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_38.md` | 4,129 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_39.md` | 7,341 |
-| `04_Logbook/PROJECT_LOGBOOK_DAY_40.md` | 4,405 |
+| `04_Logbook/PROJECT_LOGBOOK_DAY_40.md` | 4,447 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_5_8.md` | 5,355 |
 | `04_Logbook/PROJECT_LOGBOOK_DAY_9.md` | 2,434 |
 | `04_Logbook/Short Versions/DAY_06.md` | 475 |
@@ -153,7 +153,7 @@
 | `04_Logbook/Short Versions/DAY_37_SHORT_ENTRY.md` | 1,240 |
 | `04_Logbook/Short Versions/DAY_38_SHORT_ENTRY.md` | 1,470 |
 | `04_Logbook/Short Versions/DAY_39_SHORT_ENTRY.md` | 2,014 |
-| `04_Logbook/Short Versions/DAY_40_SHORT_ENTRY.md` | 2,157 |
+| `04_Logbook/Short Versions/DAY_40_SHORT_ENTRY.md` | 2,226 |
 | `04_Logbook/Short Versions/DAY31-32-33 COMBINED.txt` | 8,952 |
 | `04_Logbook/Short Versions/README.md` | 1,737 |
 | `05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER.csv` | 8,560 |
@@ -437,11 +437,11 @@
 | `Build Files and Steps/Stage 4/STAGE4_RESEARCH_COMPLETION_BRIEF_2026-10-08.md` | 16,349 |
 | `Build Files and Steps/Stage 4/STAGE4_SOFTWARE_AND_MODEL_RESEARCH.md` | 11,847 |
 | `Build Files and Steps/Stage 4/STAGE4_TRIAL_LOG_TEMPLATE.csv` | 625 |
-| `CHANGELOG.md` | 21,374 |
-| `PROJECT_STATUS.md` | 7,776 |
+| `CHANGELOG.md` | 21,548 |
+| `PROJECT_STATUS.md` | 7,672 |
 | `PROJECT_UNDERSTANDING_AUDIT.md` | 268 |
 | `README.md` | 1,855 |
-| `SESSION_HANDOFF.md` | 13,525 |
+| `SESSION_HANDOFF.md` | 13,330 |
 | `Stage 3 Prototype Development/ARCHITECTURE_RECONCILIATION.md` | 3,601 |
 | `Stage 3 Prototype Development/Figures/Stage_3_Architecture_Decision.svg` | 3,012 |
 | `Stage 3 Prototype Development/README.md` | 2,960 |
@@ -450,8 +450,8 @@
 | `Stage 3 Prototype Development/Stage_3_Decision_Report.md` | 6,933 |
 | `STAGE3_STAGE4_INTERFACE.md` | 5,904 |
 | `START_HERE.md` | 3,372 |
-| `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md` | 32,714 |
+| `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md` | 32,723 |
 
 ## Synchronization status
 
-This complete path/size manifest describes the current reviewed local `main` source tree. No files have been uploaded unless the synchronization status in the repository preparation record says otherwise. Publish only with a regular non-force push.
+This complete path/size manifest describes the current reviewed local `main` source tree. The initial set was published with a regular push; see the repository-preparation record for synchronization history. Keep using regular non-force pushes.
