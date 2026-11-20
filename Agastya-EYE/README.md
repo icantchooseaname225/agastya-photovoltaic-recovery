@@ -4,9 +4,9 @@ Agastya-EYE is the first inspection stage of the Agastya panel-recovery workflow
 
 In the current four-stage charter, EYE supports Stage 1 inspection, intake records, and routing; it is not a silver-recovery operation. The current numbered stages are Stage 1 vision-based triage, Stage 2 robotic mechanical disassembly, Stage 3 hot-knife/foam-roller thermal separation, and Stage 4 material liberation, separation and silver recovery. The robotic-arm and foam-roller directions are design concepts; EYE does not control them. Stage 4 route selection remains open. EYE does not control process equipment, and its computer-vision results do not verify silver content or recovery. Use the root current architecture when older files use another map.
 
-## Arduino control-interface demo
+## Synthetic servo control-interface demo
 
-A separate, uncompiled tabletop interface sketch accepts synthetic `APPROVE`, `REJECT`, and `HOLD` serial commands to move a servo; it is not connected to the EYE model. See [the demo notes](demos/servo_gate/README.md).
+The original, uncompiled tabletop interface sketch accepts synthetic `APPROVE`, `REJECT`, and `HOLD` commands. It remains separate from the classifier and the Arduino integration. See [the demo notes](demos/servo_gate/README.md).
 
 ## Run the laptop app
 
@@ -14,7 +14,15 @@ For the normal PC demo, double-click `Start-EYE.bat`. It finds an available loca
 
 From a PowerShell prompt, invoke the launcher without changing the machine's execution policy with `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Start-EYE.ps1`.
 
-The launcher checks, in order, an explicitly configured `AGASTYA_EYE_PYTHON`, the project `.venv`, user-managed virtual environments under `%USERPROFILE%\Envs`, Python Launcher Python 3.14, then the launcher's default Python. It selects only an interpreter that imports Pillow, NumPy, PyTorch and torchvision, and prints the selected interpreter. The app's status banner and `/api/v1/health` report the active CUDA device and model status. To point EYE at another existing compatible interpreter, set `AGASTYA_EYE_PYTHON` to its `python.exe` path before launching. No second PyTorch or CUDA installation is required when the existing environment passes this check.
+The launcher selects an interpreter that can import the application dependencies, prints its runtime versions, and stores a PID record for servers it starts. Use `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Stop-EYE.ps1` to request a clean local shutdown. `GET /api/ping` is a liveness check; `GET /api/v1/health` reports database/model readiness and returns a non-ready status if the primary database or RGB model is unavailable.
+
+The launcher checks, in order, an explicitly configured `AGASTYA_EYE_PYTHON`, the project `.venv`, user-managed virtual environments under `%USERPROFILE%\Envs`, Python Launcher Python 3.14, then the launcher's default Python. It selects only an interpreter that imports Pillow, NumPy, PyTorch, torchvision, and pySerial, and prints the selected interpreter. The app's status banner and `/api/v1/health` report the active CUDA device and model status. To point EYE at another existing compatible interpreter, set `AGASTYA_EYE_PYTHON` to its `python.exe` path before launching. No second PyTorch or CUDA installation is required when the existing environment passes this check.
+
+## Arduino Uno/Nano servo gate
+
+The optional SG90 gate uses the separate `hardware/` serial controller and `firmware/servo_gate/servo_gate.ino`. The classifier and inspection pipeline never send hardware commands. Activation defaults to disabled; after wiring and uploading the firmware, enter the detected Uno/Nano COM port and enable the current session in the site's **Arduino Gate** panel. The app accepts a release only after an operator has recorded a final approved `REUSED` result for a fresh, high-confidence clean c-Si RGB inspection with a documented electrical pass, then separately enters their ID and confirms the panel ID in the gate control. Rejected, uncertain, incomplete, stale, and human-review-pending records remain blocked. See [the Arduino setup, wiring, configuration, and demonstration guide](docs/ARDUINO_SERVO_GATE.md) and [the firmware notes](firmware/servo_gate/README.md).
+
+The app distinguishes an inspection result from the Arduino's release/close acknowledgements. The SG90 has no position sensor here, so the software cannot confirm actual servo or barrier movement. Hardware command failures are recorded as uncertain and are not retried for the same inspection. The pre-existing [synthetic serial demo](demos/servo_gate/README.md) remains available for its original `APPROVE`/`REJECT`/`HOLD` interface.
 
 To run the server directly in PowerShell and see live logs, set `AGASTYA_EYE_PYTHON` to a compatible interpreter's `python.exe` path, then run:
 
@@ -189,7 +197,7 @@ py tools/simulate_esp32.py
 
 This uses a synthetic non-panel image, stub classifier, temporary database, and loopback HTTP server. It verifies authenticated uploads, retrieval and hash verification of the saved image URL, RGB/NIR modality handling, retries, safety routing, ordered Stage 2-4 measured events, and passport hash chains. It does not test real camera hardware, sensors, panel measurements, robot/PLC equipment, or model accuracy.
 
-The current local unit-test attempt and its missing-dependency limits are recorded in [the Stage 1 validation run](docs/STAGE1_VALIDATION_RUN_2026-11-19.md). The PC-only simulator was not run in that environment because Pillow was unavailable.
+The [repair and hardware audit](docs/SYSTEM_REPAIR_AUDIT_2026-11-19.md) records the 19–20 November 2026 verification: 65/65 unit tests and the PC-only simulator passed in the launcher-selected Python 3.12 environment. The earlier partial Python 3.14 run, which lacked PyTorch, NumPy, and Pillow, remains documented in [the historical Stage 1 validation run](docs/STAGE1_VALIDATION_RUN_2026-11-19.md). The latest rerun and limits are in [the 20 November validation record](docs/STAGE1_VALIDATION_RUN_2026-11-20.md).
 
 See [Stage 1 sorter build](docs/STAGE1_SORTER_BUILD.md) for the current order list, sensor wiring, rear-capture workflow, model/data limits, arm budget, and what must be calibrated before any physical sorting.
 
@@ -198,6 +206,7 @@ See [Stage 1 sorter build](docs/STAGE1_SORTER_BUILD.md) for the current order li
 ```text
 app.py                  Local operator app and versioned device API
 firmware/agastya_eye/   AI Thinker ESP32-CAM sketch and optional INA219 adapter
+firmware/servo_gate/    Optional Uno/Nano tabletop servo gate
 inference/              CPU vision model loader, triage, and SQLite ledger
 web/                    Operator interface
 datasets/               Source notes, provenance, grouping, and training data

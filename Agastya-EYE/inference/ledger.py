@@ -185,6 +185,32 @@ class Ledger:
         connection.execute("PRAGMA foreign_keys = ON")
         return connection
 
+    def health_check(self):
+        """Inspect SQLite integrity without creating or changing the ledger file."""
+        if not self.database_path.is_file():
+            return {"healthy": False, "integrity": "missing", "message": "Inspection database is missing"}
+        try:
+            database_uri = self.database_path.resolve().as_uri() + "?mode=ro"
+            with closing(sqlite3.connect(database_uri, uri=True, timeout=1)) as connection:
+                integrity = connection.execute("PRAGMA quick_check").fetchone()[0]
+                foreign_key_issue = connection.execute("PRAGMA foreign_key_check").fetchone()
+                panels = connection.execute("SELECT COUNT(*) FROM panels").fetchone()[0]
+                inspections = connection.execute("SELECT COUNT(*) FROM inspections").fetchone()[0]
+            healthy = integrity == "ok" and foreign_key_issue is None
+            return {
+                "healthy": healthy,
+                "integrity": integrity if foreign_key_issue is None else "foreign_key_error",
+                "panels": panels,
+                "inspections": inspections,
+                "message": "Database integrity check passed" if healthy else "Database integrity check failed",
+            }
+        except (OSError, sqlite3.Error) as error:
+            return {
+                "healthy": False,
+                "integrity": "error",
+                "message": f"{type(error).__name__}: {error}",
+            }
+
     def save_inspection(self, image_bytes, panel_id, external_ref, predictions, recommendation,
                         final_disposition, decision_source, reason, reviewer_note,
                         panel_technology, frame_width_mm, frame_height_mm, junction_box_location,

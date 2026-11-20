@@ -4,6 +4,9 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$appScript = Join-Path $root 'app.py'
+$serverStateDirectory = Join-Path $env:LOCALAPPDATA 'Agastya\EYE'
+$serverStatePath = Join-Path $serverStateDirectory 'server.json'
 
 if ($ForDevice) {
     $bindHost = '0.0.0.0'
@@ -63,7 +66,7 @@ if ($pythonCommand) {
     $pythonCandidates.Add([pscustomobject]@{ Path = $pythonCommand.Source; Prefix = @() })
 }
 
-$pythonProbe = 'import sys,torch,torchvision; import numpy,PIL; assert sys.version_info >= (3,11), "Python 3.11 or newer is required"; available=torch.cuda.is_available(); gpu=torch.cuda.get_device_name(0) if available else ""; print("python="+sys.executable+"; torch="+torch.__version__+"; torchvision="+torchvision.__version__+"; torch_cuda="+str(torch.version.cuda)+"; cuda_available="+str(available)+("; gpu="+gpu if gpu else ""))'
+$pythonProbe = 'import sys,torch,torchvision,serial; import numpy,PIL; assert sys.version_info >= (3,11), "Python 3.11 or newer is required"; available=torch.cuda.is_available(); gpu=torch.cuda.get_device_name(0) if available else ""; print("python="+sys.executable+"; torch="+torch.__version__+"; torchvision="+torchvision.__version__+"; pyserial="+serial.__version__+"; torch_cuda="+str(torch.version.cuda)+"; cuda_available="+str(available)+("; gpu="+gpu if gpu else ""))'
 $selectionErrors = @()
 $python = $null
 $prefix = @()
@@ -93,7 +96,7 @@ foreach ($candidate in $pythonCandidates) {
 }
 if (-not $python) {
     $details = if ($selectionErrors.Count) { $selectionErrors -join [Environment]::NewLine } else { 'No Python launcher or interpreter was found.' }
-    throw "No Python environment can import EYE requirements (Pillow, NumPy, PyTorch and torchvision). Use the existing EYE venv, set AGASTYA_EYE_PYTHON to a compatible interpreter, or install compatible dependencies in an existing Python 3.11+ environment.`n$details"
+    throw "No Python environment can import EYE requirements (Pillow, NumPy, PyTorch, torchvision, and pySerial). Use the existing EYE venv, set AGASTYA_EYE_PYTHON to a compatible interpreter, or install compatible dependencies in an existing Python 3.11+ environment.`n$details"
 }
 
 function Test-EyeApi([int]$CandidatePort) {
@@ -102,6 +105,29 @@ function Test-EyeApi([int]$CandidatePort) {
         return ($status.app -eq 'Agastya-EYE' -and $status.status -eq 'ready')
     } catch {
         return $false
+    }
+}
+
+function Get-EyeHealth([int]$CandidatePort) {
+    try {
+        return Invoke-RestMethod -Uri "http://127.0.0.1:$CandidatePort/api/v1/health" -TimeoutSec 5
+    } catch {
+        $response = $_.Exception.Response
+        if (-not $response) {
+            return $null
+        }
+        try {
+            $reader = [System.IO.StreamReader]::new($response.GetResponseStream())
+            try {
+                $body = $reader.ReadToEnd()
+                if ($body) { return $body | ConvertFrom-Json }
+            } finally {
+                $reader.Dispose()
+            }
+        } catch {
+            return $null
+        }
+        return $null
     }
 }
 
@@ -139,7 +165,7 @@ if (-not $alreadyRunning) {
     $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
     $stdout = Join-Path $env:TEMP "agastya-eye-$stamp.out.log"
     $stderr = Join-Path $env:TEMP "agastya-eye-$stamp.err.log"
-    $arguments = $prefix + @('app.py', '--host', $bindHost, '--port', [string]$port)
+    $arguments = $prefix + @($appScript, '--host', $bindHost, '--port', [string]$port)
     $server = Start-Process -FilePath $python -ArgumentList $arguments -WorkingDirectory $root `
         -WindowStyle Hidden -RedirectStandardOutput $stdout -RedirectStandardError $stderr -PassThru
 
@@ -157,10 +183,41 @@ if (-not $alreadyRunning) {
     if (-not $ready) {
         throw "EYE did not become ready. Check logs: $stderr and $stdout"
     }
+
+    New-Item -ItemType Directory -Path $serverStateDirectory -Force | Out-Null
+    $serverState = [ordered]@{
+        process_id = $server.Id
+        port = $port
+        app_script = $appScript
+        python_path = $python
+        started_at = (Get-Date).ToString('o')
+    }
+    $serverState | ConvertTo-Json | Set-Content -LiteralPath $serverStatePath -Encoding utf8
 }
 
+for ($attempt = 0; $attempt -lt 45; $attempt++) {
+    $health = Get-EyeHealth $port
+    if ($health -and $health.status -eq 'ready') {
+        break
+    }
+    if ($health -and $health.status -eq 'degraded') {
+        break
+    }
+    Start-Sleep -Seconds 1
+}
+if ($health -and $health.status -eq 'ready') {
+    Write-Host "EYE system health: $($health.status); database: $($health.database.integrity); RGB model loaded: $($health.model.loaded)"
+} elseif ($health) {
+    Write-Warning "EYE server responds, but system health is $($health.status). Check $url/api/v1/health and the server logs before inspecting panels."
+} else {
+    Write-Warning "EYE server responds, but its system-health endpoint did not return a usable status. Check $url/api/v1/health and the server logs."
+}
 Start-Process $url
-Write-Host "Agastya EYE is ready at $url"
+if ($health -and $health.status -eq 'ready') {
+    Write-Host "Agastya EYE is ready at $url"
+} else {
+    Write-Host "Agastya EYE server is available at $url; verify system health before using inspections."
+}
 if ($ForDevice) {
     Write-Host "Device upload API: http://<this-PC-private-IP>:$port"
     Write-Host "Copy this token into firmware secrets.h: $env:AGASTYA_DEVICE_TOKEN"

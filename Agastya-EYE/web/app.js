@@ -4,6 +4,8 @@ let inspectionRows = [];
 let panelRows = [];
 let currentImageData = "";
 let webcamStream = null;
+let currentInspectionRecord = null;
+let hardwareStatusRequestId = 0;
 
 function escapeHTML(value) {
   return String(value ?? "").replace(/[&<>"']/g, (character) => ({
@@ -22,10 +24,29 @@ function formatDate(value) {
 }
 
 async function request(path, options = {}) {
-  const response = await fetch(path, options);
-  const result = await response.json();
-  if (!response.ok) throw new Error(result.error || `Request failed (${response.status})`);
-  return result;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 60000);
+  try {
+    const response = await fetch(path, { ...options, signal: controller.signal });
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw new Error(`EYE returned an unreadable response (${response.status})`);
+    }
+    if (!response.ok) throw new Error(result.error || `Request failed (${response.status})`);
+    return result;
+  } catch (error) {
+    if (error.name === "AbortError") {
+      throw new Error("The EYE request timed out. The server may still be processing; check the ledger before retrying.");
+    }
+    if (error instanceof TypeError) {
+      throw new Error(`Cannot reach the EYE server at ${window.location.origin}. Check that it is running, then retry.`);
+    }
+    throw error;
+  } finally {
+    window.clearTimeout(timeout);
+  }
 }
 
 function setStatus(element, message, kind = "") {
@@ -54,6 +75,9 @@ function showPage(page) {
 
 function setImage(data, filename = "Captured image") {
   currentImageData = data;
+  currentInspectionRecord = null;
+  hardwareStatusRequestId += 1;
+  $("#hardware-release-panel").hidden = true;
   const preview = $("#image-preview");
   preview.src = data;
   preview.hidden = false;
@@ -173,6 +197,50 @@ function renderEvidence(record) {
     const sourceNote = item.advisory_only ? '<small title="Not an electrical test or burn diagnosis">Research only · not routed</small>' : "";
     return `<div class="prediction"><span>${escapeHTML(pretty(item.label))}${sourceNote}</span><span class="prediction-track"><span class="prediction-fill" style="display:block;width:${percent}%"></span></span><em>${percent}%</em></div>`;
   }).join("");
+  currentInspectionRecord = record;
+  refreshHardwareApproval(record);
+}
+
+async function refreshHardwareApproval(record) {
+  const panel = $("#hardware-release-panel");
+  const requestId = ++hardwareStatusRequestId;
+  panel.hidden = false;
+  $("#hardware-release-state").textContent = "Checking";
+  $("#hardware-release-detail").textContent = "Checking backend, inspection, and Arduino readiness…";
+  $("#hardware-release-message").textContent = "";
+  $("#hardware-release-message").className = "inline-status";
+  $("#hardware-approval-fields").hidden = true;
+  $("#hardware-release-button").disabled = true;
+  $("#hardware-connect-button").hidden = true;
+  try {
+    const data = await request(`/api/v1/hardware/inspections/${record.id}/release`);
+    if (requestId !== hardwareStatusRequestId || currentInspectionRecord?.id !== record.id) return;
+    const hardware = data.hardware || {};
+    const approval = data.approval;
+    const eligibility = data.eligibility || { eligible: false, reason: "Release eligibility is unavailable" };
+    $("#hardware-release-state").textContent = approval ? pretty(approval.state) : pretty(hardware.state || "unknown");
+    if (approval) {
+      $("#hardware-release-detail").textContent = approval.state === "uncertain"
+        ? "The command outcome is uncertain. Inspect the gate; this inspection cannot be retried."
+        : approval.state === "closed_commanded"
+          ? "Arduino acknowledged the release and timed close commands. A position sensor does not verify physical motion."
+          : "A one-time release request is already recorded for this inspection.";
+      $("#hardware-release-message").textContent = `Approval ${approval.command_id} · ${pretty(approval.state)}`;
+      $("#hardware-release-button").disabled = true;
+      return;
+    }
+
+    $("#hardware-release-detail").textContent = eligibility.reason;
+    $("#hardware-connect-button").hidden = !hardware.enabled || Boolean(hardware.ready);
+    $("#hardware-approval-fields").hidden = !eligibility.eligible;
+    $("#hardware-panel-confirmation").value = "";
+    $("#hardware-release-button").disabled = !eligibility.eligible || !hardware.ready;
+  } catch (error) {
+    if (requestId !== hardwareStatusRequestId) return;
+    $("#hardware-release-state").textContent = "Unavailable";
+    $("#hardware-release-detail").textContent = error.message;
+    $("#hardware-release-message").className = "inline-status error";
+  }
 }
 
 function renderInspectionRows(rows) {
@@ -285,24 +353,81 @@ async function refreshStatus() {
   try {
     const status = await request("/api/status");
     const banner = $("#model-banner");
-    banner.classList.toggle("ready", status.model.ready && status.model.loaded !== false);
+    const databaseHealthy = status.database?.healthy !== false;
+    banner.classList.toggle("ready", status.model.ready && status.model.loaded !== false && databaseHealthy);
     const evaluation = status.model.evaluation;
     const testSummary = evaluation?.test_images
       ? ` · held-out ${(evaluation.test_accuracy * 100).toFixed(0)}% acc, ${(evaluation.test_macro_f1 * 100).toFixed(0)}% macro F1 (${evaluation.test_images} images)`
       : "";
-    banner.querySelector("span:last-child").textContent = `${status.model.message}${testSummary}`;
-    $("#sidebar-model").textContent = status.model.ready
+    const databaseSummary = databaseHealthy ? " · inspection database healthy" : " · inspection database unavailable";
+    const hardwareSummary = status.hardware?.enabled
+      ? ` · Arduino ${status.hardware.ready ? "ready" : status.hardware.state}`
+      : " · Arduino gate disabled";
+    banner.querySelector("span:last-child").textContent = `${status.model.message}${testSummary}${databaseSummary}${hardwareSummary}`;
+    $("#sidebar-model").textContent = !databaseHealthy
+      ? "Inspection database unavailable"
+      : status.model.ready
       ? (status.model.loaded === false ? "RGB checkpoint available · warming" : "RGB screen ready · review required")
       : "RGB model unavailable";
     $("#footer-counts").textContent = `${status.panels} panels · ${status.inspections} inspections`;
     if (status.model.ready && status.model.loaded === false) {
       window.setTimeout(refreshStatus, 2500);
     }
+    await refreshHardwareSettings();
   } catch (error) {
     $("#sidebar-model").textContent = "App API unavailable";
     const banner = $("#model-banner");
     banner.classList.remove("ready");
     banner.querySelector("span:last-child").textContent = `Cannot reach EYE API: ${error.message}`;
+  }
+}
+
+async function refreshHardwareSettings() {
+  try {
+    const hardware = await request("/api/v1/hardware/status");
+    const portInput = $("#hardware-port");
+    if (document.activeElement !== portInput) portInput.value = hardware.port || "";
+    $("#hardware-settings-state").textContent = `${pretty(hardware.state)}${hardware.port ? ` · ${hardware.port}` : ""}`;
+    $("#hardware-enable-button").hidden = Boolean(hardware.enabled);
+    $("#hardware-enable-button").disabled = hardware.state === "misconfigured" || !/^COM[1-9]\d*$/i.test(portInput.value.trim());
+    $("#hardware-global-connect-button").hidden = !hardware.enabled || Boolean(hardware.ready);
+    $("#hardware-disable-button").hidden = !hardware.enabled;
+    $("#hardware-settings-detail").textContent = hardware.enabled
+      ? (hardware.ready
+        ? "Arduino is ready. Each release still requires a separate eligible inspection and operator confirmation."
+        : hardware.message || "Gate enabled for this session. Connect the configured Arduino to continue.")
+      : "Gate activation is off by default. Enter the Uno/Nano COM port from Windows Device Manager. This setting lasts for this server session.";
+  } catch (error) {
+    $("#hardware-settings-state").textContent = "Unavailable";
+    $("#hardware-settings-detail").textContent = error.message;
+  }
+}
+
+async function configureHardware(enabled) {
+  const port = $("#hardware-port").value.trim();
+  if (enabled && !/^COM[1-9]\d*$/i.test(port)) {
+    setStatus($("#hardware-settings-message"), "Enter the Arduino COM port shown by Windows, for example COM5.", "error");
+    return;
+  }
+  const buttons = ["#hardware-enable-button", "#hardware-disable-button"];
+  buttons.forEach((selector) => { $(selector).disabled = true; });
+  setStatus($("#hardware-settings-message"), enabled ? "Enabling gate controls for this server session…" : "Disabling gate controls…");
+  try {
+    const result = await request("/api/v1/hardware/config", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ enabled, port }),
+    });
+    setStatus($("#hardware-settings-message"), enabled
+      ? `Gate enabled for this session on ${result.hardware.port}; connect the Arduino to continue.`
+      : "Gate disabled for this session.", "success");
+  } catch (error) {
+    setStatus($("#hardware-settings-message"), error.message, "error");
+  } finally {
+    await refreshHardwareSettings();
+    if (currentInspectionRecord) await refreshHardwareApproval(currentInspectionRecord);
+    $("#hardware-enable-button").disabled = !/^COM[1-9]\d*$/i.test($("#hardware-port").value.trim());
+    $("#hardware-disable-button").disabled = false;
   }
 }
 
@@ -657,6 +782,72 @@ $("#inspection-form").addEventListener("submit", async (event) => {
     setStatus($("#save-status"), error.message, "error");
   } finally {
     button.disabled = false;
+  }
+});
+
+$("#hardware-connect-button").addEventListener("click", async () => {
+  const button = $("#hardware-connect-button");
+  button.disabled = true;
+  setStatus($("#hardware-release-message"), "Checking the configured Arduino port…");
+  try {
+    const result = await request("/api/v1/hardware/connect", {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: "{}",
+    });
+    setStatus($("#hardware-release-message"), result.hardware?.message || "Arduino is ready", "success");
+  } catch (error) {
+    setStatus($("#hardware-release-message"), error.message, "error");
+  } finally {
+    button.disabled = false;
+    if (currentInspectionRecord) await refreshHardwareApproval(currentInspectionRecord);
+  }
+});
+
+$("#hardware-enable-button").addEventListener("click", () => configureHardware(true));
+$("#hardware-disable-button").addEventListener("click", () => configureHardware(false));
+$("#hardware-port").addEventListener("input", () => {
+  $("#hardware-enable-button").disabled = !/^COM[1-9]\d*$/i.test($("#hardware-port").value.trim());
+});
+$("#hardware-global-connect-button").addEventListener("click", async () => {
+  const button = $("#hardware-global-connect-button");
+  button.disabled = true;
+  setStatus($("#hardware-settings-message"), "Checking the configured Arduino port…");
+  try {
+    const result = await request("/api/v1/hardware/connect", {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: "{}",
+    });
+    setStatus($("#hardware-settings-message"), result.hardware?.message || "Arduino is ready", "success");
+  } catch (error) {
+    setStatus($("#hardware-settings-message"), error.message, "error");
+  } finally {
+    button.disabled = false;
+    await refreshHardwareSettings();
+    if (currentInspectionRecord) await refreshHardwareApproval(currentInspectionRecord);
+  }
+});
+
+$("#hardware-release-button").addEventListener("click", async () => {
+  const record = currentInspectionRecord;
+  if (!record) return;
+  const operatorId = $("#hardware-operator-id").value.trim();
+  const panelConfirmation = $("#hardware-panel-confirmation").value.trim();
+  if (!operatorId || panelConfirmation !== record.panel_id) {
+    setStatus($("#hardware-release-message"), "Enter an operator ID and type the exact panel ID.", "error");
+    return;
+  }
+  const button = $("#hardware-release-button");
+  button.disabled = true;
+  setStatus($("#hardware-release-message"), "Recording one-time approval and waiting for Arduino acknowledgement…");
+  try {
+    const result = await request(`/api/v1/hardware/inspections/${record.id}/release`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ operator_id: operatorId, panel_id_confirmation: panelConfirmation }),
+    });
+    setStatus($("#hardware-release-message"), result.message, "success");
+  } catch (error) {
+    setStatus($("#hardware-release-message"), error.message, "error");
+  } finally {
+    await refreshHardwareApproval(record);
   }
 });
 

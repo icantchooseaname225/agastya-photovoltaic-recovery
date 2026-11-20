@@ -14,6 +14,7 @@ import re
 import socket
 import sqlite3
 import threading
+import time
 import warnings
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -37,6 +38,19 @@ from inference.triage import (
     SORT_ROUTES,
     recommend,
     recommend_route,
+)
+from hardware.approval import (
+    DuplicateApprovalError,
+    HardwareApprovalService,
+    HardwareApprovalStore,
+    IneligibleApprovalError,
+    inspection_image_is_intact,
+)
+from hardware.arduino_config import ArduinoConfig
+from hardware.arduino_controller import (
+    ArduinoServoController,
+    HardwareProtocolError,
+    HardwareUnavailableError,
 )
 
 ROOT = Path(__file__).resolve().parent
@@ -65,6 +79,17 @@ classifier = SolarClassifier()
 thermal_classifier = ThermalClassifier()
 visible_crop_classifier = VisibleCropDefectClassifier()
 power_loss_estimator = ResearchPowerLossEstimator()
+arduino_config = ArduinoConfig.from_env()
+arduino_controller = ArduinoServoController(arduino_config)
+hardware_approval_store = HardwareApprovalStore(ROOT / "database" / "hardware.sqlite3")
+hardware_approval_service = HardwareApprovalService(
+    arduino_controller,
+    hardware_approval_store,
+    max_age_seconds=arduino_config.approval_max_age_seconds,
+)
+DATASET_STATUS_CACHE_SECONDS = 30.0
+_dataset_status_lock = threading.Lock()
+_dataset_status_cache = {"created_at": 0.0, "value": None}
 
 
 def parse_measurement(value, label):
@@ -157,7 +182,22 @@ def image_from_bytes(image_bytes):
     return image, output.getvalue()
 
 
-def dataset_status():
+def dataset_status(*, refresh=False):
+    now = time.monotonic()
+    cached = _dataset_status_cache["value"]
+    if not refresh and cached is not None and now - _dataset_status_cache["created_at"] < DATASET_STATUS_CACHE_SECONDS:
+        return cached
+    with _dataset_status_lock:
+        now = time.monotonic()
+        cached = _dataset_status_cache["value"]
+        if not refresh and cached is not None and now - _dataset_status_cache["created_at"] < DATASET_STATUS_CACHE_SECONDS:
+            return cached
+        value = _build_dataset_status()
+        _dataset_status_cache.update({"created_at": now, "value": value})
+        return value
+
+
+def _build_dataset_status():
     processed = DATASET_ROOT / "processed"
     counts = {}
     for split in ("train", "validation", "test"):
@@ -213,6 +253,38 @@ def dataset_status():
     }
 
 
+def system_health():
+    """Return readiness from the database and primary RGB inference model."""
+    database_status = ledger.health_check()
+    model_status = classifier.status(load=False)
+    thermal_status = thermal_classifier.status(load=False)
+    visible_crop_status = visible_crop_classifier.status(load=False)
+    if not database_status["healthy"] or not model_status.get("ready"):
+        status = "degraded"
+    elif model_status.get("loading") or not model_status.get("loaded"):
+        status = "warming"
+    else:
+        status = "ready"
+    return {
+        "api_version": "v1",
+        "status": status,
+        "inspection_ready": status == "ready",
+        "database": database_status,
+        "model": model_status,
+        "thermal_model": thermal_status,
+        "visible_crop_model": visible_crop_status,
+        "device_upload_enabled": bool(os.environ.get("AGASTYA_DEVICE_TOKEN")),
+        "hardware": {
+            **arduino_controller.get_status(),
+            "approval_ledger": hardware_approval_store.health_check(),
+        },
+    }
+
+
+def inspection_image_available(record):
+    return inspection_image_is_intact(record, project_root=ROOT, image_root=IMAGE_ROOT)
+
+
 def fetch_camera_snapshot(camera_url):
     parsed = urlsplit(camera_url.strip())
     if parsed.scheme != "http" or not parsed.hostname or parsed.username or parsed.password:
@@ -251,6 +323,16 @@ class EyeHandler(BaseHTTPRequestHandler):
     server_version = "AgastyaEYE/1.0"
 
     def do_GET(self):
+        try:
+            return self._handle_get()
+        except (sqlite3.Error, OSError) as error:
+            self.log_error("GET %s unavailable: %s", self.path, error)
+            return self._json({"error": "EYE could not read the requested data"}, 503)
+        except Exception as error:
+            self.log_error("GET %s failed: %s", self.path, error)
+            return self._json({"error": "EYE could not complete the request"}, 500)
+
+    def _handle_get(self):
         path = urlsplit(self.path).path
         if path == "/" or path == "/index.html":
             return self._file(WEB_ROOT / "index.html")
@@ -266,6 +348,11 @@ class EyeHandler(BaseHTTPRequestHandler):
                 "thermal_model": thermal_classifier.status(load=False),
                 "visible_crop_model": visible_crop_classifier.status(load=False),
                 "dataset": dataset_status(),
+                "database": ledger.health_check(),
+                "hardware": {
+                    **arduino_controller.get_status(),
+                    "approval_ledger": hardware_approval_store.health_check(),
+                },
                 **ledger.counts(),
             })
         if path == "/api/panels":
@@ -288,13 +375,33 @@ class EyeHandler(BaseHTTPRequestHandler):
         if path == "/api/datasets":
             return self._json(dataset_status())
         if path == "/api/v1/health":
+            health = system_health()
+            status_code = 200 if health["status"] == "ready" else 503
+            return self._json(health, status_code)
+        if path == "/api/v1/hardware/status":
             return self._json({
-                "api_version": "v1",
-                "status": "ready",
-                "model": classifier.status(),
-                "thermal_model": thermal_classifier.status(),
-                "visible_crop_model": visible_crop_classifier.status(),
-                "device_upload_enabled": bool(os.environ.get("AGASTYA_DEVICE_TOKEN")),
+                **arduino_controller.get_status(),
+                "approval_ledger": hardware_approval_store.health_check(),
+            })
+        hardware_release_match = re.fullmatch(r"/api/v1/hardware/inspections/(\d+)/release", path)
+        if hardware_release_match:
+            inspection_id = int(hardware_release_match.group(1))
+            record = ledger.get_inspection(inspection_id)
+            if not record:
+                return self._json({"error": "Inspection not found"}, 404)
+            approval = hardware_approval_store.get_by_inspection(inspection_id)
+            health = system_health()
+            eligibility = hardware_approval_service.get_eligibility(
+                record,
+                backend_ready=health["inspection_ready"],
+                image_available=inspection_image_available(record),
+            )
+            return self._json({
+                "eligibility": eligibility,
+                "approval": approval,
+                "hardware": arduino_controller.get_status(),
+                "approval_ledger": hardware_approval_store.health_check(),
+                "approval_max_age_seconds": arduino_config.approval_max_age_seconds,
             })
         if path == "/api/v1/panels":
             return self._json(ledger.list_panels())
@@ -344,6 +451,24 @@ class EyeHandler(BaseHTTPRequestHandler):
                 return self._device_inspect()
             if path.startswith("/api/v1/panels/") and path.endswith("/events"):
                 return self._stage_event(path)
+            if path == "/api/v1/hardware/connect":
+                if not self._is_loopback_request():
+                    return self._json({"error": "Arduino controls are available only from this computer"}, 403)
+                result = hardware_approval_service.connect()
+                return self._json(result, 200 if result["ready"] else 503)
+            if path == "/api/v1/hardware/config":
+                if not self._is_loopback_request():
+                    return self._json({"error": "Arduino controls are available only from this computer"}, 403)
+                return self._hardware_configure()
+            hardware_release_match = re.fullmatch(r"/api/v1/hardware/inspections/(\d+)/release", path)
+            if hardware_release_match:
+                return self._hardware_release(int(hardware_release_match.group(1)))
+            if path == "/api/v1/admin/shutdown":
+                if not self._is_loopback_request():
+                    return self._json({"error": "Shutdown is available only from this computer"}, 403)
+                self._json({"status": "stopping"}, 202)
+                threading.Thread(target=self.server.shutdown, name="eye-shutdown", daemon=True).start()
+                return
             body = self._read_json()
             if path == "/api/capture":
                 image_bytes = fetch_camera_snapshot(str(body.get("camera_url", "")))
@@ -359,8 +484,81 @@ class EyeHandler(BaseHTTPRequestHandler):
         except sqlite3.IntegrityError as error:
             return self._json({"error": f"Ledger constraint: {error}"}, 409)
         except Exception as error:
-            self.log_error("Inspection request failed: %s", error)
-            return self._json({"error": "The inspection could not be saved"}, 500)
+            self.log_error("POST %s failed: %s", path, error)
+            return self._json({"error": "EYE could not complete the request"}, 500)
+
+    def _is_loopback_request(self):
+        try:
+            if not ipaddress.ip_address(self.client_address[0]).is_loopback:
+                return False
+        except ValueError:
+            return False
+        origin = self.headers.get("Origin")
+        if origin:
+            parsed_origin = urlsplit(origin)
+            if parsed_origin.netloc.lower() != self.headers.get("Host", "").lower():
+                return False
+        return True
+
+    def _hardware_release(self, inspection_id):
+        if not self._is_loopback_request():
+            return self._json({"error": "Arduino controls are available only from this computer"}, 403)
+        record = ledger.get_inspection(inspection_id)
+        if not record:
+            return self._json({"error": "Inspection not found"}, 404)
+        try:
+            body = self._read_json(8 * 1024)
+            health = system_health()
+            result = hardware_approval_service.release(
+                record,
+                operator_id=body.get("operator_id"),
+                panel_confirmation=body.get("panel_id_confirmation"),
+                backend_ready=health["inspection_ready"],
+                image_available=inspection_image_available(record),
+            )
+            return self._json(result)
+        except DuplicateApprovalError as error:
+            return self._json({"error": str(error), "retry_allowed": False}, 409)
+        except IneligibleApprovalError as error:
+            return self._json({"error": str(error), "retry_allowed": False}, 409)
+        except HardwareUnavailableError as error:
+            approval = hardware_approval_store.get_by_inspection(inspection_id)
+            if approval:
+                return self._json({
+                    "error": str(error),
+                    "release_status": approval["state"],
+                    "retry_allowed": False,
+                    "physical_position_verified": False,
+                }, 503)
+            return self._json({"error": str(error), "release_status": "not_sent", "retry_allowed": True}, 503)
+        except HardwareProtocolError as error:
+            self.log_error("Arduino release outcome is uncertain for inspection %s: %s", inspection_id, error)
+            return self._json({
+                "error": str(error),
+                "release_status": "uncertain",
+                "retry_allowed": False,
+                "physical_position_verified": False,
+            }, 502)
+        except sqlite3.Error as error:
+            self.log_error("Hardware approval ledger failed for inspection %s: %s", inspection_id, error)
+            return self._json({"error": "Hardware approval could not be recorded; no retry is allowed for this inspection"}, 503)
+        except Exception as error:
+            self.log_error("Arduino release failed for inspection %s: %s", inspection_id, error)
+            return self._json({
+                "error": "Release status is uncertain; inspect the gate and do not retry this inspection",
+                "release_status": "uncertain",
+                "retry_allowed": False,
+                "physical_position_verified": False,
+            }, 502)
+
+    def _hardware_configure(self):
+        global arduino_config
+        body = self._read_json(8 * 1024)
+        if not isinstance(body.get("enabled"), bool):
+            raise ValueError("enabled must be true or false")
+        hardware = arduino_controller.set_activation(body["enabled"], body.get("port", ""))
+        arduino_config = arduino_controller.config
+        return self._json({"hardware": hardware, "session_only": True})
 
     def _inspect(self, body):
         image_data = str(body.get("image_data", ""))
@@ -851,14 +1049,18 @@ def main():
     if device_token and len(device_token) < 24:
         parser.error("AGASTYA_DEVICE_TOKEN must be at least 24 characters")
     server = ThreadingHTTPServer((args.host, args.port), EyeHandler)
-    print(f"Agastya-EYE ready at http://{args.host}:{args.port}")
+    print(f"Agastya-EYE server listening at http://{args.host}:{args.port}; check /api/v1/health for readiness")
     threading.Thread(target=warm_models, name="eye-model-warmup", daemon=True).start()
+    if arduino_config.enabled:
+        threading.Thread(target=arduino_controller.connect, name="eye-arduino-connect", daemon=True).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nAgastya-EYE stopped")
+        print("\nAgastya-EYE stopping")
     finally:
         server.server_close()
+        arduino_controller.disconnect()
+        print("Agastya-EYE stopped")
 
 
 if __name__ == "__main__":

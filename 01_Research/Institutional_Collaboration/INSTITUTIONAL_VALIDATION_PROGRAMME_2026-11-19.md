@@ -1,6 +1,6 @@
 # AGASTYA institutional validation programme
 
-**Prepared:** 19 November 2026. **Status:** public-source review only; no enquiry sent, booking made or sample accepted.
+**Prepared:** 19 November 2026; status update 20 November 2026. **Status:** public-source review plus an owner-reported CSIR-NML correspondence update; no visit, collaboration, booking or sample acceptance confirmed.
 
 ## Evidence boundary
 
@@ -28,5 +28,11 @@ The six institutions have relevant public capabilities, but their web pages do n
 
 ## Next step
 
-Check mailbox threads, then review the private drafts under the project management folder. No messages were sent.
+Check the existing mailbox thread for the owner's reported CSIR-NML exchange, then follow the institute's visitor and appointment process after the relevant contact replies. Attend with a parent or school representative if a visit is arranged. A concise project overview may be shared after review. Do not treat this response as collaboration, facility acceptance or approval to send a sample.
+
+## Owner-reported correspondence update — 20 November 2026
+
+The project owner reports receiving a positive response from Dr. D. Mishra, Head of the Minerals Processing Division at CSIR-NML, Jamshedpur. The reply acknowledged the project relevance, noted that NML is working in this research area, and suggested arranging a visit to speak with the relevant scientists. A scientist was copied into that correspondence. The owner reports replying with interest in a visit and asking for the appropriate contact details, visitor permission, appointment steps and required documents. The owner said they could attend with a parent or school representative and provide a concise project overview.
+
+This may provide an opportunity to discuss the proposed mechanical separation, non-ferrous separation and flotation-based beneficiation stages. The email thread has not been independently reviewed for this update. No visit, collaboration, sample acceptance, experimental testing or technical endorsement is confirmed. Keep the private correspondence and copied scientist's contact details out of the public project files.
 

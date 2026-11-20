@@ -17,6 +17,8 @@ from torchvision.datasets import ImageFolder
 from torchvision.models import MobileNet_V2_Weights, mobilenet_v2
 from torchvision import transforms
 
+from inference.preprocessing import rgb_evaluation_transform
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_ROOT = ROOT / "datasets" / "processed"
 MODEL_PATH = ROOT / "models" / "solar_mobilenet_v2.pth"
@@ -35,12 +37,7 @@ def make_loaders(batch_size, seed):
         transforms.ToTensor(),
         transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
     ])
-    eval_transform = transforms.Compose([
-        transforms.Resize(256),
-        transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
-    ])
+    eval_transform = rgb_evaluation_transform()
     datasets = {
         "train": ImageFolder(DATA_ROOT / "train", transform=train_transform),
         "validation": ImageFolder(DATA_ROOT / "validation", transform=eval_transform),

@@ -29,8 +29,13 @@ class SimulatorClassifier:
     def __init__(self):
         self.predict_calls = 0
 
-    def status(self):
-        return {"ready": True, "message": "PC simulation stub; no panel inference"}
+    def status(self, *, load=True):
+        return {
+            "ready": True,
+            "loaded": True,
+            "loading": False,
+            "message": "PC simulation stub; no panel inference",
+        }
 
     def predict(self, image):
         self.predict_calls += 1
@@ -41,7 +46,7 @@ class SimulatorThermalClassifier:
     def __init__(self):
         self.predict_calls = 0
 
-    def status(self):
+    def status(self, *, load=True):
         return {"ready": True, "message": "Synthetic thermal model stub; no panel inference"}
 
     def supports_input(self, image):
@@ -62,7 +67,7 @@ class SimulatorVisibleCropClassifier:
     def __init__(self):
         self.predict_calls = 0
 
-    def status(self):
+    def status(self, *, load=True):
             return {"ready": True, "message": "Visible close-up research screen", "used_for_routing": False}
 
     def predict(self, image):

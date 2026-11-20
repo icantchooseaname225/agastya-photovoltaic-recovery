@@ -133,6 +133,26 @@ textarea.control { min-height: 58px; resize: vertical; }
 .summary-row span { color: #7c8983; font-size: 9px; font-weight: 700; letter-spacing: 0; }
 .summary-row strong { max-width: 70%; color: #394942; font-size: 11px; overflow-wrap: anywhere; text-align: right; }
 .decision-reason { margin: 12px 0 2px; color: #66756e; font-size: 11px; line-height: 1.5; }
+.hardware-settings { display: grid; gap: 8px; margin: 0 0 15px; padding: 13px 15px; border: 1px solid #cbd9d0; background: #f8fbf9; }
+.hardware-settings-heading { display: flex; justify-content: space-between; gap: 10px; color: #365546; font-size: 10px; }
+.hardware-settings-heading span { color: #6c7d73; text-align: right; }
+.hardware-settings-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.hardware-settings-controls label { display: grid; gap: 5px; min-width: 150px; color: #4a5d52; font-size: 10px; }
+.hardware-settings-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.hardware-settings > p { margin: 0; color: #617168; font-size: 10px; line-height: 1.45; }
+.hardware-settings [hidden] { display: none; }
+.hardware-settings .inline-status:not(:empty) { padding: 0; }
+.hardware-release-panel { display: grid; gap: 9px; margin-top: 14px; padding: 13px; border: 1px solid #cbd9d0; background: #f8fbf9; }
+.hardware-release-panel[hidden] { display: none; }
+.hardware-release-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: #365546; font-size: 9px; letter-spacing: .04em; }
+.hardware-release-heading span { color: #6c7d73; text-align: right; letter-spacing: 0; }
+.hardware-release-panel > p { margin: 0; color: #617168; font-size: 10px; line-height: 1.5; }
+.hardware-approval-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.hardware-approval-fields[hidden] { display: none; }
+.hardware-approval-fields label { display: grid; gap: 5px; color: #4a5d52; font-size: 10px; }
+.hardware-approval-fields .control { min-width: 0; }
+.hardware-release-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.hardware-release-actions .button { font-size: 10px; }
 .prediction-list { display: grid; gap: 7px; margin-top: 14px; }
 .prediction { display: grid; grid-template-columns: 82px 1fr 38px; align-items: center; gap: 8px; color: #596960; font-size: 10px; }
 .prediction-track { height: 5px; background: #e9efeb; }
@@ -290,6 +310,7 @@ tbody tr:hover td { background: #fbfcfb; }
   .process-illustration { min-height: 300px; }
 }
 @media (max-width: 600px) {
+  .hardware-approval-fields { grid-template-columns: 1fr; }
   .process-stage-tabs { grid-template-columns: 1fr; }
   .process-tab { min-height: 48px; }
   .process-visual-column { padding: 11px; }

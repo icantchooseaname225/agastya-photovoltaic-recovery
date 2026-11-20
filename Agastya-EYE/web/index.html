@@ -43,6 +43,20 @@
           <div id="model-banner" class="model-banner"><span class="status-dot"></span><span>Loading model status</span></div>
         </div>
 
+        <section class="hardware-settings" aria-label="Arduino gate settings">
+          <div class="hardware-settings-heading"><strong>ARDUINO GATE</strong><span id="hardware-settings-state">Checking</span></div>
+          <div class="hardware-settings-controls">
+            <label for="hardware-port">Arduino COM port<input id="hardware-port" class="control" type="text" maxlength="12" placeholder="COM5"></label>
+            <div class="hardware-settings-actions">
+              <button id="hardware-enable-button" class="button" type="button" disabled>Enable gate</button>
+              <button id="hardware-global-connect-button" class="button" type="button" hidden>Connect Arduino</button>
+              <button id="hardware-disable-button" class="button secondary" type="button" hidden>Disable gate</button>
+            </div>
+          </div>
+          <p id="hardware-settings-detail">Gate activation is off by default. Enter the Uno/Nano COM port from Windows Device Manager. This setting lasts for this server session.</p>
+          <p id="hardware-settings-message" class="inline-status" role="status" aria-live="polite"></p>
+        </section>
+
         <div class="inspection-layout">
           <form id="inspection-form" class="inspection-form">
             <div class="form-section">
@@ -151,6 +165,19 @@
               <div class="summary-row"><span>FINAL DISPOSITION</span><strong id="final-result">—</strong></div>
               <div class="summary-row"><span>PASSPORT INTEGRITY</span><strong id="integrity-result">Pending save</strong></div>
               <p id="decision-reason" class="decision-reason">A saved inspection will include its image, evidence and decision history.</p>
+              <section id="hardware-release-panel" class="hardware-release-panel" hidden aria-label="Arduino servo gate">
+                <div class="hardware-release-heading"><strong>ARDUINO SERVO GATE</strong><span id="hardware-release-state">Not checked</span></div>
+                <p id="hardware-release-detail">Optional hardware is disabled until explicitly enabled in the app configuration.</p>
+                <div id="hardware-approval-fields" class="hardware-approval-fields" hidden>
+                  <label>Approving operator ID<input id="hardware-operator-id" class="control" maxlength="80" autocomplete="off"></label>
+                  <label>Type the panel ID to confirm<input id="hardware-panel-confirmation" class="control" maxlength="32" autocomplete="off"></label>
+                </div>
+                <div class="hardware-release-actions">
+                  <button id="hardware-connect-button" class="button" type="button" hidden>Retry Arduino connection</button>
+                  <button id="hardware-release-button" class="button primary" type="button" disabled>Authorize one-time gate release</button>
+                </div>
+                <p id="hardware-release-message" class="inline-status" role="status" aria-live="polite"></p>
+              </section>
               <div id="prediction-list" class="prediction-list"></div>
             </div>
           </section>

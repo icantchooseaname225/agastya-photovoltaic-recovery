@@ -5,6 +5,7 @@ import threading
 from pathlib import Path
 
 from .device import device_status, prepare_model_for_inference, run_inference
+from .preprocessing import rgb_evaluation_transform
 
 LABELS = ("clean", "dust", "crack", "broken", "burned", "snow", "bird_drop", "other")
 MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "solar_mobilenet_v2.pth"
@@ -23,6 +24,7 @@ class SolarClassifier:
         self._loading = False
         self._device = None
         self._device_note = None
+        self._preprocess = None
 
     def status(self, *, load=True):
         if load:
@@ -81,20 +83,7 @@ class SolarClassifier:
             if self._model is None:
                 return []
 
-            import numpy as np
-
-            image = image.convert("RGB")
-            width, height = image.size
-            scale = 256 / min(width, height)
-            image = image.resize((round(width * scale), round(height * scale)))
-            left = (image.width - 224) // 2
-            top = (image.height - 224) // 2
-            image = image.crop((left, top, left + 224, top + 224))
-            pixels = np.asarray(image, dtype=np.float32) / 255.0
-            tensor = self._torch.from_numpy(pixels).permute(2, 0, 1)
-            mean = self._torch.tensor((0.485, 0.456, 0.406))[:, None, None]
-            std = self._torch.tensor((0.229, 0.224, 0.225))[:, None, None]
-            tensor = ((tensor - mean) / std).unsqueeze(0)
+            tensor = self._preprocess(image.convert("RGB")).unsqueeze(0)
             probabilities_tensor, self._device, note = run_inference(
                 self._model,
                 tensor,
@@ -117,6 +106,7 @@ class SolarClassifier:
             self._mtime = None
             self._device = None
             self._device_note = None
+            self._preprocess = None
             return
 
         mtime = MODEL_PATH.stat().st_mtime_ns
@@ -141,11 +131,13 @@ class SolarClassifier:
             model.classifier[1] = torch.nn.Linear(model.last_channel, len(classes))
             state = torch.load(MODEL_PATH, map_location="cpu", weights_only=True)
             model.load_state_dict(state)
+            preprocess = rgb_evaluation_transform()
             device, device_note = prepare_model_for_inference(model, torch)
             model.eval()
             self._device = device
             self._device_note = device_note
             self._torch = torch
+            self._preprocess = preprocess
             self._classes = classes
             self._metadata = metadata
             self._mtime = mtime
@@ -156,6 +148,7 @@ class SolarClassifier:
             self._mtime = mtime
             self._device = None
             self._device_note = None
+            self._preprocess = None
             self._error = f"{type(error).__name__}: {error}"
         finally:
             self._loading = False

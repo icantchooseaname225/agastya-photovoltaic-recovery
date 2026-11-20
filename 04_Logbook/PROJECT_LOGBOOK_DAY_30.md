@@ -67,7 +67,7 @@ Do not set numeric go/no-go limits until measurement uncertainty, repeatability,
 
 ## Deliverable and project-state record
 
-The editable report is `C:/Users/jay91/Documents/Codex/2026-10-23/files-pasted-by-the-user-agastya/outputs/Agastya_Stage4_Investigation_2026-10-23/Agastya_Stage4_Labs_Equipment_and_Physical_Testing_Plan.docx`. Machine-readable laboratory, equipment, route and simulation CSVs and the complete source/config/output/figure/test package are in the same investigation folder. Word export was visually reviewed page-by-page; LibreOffice was unavailable, so the installed Microsoft Word renderer and bundled Poppler were used. The Stage 4 investigation output is a research draft pending owner review.
+The editable report is `%USERPROFILE%/Documents/Codex/2026-10-23/files-pasted-by-the-user-agastya/outputs/Agastya_Stage4_Investigation_2026-10-23/Agastya_Stage4_Labs_Equipment_and_Physical_Testing_Plan.docx`. Machine-readable laboratory, equipment, route and simulation CSVs and the complete source/config/output/figure/test package are in the same investigation folder. Word export was visually reviewed page-by-page; LibreOffice was unavailable, so the installed Microsoft Word renderer and bundled Poppler were used. The Stage 4 investigation output is a research draft pending owner review.
 
 Modified project navigation: full/short logbook index, short-version README, project index latest-entry pointer and OPEN_QUESTIONS latest-entry summary. Pre-edit SHA-256-verified copies are in `C:/Agastya/99_Archive/Logbook_Phase5_Before_Update_2026-10-23/`. No thesis, architecture, historic simulation output, evidence register or decisions log was edited.
 

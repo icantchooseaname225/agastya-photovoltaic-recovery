@@ -12,6 +12,10 @@ Reviewed 2026-09-26. Stage 1 is a laptop-assisted inspection prototype, not an a
 
 The current Python 3.14.10 `unittest` run attempted 35 tests: 29 passed and 6 errored because PyTorch, NumPy and Pillow were unavailable. The documented PC-only simulator was not rerun because it also needs Pillow. See the [full validation record](STAGE1_VALIDATION_RUN_2026-11-19.md). This partial result does not supersede the earlier simulator record above or demonstrate camera, panel, model-field or hardware validation.
 
+## Updated software check — 20 November 2026
+
+The existing suite passed **65/65** using the launcher's Python 3.12.14 environment, and the synthetic PC-only workflow passed. This supersedes the dependency-limited Python 3.14 attempt above for the current software status. No camera, Arduino board, servo, physical panel, or process was tested. See the [current run record](STAGE1_VALIDATION_RUN_2026-11-20.md).
+
 ## Remaining blockers and fixes
 
 | Priority | Gap | Fix and completion evidence |

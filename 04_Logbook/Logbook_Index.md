@@ -1,6 +1,6 @@
 # AGASTYA Logbook Index
 
-**Updated:** 19 November 2026  
+**Updated:** 20 November 2026<br>
 **Current architecture:** Stage 1 vision-based triage → Stage 2 robotic mechanical disassembly → Stage 3 hot-knife/foam-roller thermal separation → Stage 4 liberation, separation and silver recovery. See [AGASTYA_ARCHITECTURE.md](../AGASTYA_ARCHITECTURE.md), the current architecture source.
 
 This index links the surviving full and shortened records. “Full” means the most complete digital record found in the project; it does not mean a student's original handwritten notebook. Reconstructed and short-only records remain visibly qualified.
@@ -41,10 +41,12 @@ This index links the surviving full and shortened records. “Full” means the 
 | 36 | [Day 36](PROJECT_LOGBOOK_DAY_36.md) | [Day 36 short](Short%20Versions/DAY_36_SHORT_ENTRY.md) | 19 November 2026; AI-assisted digital continuation for GitHub privacy and staged-file review; owner review pending; no external sync or physical activity. |
 | 37 | [Day 37](PROJECT_LOGBOOK_DAY_37.md) | [Day 37 short](Short%20Versions/DAY_37_SHORT_ENTRY.md) | 19 November 2026; AI-assisted digital continuation validating the complete staged manifest and recording the owner’s direction to keep GitHub public; owner review pending; no external sync or physical activity. |
 | 38 | [Day 38](PROJECT_LOGBOOK_DAY_38.md) | [Day 38 short](Short%20Versions/DAY_38_SHORT_ENTRY.md) | 19 November 2026; AI-assisted digital continuation reviewing outstanding dependencies and updating the paired logbook/project record; owner review pending; no external sync or physical activity. |
+| 39 | [Day 39](PROJECT_LOGBOOK_DAY_39.md) ([Word](PROJECT_LOGBOOK_DAY_39.docx)) | [Day 39 short](Short%20Versions/DAY_39_SHORT_ENTRY.md) ([Word](Short%20Versions/DAY_39_SHORT_ENTRY.docx)) | 19–20 November 2026; AI-assisted digital continuation repairing/verifying local EYE and preparing optional Arduino gate; owner review pending; no physical hardware test. |
+| 40 | [Day 40](PROJECT_LOGBOOK_DAY_40.md) | [Day 40 short](Short%20Versions/DAY_40_SHORT_ENTRY.md) | 20 November 2026; AI-assisted digital continuation reviewing EYE validation and recording the owner-reported CSIR-NML response and visit follow-up; owner review pending; no physical hardware test or confirmed collaboration. |
 
 ## Recent full records
 
-Day 38 is the newest full record and remains an AI-assisted draft pending owner review. Days 37, 36, 35 and 34 remain preserved as earlier 19 November continuations. Days 31–33 are present only in a combined short record; missing full entries were not reconstructed. Days 29–30 document scenario simulations only, not physical results. Day 22 is excluded because only a short note survives and no full record or supporting source was located.
+Day 40 is the newest full/short pair and remains an AI-assisted draft pending owner review; it records local documentation and software-validation work, plus the owner's summary of a CSIR-NML response and follow-up about a possible institutional visit. The email thread has not been independently checked, and no visit, collaboration or test is confirmed. No physical hardware test was conducted. Day 39 records the EYE software repair and Arduino compile checks, also without a physical hardware test. Days 34–38 remain paired digital continuations. Days 31–33 are present only in a combined short record; missing full entries were not reconstructed. Days 29–30 document scenario simulations only, not physical results. Day 22 is excluded because only a short note survives and no full record or supporting source was located.
 
 ## Architecture and historical crosswalks
 
@@ -61,7 +63,7 @@ The full Day 24 and Day 25 records preserve stage maps used by the 10 and 13 Oct
 
 ## Permanent maintenance rule
 
-For every future entry, create the full record and its short counterpart in the same update. Use the same day identifier and date, link each file to the other, state the objective, record only supported work and findings, preserve uncertainties/next action, and label Draft, Reconstructed, Digital continuation or Verified status as appropriate. Add the evidence/source links and update this index in the same operation. Keep unapproved AI-written text marked as a draft; do not convert it into a verified student record without confirmation and supporting evidence. Never backfill undocumented activity.
+From Day 40 onward, keep each full entry and short counterpart together. Write in a clear first-person voice that the student can review and make their own; keep AI-assisted drafts labeled for owner review until verified. Use the same day identifier and date, link each file to the other, record only supported work and findings, and preserve setbacks, uncertainties and the next step. Update this index with every pair. Do not backfill undocumented activity or reconstruct missing Days 31–33.
 
 ## Backups and short-version guide
 

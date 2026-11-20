@@ -1,6 +1,6 @@
 # AGASTYA project index
 
-**Last updated:** 19 November 2026 (Day 38 continuation)  
+**Last updated:** 20 November 2026 (Day 40 continuation and repository wrap-up)
 **Current architecture:** Stage 1 vision-based triage → Stage 2 robotic mechanical disassembly → Stage 3 hot-knife/foam-roller thermal separation → Stage 4 liberation, separation and silver recovery. See [current architecture](AGASTYA_ARCHITECTURE.md).
 
 The current 19 November project-owner direction supersedes the 16 October manual Stage 2 baseline. Earlier stage maps and the 14 October electrostatic package remain preserved in `99_Archive/` as historical work. See the [current process architecture](AGASTYA_ARCHITECTURE.md).
@@ -41,15 +41,16 @@ The current 19 November project-owner direction supersedes the 16 October manual
 - [Simulation/data README](Agastya%20Physics%20Simulation/README.md)
 - [Agastya-EYE README](Agastya-EYE/README.md)
 - [Stage 1 software validation run](Agastya-EYE/docs/STAGE1_VALIDATION_RUN_2026-11-19.md) — partial unit-test results and the uncompiled servo-demo boundary.
-- [Stage 1 software validation run](Agastya-EYE/docs/STAGE1_VALIDATION_RUN_2026-11-19.md) — partial unit-test results and the uncompiled servo-demo boundary.
+- [Current Stage 1 software validation](Agastya-EYE/docs/STAGE1_VALIDATION_RUN_2026-11-20.md) — all 65 tests and the synthetic workflow passed; hardware was not tested.
+- [Stage 1 repair audit](Agastya-EYE/docs/SYSTEM_REPAIR_AUDIT_2026-11-19.md) and [Arduino servo-gate documentation](Agastya-EYE/docs/ARDUINO_SERVO_GATE.md).
 
 ## Project records and communication
 
 - [Logbook index](04_Logbook/Logbook_Index.md) — original entries remain historical; no undocumented activity was backfilled.
-- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_38.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_38_SHORT_ENTRY.md) — AI-assisted digital continuation pending owner review; no physical activity is claimed. Days 31–33 remain short-only.
+- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_40_SHORT_ENTRY.md) — AI-assisted draft in a natural first-person project voice; records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
 - [Session handoff](SESSION_HANDOFF.md) — current changes, checks and next action for continuation.
-- [GitHub repository preparation](00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md) — local commit `e194ddb` exists on `main`; the remote remains empty/public and push awaits Git authentication.
-- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-19.md) — complete path/size inventory and exclusion rationale.
+- [GitHub repository preparation](00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md) — repository state, current manifest and first-push outcome.
+- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md) — current path/size inventory and exclusion rationale for the initial public sync.
 - October presentation binaries are retained locally and excluded from the initial GitHub source set pending content and identity review.
 - [Current presentation speaker notes](05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES_2026-10-20.md)
 - [Presentation slide evidence register](05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER_2026-10-20.csv)

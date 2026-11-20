@@ -1,5 +1,7 @@
 # GitHub repository preparation audit — 19 November 2026
 
+> Historical audit, continued on 20 November 2026. See the current synchronization update at the end of this file.
+
 ## Findings
 
 - Initial audit found no Git repository. `C:\Agastya` was initialized on `main` with the exact owner-supplied URL as `origin`; the reviewed initial set now has local root commit `e194ddb06275c48159356f85cea18c473b4f6f66`.
@@ -23,3 +25,11 @@ The owner supplied [`https://github.com/icantchooseaname225/agastya-photovoltaic
 The local `C:\Agastya` repository is on branch `main`, with the exact URL configured as `origin`. The complete staged set was reconciled against the manifest and committed locally as `e194ddb06275c48159356f85cea18c473b4f6f66`. The text/code candidates were screened for email addresses, local profile paths and credential patterns; no candidate exceeds 10 MiB. The manifest contains the exact count, byte total, paths and exclusions. A regular `git push -u origin main` failed because command-line Git had no saved credentials. The repository remains empty/public; no force-push or alternative partial upload was attempted.
 
 The connected GitHub tools expose Git object operations, but no action for creating the initial branch ref in an empty repository. The local commit is ready to publish after the owner signs in through Git Credential Manager or GitHub Desktop.
+
+## Current tree and synchronization update — 20 November 2026
+
+- The owner instructed that the supplied repository remain public and asked to complete the remaining work. The EYE software changes and Day 39–40 documentation were consolidated onto local `main`; hardware validation remains open and no physical board, servo or panel was tested.
+- Day 40 includes an owner-reported summary of a positive response from CSIR-NML's Minerals Processing Division and the owner's follow-up about arranging a visit. The actual mail thread was not checked during this update. No visit, collaboration, sample acceptance or test is confirmed. Private correspondence and copied-person contact details remain excluded.
+- Current complete path/size review: [GitHub staged-file review — 20 November 2026](GITHUB_STAGED_FILE_REVIEW_2026-11-20.md). It records the source tree and publication exclusions.
+- The destination was previously confirmed public and empty. No GitHub credential was available in the local credential manager; no files are uploaded until a normal push succeeds and the remote ref is verified.
+- Continue with Git Credential Manager sign-in if prompted, push `main` without force, and confirm the resulting remote commit. If authentication cannot be completed in this session, leave the reviewed local commit intact and request the owner to sign in through Git Credential Manager.

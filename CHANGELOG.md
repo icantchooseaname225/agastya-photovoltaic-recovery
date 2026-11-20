@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-11-20 — Day 40 logbook and EYE validation
+
+- Added matching Day 40 full and short logbook entries in a natural first-person draft style; the AI-assisted status remains visible for owner review. The index now directs future entries from Day 40 onward to use the same full/short pairing without filling in missing days.
+- Re-ran the EYE unit suite in Python 3.12.14: 65/65 passed. The synthetic PC-only workflow passed. Added a current validation record; no board, servo or physical panel was tested.
+- Added the owner's summary of the positive CSIR-NML response and visit inquiry to both Day 40 entries and the institutional-validation record. The email thread remains unchecked; no visit, collaboration, sample acceptance or testing is confirmed.
+- Closed the EYE software implementation work in the local project record. Physical Uno/Nano and guarded-servo verification remains a future validation gate.
+- Replaced computer-specific profile paths in Day 39 and EYE documentation with `%USERPROFILE%` references before public synchronization.
+
 ## 2026-11-19 — directive audit and paired Day 38 logbook
 
 - Re-read the supplied master directives and checked current task/status records. The remaining physical validation tasks depend on event and team information, a traceable sample, qualified facilities, assays, measured inputs and supplier/receiver quotes; no missing evidence was inferred.
