@@ -6,7 +6,7 @@
 - Generated a nine-component arm-envelope OBJ/MTL and 556-triangle STL; added editable parametric source. The Fusion API script remains unexecuted and no F3D/STEP export is claimed.
 - Executed the ideal two-link IK screen for 71 illustrative task points and a payload-only moment sweep; added a simple NC-loop status divider model and LTspice transient netlist. The LTspice file was not run, the Arduino sketch was not compiled, and no hardware was connected.
 - Added transparent catalogue-price arithmetic and a null-input plant economics calculator that refuses to invent process cost or payback.
-- Added paired Day 42 full and short entries. Thirteen Node software checks passed; no physical test or process validation occurred.
+- Added paired Day 42 full and short entries. Thirteen Node software checks passed; no physical test or process validation occurred. The 487-file reviewed source set was pushed normally to public main as 5e7ca0e; a fetch confirmed local and remote main matched.
 
 ## 2026-11-20 — Day 41 Stage 2 CAD/electronics/economics
 

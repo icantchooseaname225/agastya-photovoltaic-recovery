@@ -52,7 +52,7 @@ The current 19 November project-owner direction supersedes the 16 October manual
 - [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_42.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_42_SHORT_ENTRY.md) — AI-assisted first-person draft of generated concept mesh, executed idealized IK/NC-loop models and economic arithmetic; 13 software checks passed, with no native CAD or physical validation. [Day 40](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
 - [Session handoff](SESSION_HANDOFF.md) — current changes, checks and next action for continuation.
 - [GitHub repository preparation](00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md) — repository state, current manifest and first-push outcome.
-- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md) — current path/size inventory and exclusion rationale for the initial public sync.
+- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md) — current 487-file path/size inventory and exclusion rationale for the Day 42 public sync.
 - October presentation binaries are retained locally and excluded from the initial GitHub source set pending content and identity review.
 - [Current presentation speaker notes](05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES_2026-10-20.md)
 - [Presentation slide evidence register](05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER_2026-10-20.csv)

@@ -18,7 +18,7 @@ This remains an engineering desk study and computational project. No AGASTYA rob
 
 ## Immediate continuation
 
-1. Review the refreshed path/size manifest and privacy screen, then commit and push only the intended AGASTYA changes to the owner-selected public main using a normal push; verify remote main.
+1. The Day 42 package has been committed and pushed normally as 5e7ca0e. Fetch confirmed local main and origin/main matched; the reviewed set was 487 files and about 3.36 MB.
 2. Open the DXFs in AutoCAD and execute/review the Fusion script in the native app before claiming app-generated artifacts; add F3D/STEP only if the model passes visual review.
 3. Replace assumed panel/tool inputs and perform joint-limit, collision, load and safety analysis with a qualified reviewer before any powered build.
 4. Compare a rail/indexer or dedicated fixture against a long-reach arm and gather comparable written India quotes before updating process economics.
