@@ -10,7 +10,7 @@
 ## Reviewed project set summary
 
 - Reviewed tracked-file count, including this manifest: **425**.
-- Aggregate working-tree file bytes, including this review: **2,944,875 bytes**.
+- Aggregate working-tree file bytes, including this review: **2,945,479 bytes**.
 - Largest individual file: less than 10 MiB; this is the sum of individual file sizes, not the compressed Git object-store size.
 - The manifest is included in the committed local project set. Its size is shown in the final table row.
 
@@ -37,7 +37,7 @@
 | `00_Project_Management/FILE_MIGRATION_LOG.csv` | 23,925 |
 | `00_Project_Management/FINAL_CONSISTENCY_AUDIT_2026-10-11.md` | 8,831 |
 | `00_Project_Management/generate_file_inventory.py` | 2,145 |
-| `00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md` | 5,648 |
+| `00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md` | 5,867 |
 | `00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-19.md` | 31,555 |
 | `00_Project_Management/link_check_results.csv` | 44,652 |
 | `00_Project_Management/MASTER_TASK_LIST.md` | 11,344 |
@@ -437,11 +437,11 @@
 | `Build Files and Steps/Stage 4/STAGE4_RESEARCH_COMPLETION_BRIEF_2026-10-08.md` | 16,349 |
 | `Build Files and Steps/Stage 4/STAGE4_SOFTWARE_AND_MODEL_RESEARCH.md` | 11,847 |
 | `Build Files and Steps/Stage 4/STAGE4_TRIAL_LOG_TEMPLATE.csv` | 625 |
-| `CHANGELOG.md` | 21,548 |
-| `PROJECT_STATUS.md` | 7,672 |
+| `CHANGELOG.md` | 21,706 |
+| `PROJECT_STATUS.md` | 7,727 |
 | `PROJECT_UNDERSTANDING_AUDIT.md` | 268 |
 | `README.md` | 1,855 |
-| `SESSION_HANDOFF.md` | 13,330 |
+| `SESSION_HANDOFF.md` | 13,502 |
 | `Stage 3 Prototype Development/ARCHITECTURE_RECONCILIATION.md` | 3,601 |
 | `Stage 3 Prototype Development/Figures/Stage_3_Architecture_Decision.svg` | 3,012 |
 | `Stage 3 Prototype Development/README.md` | 2,960 |
