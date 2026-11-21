@@ -6,6 +6,7 @@
 - Ran the NC-loop status netlist in LTspice 26.1.1 batch mode; recorded open and closed status-node measurements in CSV/JSON and added netlist measurement directives. No hardware or safety function was tested.
 - Added a quote-completeness model for arm/tooling, arm-on-rail/indexer and dedicated-mechanism layouts. No process-cell quote was available, so CAPEX, unit cost and payback remain unestimated.
 - Added the Day 43 full/short logbook pair and refreshed the project status, task list and package guides. Eighteen Node checks pass; Fusion/AutoCAD native review and physical validation remain open.
+- Pushed the Day 43 engineering package to public main as `c828b20`; fetch confirmed local and remote refs matched. This follow-up record refresh records that sync and includes a recalculated path/size manifest.
 
 ## 2026-11-20 — Stage 2 model package, economics calculator and Day 42 logbook
 

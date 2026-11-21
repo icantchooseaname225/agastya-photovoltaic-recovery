@@ -17,7 +17,7 @@ This remains an engineering desk study and computational project. No AGASTYA rob
 
 ## Immediate continuation
 
-1. Day 43 files are prepared for the next normal push to public main; record the final local/remote commit and refreshed privacy/size manifest after synchronization.
+1. The Day 43 engineering package and its reviewed 498-file manifest were pushed normally as `c828b20`; fetch confirmed local `main` and `origin/main` matched. This follow-up record refresh accompanies the recalculated manifest.
 2. Open and review the concept drawings in AutoCAD and run the Fusion script in the native app before claiming F3D/STEP artifacts.
 3. Replace assumed panel/tool geometry with measured dimensions, masses, centers of gravity and removal forces; then add collisions, joint limits and manufacturer-supported loads.
 4. Populate the three-layout quote template with comparable written supplier quotes and complete scope details; keep cost per panel and payback blank until measured operating inputs exist.
