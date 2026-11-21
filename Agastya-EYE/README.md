@@ -12,6 +12,8 @@ The original, uncompiled tabletop interface sketch accepts synthetic `APPROVE`, 
 
 For the normal PC demo, double-click `Start-EYE.bat`. It finds an available local port, starts the app in the background, waits for the API, and opens the browser. If startup fails, it shows the log file path. The launcher reuses an EYE server already running on its selected port.
 
+EYE is **on-demand** and does not auto-start with Windows, so the model server does not use memory while you are not using it. This PC has desktop shortcuts named **Start AGASTYA-EYE** and **Stop AGASTYA-EYE**. If the site cannot connect after a reboot, double-click Start; closing the browser does not stop the server, so use Stop when you are finished. A stopped server cannot be restarted by a button in its own website because the website is served by that server. See [the quick start guide](docs/START_EYE_QUICKSTART.md).
+
 From a PowerShell prompt, invoke the launcher without changing the machine's execution policy with `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Start-EYE.ps1`.
 
 The launcher selects an interpreter that can import the application dependencies, prints its runtime versions, and stores a PID record for servers it starts. Use `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Stop-EYE.ps1` to request a clean local shutdown. `GET /api/ping` is a liveness check; `GET /api/v1/health` reports database/model readiness and returns a non-ready status if the primary database or RGB model is unavailable.
