@@ -46,3 +46,15 @@ The values below are web-displayed catalogue prices observed on 20 November 2026
 - [NXP PCA9685 data sheet](https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf)
 
 No source provides an accepted PV-cell process-arm quotation. No machine selection, purchase, ROI or cost claim is made.
+
+## Day 43 quote-comparison addendum — 21 November 2026
+
+I added a capital quote-input model for three layouts that still need a common, measured design basis:
+
+1. **Arm plus task tooling:** quote the robot/controller package, task tools, panel support, guarding, power/controls, extraction/output handling, installation, training and initial spares.
+2. **Short-reach arm with a rail or panel indexer:** quote the smaller arm package and the rail/indexer as separate lines, then include the same tooling, fixture, safety, installation and support scope.
+3. **Dedicated mechanisms and fixtures:** quote the task-specific mechanisms, tools, support fixture, guarding, power/controls, extraction, commissioning, training and spares.
+
+The template is [`inputs/workcell_quotes.template.json`](inputs/workcell_quotes.template.json); the result is [`outputs/WORKCELL_QUOTE_COMPARISON.json`](outputs/WORKCELL_QUOTE_COMPARISON.json). The calculator requires every capital line to have a line total, named supplier, quote reference and date, plus explicit tax and delivery/installation/commissioning scope. It leaves the comparison marked incomplete until all three layouts have complete inputs. No prices were supplied or estimated for these process-cell options.
+
+Even a complete capital comparison would not establish the cheapest cost per panel or payback. Those still need measured cycle time and throughput, staffing, energy, consumables, maintenance, yield/losses, receiver terms and disposal costs. None of the educational kit prices above has been carried into this process-cell template.

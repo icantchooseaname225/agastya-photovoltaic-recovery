@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-11-21 — Day 43 load sensitivity, LTspice verification and quote framework
+
+- Extended the illustrative 71-point arm IK report with a candidate-angle envelope and a 625-case static gravity-moment sensitivity grid for link, tool and payload masses. All sensitivity masses are explicitly hypothetical.
+- Ran the NC-loop status netlist in LTspice 26.1.1 batch mode; recorded open and closed status-node measurements in CSV/JSON and added netlist measurement directives. No hardware or safety function was tested.
+- Added a quote-completeness model for arm/tooling, arm-on-rail/indexer and dedicated-mechanism layouts. No process-cell quote was available, so CAPEX, unit cost and payback remain unestimated.
+- Added the Day 43 full/short logbook pair and refreshed the project status, task list and package guides. Eighteen Node checks pass; Fusion/AutoCAD native review and physical validation remain open.
+
 ## 2026-11-20 — Stage 2 model package, economics calculator and Day 42 logbook
 
 - Added top-level robotic arm and agastya economics packages with package guides, source files, generated outputs and tests.

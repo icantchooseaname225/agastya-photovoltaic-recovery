@@ -1,6 +1,6 @@
 # Concise logbook versions
 
-The [Logbook Index](../Logbook_Index.md) is the chronological map of full and short records. Day 34 has a new full/short digital pair. Days 31–33 survive only as a combined short record; no full entries were reconstructed. Earlier numbering, date gaps and draft status remain in the index.
+The [Logbook Index](../Logbook_Index.md) is the chronological map of full and short records. Days 34–43 have paired full/short digital entries. Days 31–33 survive only as a combined short record; no full entries were reconstructed. Earlier numbering, date gaps and draft status remain in the index.
 
 ## Record status
 

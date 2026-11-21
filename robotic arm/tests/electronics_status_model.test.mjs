@@ -18,7 +18,9 @@ test("bad electrical model inputs are rejected",()=>{
 });
 test("LTspice netlist has a transient directive and no ngspice control block",()=>{
   const net=fs.readFileSync(path.resolve(import.meta.dirname,"..","electronics","spice","NC_LOOP_STATUS_LTSPICE.cir"),"utf8");
-  assert.match(net,/^\.tran 0 20m 0 10u$/m); assert.match(net,/^\.model SWNC SW\(/m); assert.match(net,/^\.end$/m);
+  assert.match(net,/^\.tran 0 20m 0 10u$/m); assert.match(net,/^\.model SWNC SW\(/m);
+  assert.match(net,/^\.measure TRAN V_OPEN FIND V\(MCU_STATUS\) AT=2m$/m);
+  assert.match(net,/^\.measure TRAN V_CLOSED FIND V\(MCU_STATUS\) AT=7m$/m); assert.match(net,/^\.end$/m);
   assert.doesNotMatch(net,/^\.control$/m); assert.match(net,/^SNC MCU_STATUS 0 CTRL 0 SWNC$/m);
 });test("truth table and generated output preserve fail-high behavior",()=>{
   const rows=buildTruthTable(); assert.equal(rows.length,3);

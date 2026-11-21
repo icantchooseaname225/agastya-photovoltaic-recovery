@@ -1,6 +1,7 @@
 {
   "model": "5 V pull-up through 10 kohm; NC contact to signal ground; contact represented as 0.5 ohm when closed and open circuit otherwise.",
-  "evidence": "Executed DC circuit-equation model in Node.js; LTspice netlist is supplied but not executed here.",
+  "evidence": "Executed DC circuit-equation model in Node.js and transient netlist in LTspice 26.1.1 batch mode; measured results are recorded separately.",
+  "ltspiceVerification": "LTSPICE_TRANSIENT_RESULTS.json",
   "results": [
     {
       "state": "healthy NC contact",

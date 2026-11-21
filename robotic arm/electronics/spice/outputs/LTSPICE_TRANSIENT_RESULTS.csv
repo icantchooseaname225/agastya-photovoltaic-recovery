@@ -1,0 +1,3 @@
+condition,node,time_s,voltage_V
+Open loop at 2 ms,MCU_STATUS,0.002,4.9999499321
+Closed loop at 7 ms,MCU_STATUS,0.007,0.000249987497227

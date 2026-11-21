@@ -1,0 +1,29 @@
+{
+  "tool": "LTspice 26.1.1 for Windows",
+  "batchMode": true,
+  "runDate": "2026-11-21",
+  "circuit": "NC_LOOP_STATUS_LTSPICE.cir",
+  "transientWindowMs": 20,
+  "maximumTimestepUs": 10,
+  "switchSequence": "Modeled status path begins open, closes at 5 ms, opens again at 10 ms.",
+  "measurements": [
+    {
+      "voltageV": 4.9999499321,
+      "condition": "Open loop at 2 ms",
+      "timeSeconds": 0.002,
+      "node": "MCU_STATUS"
+    },
+    {
+      "voltageV": 0.000249987497227,
+      "condition": "Closed loop at 7 ms",
+      "timeSeconds": 0.007,
+      "node": "MCU_STATUS"
+    }
+  ],
+  "interpretation": "The simulated input is fail-high for the modeled open loop and near ground for the modeled closed contact. This is an idealized logic-status example, not a safety circuit validation.",
+  "limitations": [
+    "No controller input threshold, noise, wire capacitance, isolation, relay/safety hardware or board has been qualified.",
+    "The status channel is not a safety function and does not interrupt motor power.",
+    "Simulation is not a physical wiring or stop test."
+  ]
+}

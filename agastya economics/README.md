@@ -1,6 +1,6 @@
 # AGASTYA economics
 
-**Updated:** 20 November 2026
+**Updated:** 21 November 2026
 **Currency:** INR
 **Status:** catalogue-based education-scale comparison and a parameterized process-economics shell; no process-cell cost or ROI estimate.
 
@@ -28,3 +28,11 @@ A numeric example in the test suite verifies only the formula implementation; it
 ## Source links
 
 The copied review includes the original seller links. The catalogue model retains each listing URL with its price row and a scope note. No purchase was made. Catalogue availability and prices may change.
+
+## Process-cell quote comparison
+
+Run:
+
+    node "agastya economics/models/workcell_quote_screen.mjs"
+
+This creates an intentionally blank input template for three layouts: an arm with tooling, a shorter-reach arm on a rail/indexer, and dedicated mechanisms/fixtures. Each capital line stays null until a dated supplier quote, scope details, tax status and delivery/installation/commissioning status are recorded. The model refuses to compare an incomplete set. It does not estimate process cost per panel or payback, and no process-cell quotes were available for this review.

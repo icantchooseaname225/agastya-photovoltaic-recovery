@@ -26,7 +26,8 @@ export function runElectronicsModel(outputDir) {
   fs.writeFileSync(path.join(outputDir,"NC_LOOP_SIMULATION.csv"),csv);
   fs.writeFileSync(path.join(outputDir,"NC_LOOP_SIMULATION.json"),JSON.stringify({
     model:"5 V pull-up through 10 kohm; NC contact to signal ground; contact represented as 0.5 ohm when closed and open circuit otherwise.",
-    evidence:"Executed DC circuit-equation model in Node.js; LTspice netlist is supplied but not executed here.",
+    evidence:"Executed DC circuit-equation model in Node.js and transient netlist in LTspice 26.1.1 batch mode; measured results are recorded separately.",
+    ltspiceVerification:"LTSPICE_TRANSIENT_RESULTS.json",
     results:rows,
     limitations:["This is a single-channel status-input model, not a safety relay or safety function.",
       "It cannot detect every possible fault: a short to ground can look like a healthy closed contact.",

@@ -26,7 +26,7 @@ The current owner direction and evidence classes are defined in [AGASTYA_ARCHITE
 - [Stage 2 simulation](02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/model_report.md): executed top-view reach screen with source, CSV, JSON and SVG outputs. It is not CAD or robot-motion validation.
 - [Stage 3 thermal research](Build%20Files%20and%20Steps/Stage%203/STAGE3_THERMAL_DEVELOPMENT.md): previous hot-knife conduction model; it does not include foam-roller contact, peel mechanics, or liberation.
 - [Stage 4 evidence](Build%20Files%20and%20Steps/Stage%204): literature comparisons and virtual mass-balance/sensitivity work; no AGASTYA feed assay or silver-recovery run.
-- [Logbook index](04_Logbook/Logbook_Index.md): Day 34 now has a full/short digital pair; Days 31–33 survive as a combined short record only, so no missing full entries were reconstructed.
+- [Logbook index](04_Logbook/Logbook_Index.md): paired AI-assisted full/short digital drafts continue from Day 40 onward; Day 43 is the latest. Days 31–33 survive as a combined short record only, so no missing full entries were reconstructed.
 
 ## Evidence boundary
 

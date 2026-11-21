@@ -1,6 +1,6 @@
 # AGASTYA project index
 
-**Last updated:** 20 November 2026 (Day 42 Stage 2 simulation continuation)
+**Last updated:** 21 November 2026 (Day 43 Stage 2 simulation continuation)
 **Current architecture:** Stage 1 vision-based triage → Stage 2 robotic mechanical disassembly → Stage 3 hot-knife/foam-roller thermal separation → Stage 4 liberation, separation and silver recovery. See [current architecture](AGASTYA_ARCHITECTURE.md).
 
 The current 19 November project-owner direction supersedes the 16 October manual Stage 2 baseline. Earlier stage maps and the 14 October electrostatic package remain preserved in `99_Archive/` as historical work. See the [current process architecture](AGASTYA_ARCHITECTURE.md).
@@ -23,8 +23,8 @@ The current 19 November project-owner direction supersedes the 16 October manual
 - [Engineering overview](02_Engineering/ENGINEERING_OVERVIEW.md)
 - [Stage 2 robotic disassembly feasibility](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ROBOTIC_DISASSEMBLY_FEASIBILITY_2026-11-19.md)
 - [Stage 2 concept CAD plan and generator](02_Engineering/Stage_2_Robotic_Disassembly/simulation_outputs/concept_workcell_plan_notes.md)
-- [Packaged robotic-arm CAD, electronics and simulations](robotic%20arm/README.md), with OBJ/STL/SCAD mesh sources and a 71-point idealized IK screen. The [Fusion API source](robotic%20arm/cad/Fusion/README.md) is prepared but not run; no F3D/STEP export exists. [Original Stage 2 basis](02_Engineering/Stage_2_Robotic_Disassembly/STAGE2_ARM_CONCEPT_BASIS_2026-11-20.md) remains the design-history source.
-- [Stage 2 bench electronics models](robotic%20arm/electronics/README.md) and [economic screen/model](agastya%20economics/README.md)
+- [Packaged robotic-arm CAD, electronics and simulations](robotic%20arm/README.md), with OBJ/STL/SCAD mesh sources, 71-point idealized IK, candidate angle envelope and static-moment sensitivity. The [Fusion API source](robotic%20arm/cad/Fusion/README.md) is prepared but not run; no F3D/STEP export exists. [Original Stage 2 basis](robotic%20arm/STAGE2_ARM_CONCEPT_BASIS_2026-11-20.md) includes the Day 43 addendum.
+- [Stage 2 bench electronics models](robotic%20arm/electronics/README.md), including an LTspice transient result, and the [economic screen/model](agastya%20economics/README.md), including the three-layout quote template.
 - [Stage 1 servo-gate control-interface demo](Agastya-EYE/demos/servo_gate/README.md)
 - [Stage 3 roller/liberation placement review](Build%20Files%20and%20Steps/Stage%203/STAGE3_ROLLER_AND_LIBERATION_PLACEMENT_REASSESSMENT_2026-11-19.md)
 - [Stage 4 architecture reassessment](Build%20Files%20and%20Steps/Stage%204/STAGE4_ARCHITECTURE_REASSESSMENT_2026-11-19.md)
@@ -49,10 +49,10 @@ The current 19 November project-owner direction supersedes the 16 October manual
 ## Project records and communication
 
 - [Logbook index](04_Logbook/Logbook_Index.md) — original entries remain historical; no undocumented activity was backfilled.
-- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_42.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_42_SHORT_ENTRY.md) — AI-assisted first-person draft of generated concept mesh, executed idealized IK/NC-loop models and economic arithmetic; 13 software checks passed, with no native CAD or physical validation. [Day 40](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
+- [Latest logbook entry](04_Logbook/PROJECT_LOGBOOK_DAY_43.md) with its [short counterpart](04_Logbook/Short%20Versions/DAY_43_SHORT_ENTRY.md) — AI-assisted first-person draft of the joint-angle/mass sensitivity screens, LTspice batch run and quote framework; 18 software checks passed, with no native CAD or physical validation. [Day 40](04_Logbook/PROJECT_LOGBOOK_DAY_40.md) records the owner-reported NML response and visit follow-up, not independently checked against the email thread. Days 31–33 remain short-only.
 - [Session handoff](SESSION_HANDOFF.md) — current changes, checks and next action for continuation.
 - [GitHub repository preparation](00_Project_Management/GITHUB_REPOSITORY_PREPARATION_2026-11-19.md) — repository state, current manifest and first-push outcome.
-- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-20.md) — current 487-file path/size inventory and exclusion rationale for the Day 42 public sync.
+- [GitHub staged-file review](00_Project_Management/GITHUB_STAGED_FILE_REVIEW_2026-11-21.md) — refreshed Day 43 path/size inventory and exclusion rationale for the public sync.
 - October presentation binaries are retained locally and excluded from the initial GitHub source set pending content and identity review.
 - [Current presentation speaker notes](05_Presentation/Presentation_Script/AGASTYA_PRESENTATION_SPEAKER_NOTES_2026-10-20.md)
 - [Presentation slide evidence register](05_Presentation/Final_Presentation/AGASTYA_SLIDE_EVIDENCE_REGISTER_2026-10-20.csv)

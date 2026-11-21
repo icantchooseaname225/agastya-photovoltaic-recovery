@@ -1,0 +1,305 @@
+{
+  "currency": "INR",
+  "evidence": "No process-cell quotations have been supplied. All numeric and source fields are intentionally null.",
+  "scopeRule": "Enter vendor-confirmed line totals and a traceable written quote reference. Explicitly record whether tax and delivery/installation/commissioning are included. Do not enter catalogue guesses as quotes.",
+  "architectures": [
+    {
+      "id": "ARM_PLUS_TOOLING",
+      "label": "Arm plus task tooling",
+      "capitalItems": [
+        {
+          "category": "robot_and_controller",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "process_tooling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "panel_support_fixture",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "safety_guarding",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "electrical_power_controls",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "extraction_and_output_handling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "installation_commissioning",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "training",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "initial_spares",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        }
+      ]
+    },
+    {
+      "id": "ARM_ON_RAIL",
+      "label": "Short-reach arm with rail or panel indexer",
+      "capitalItems": [
+        {
+          "category": "arm_and_controller",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "rail_or_panel_indexer",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "process_tooling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "panel_support_fixture",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "safety_guarding",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "electrical_power_controls",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "extraction_and_output_handling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "installation_commissioning",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "training",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "initial_spares",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        }
+      ]
+    },
+    {
+      "id": "DEDICATED_FIXTURES",
+      "label": "Dedicated mechanisms and fixtures",
+      "capitalItems": [
+        {
+          "category": "dedicated_mechanisms",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "process_tooling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "panel_support_fixture",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "safety_guarding",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "electrical_power_controls",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "extraction_and_output_handling",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "installation_commissioning",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "training",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        },
+        {
+          "category": "initial_spares",
+          "lineTotalInr": null,
+          "supplier": null,
+          "quoteReference": null,
+          "quoteDate": null,
+          "taxIncluded": null,
+          "deliveryInstallationCommissioningIncluded": null,
+          "scopeNotes": null
+        }
+      ]
+    }
+  ]
+}

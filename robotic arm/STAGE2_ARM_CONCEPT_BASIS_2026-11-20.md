@@ -16,11 +16,11 @@ I carried the earlier 2D perimeter screen into a first 3D envelope for discussio
 | Upper-arm envelope | 1,100 mm | Placeholder link length. |
 | Forearm envelope | 900 mm | Placeholder link length. |
 | Nominal extended reach | 2,000 mm, excluding tool projection | Leaves 168.7 mm over the earlier 1,831.3 mm sampled far-corner radius. That is only geometric margin; not pose, collision, deflection or payload clearance. |
-| Axes | base yaw, shoulder pitch, elbow pitch, wrist/tool pitch | Kinematic sketch only; no joint limits or inverse-kinematic solution. |
+| Axes | base yaw, shoulder pitch, elbow pitch, wrist/tool pitch | A selected two-link IK solution is screened over the illustrative point set; no physical joint limits or motion plan are defined. |
 | Vertical base datum | 730 mm to shoulder centre | 20 mm base plate + 650 mm pedestal + 60 mm turntable from the current Fusion script; layout placeholder. |
 | Link cross-section envelopes | 120 × 100 mm and 100 × 80 mm | Solid visual envelopes only; no material or structural section chosen. |
 
-The 2D screen found that a 2.0 m nominal radial reach covers its 71 illustrative perimeter samples. The model does not include robot-link geometry, inverse kinematics, tool orientation, joint limits, singularities, collision, deflection, wrist moment, guarding or safety. The 2.0 m total in this concept is therefore a drawing input, not proof that a real arm can reach or safely perform the operations.
+The 2D screen found that a 2.0 m nominal radial reach covers its 71 illustrative perimeter samples. The later planar IK model adds a selected geometric solution, but still does not include robot-link collision geometry, physical tool orientation, joint stops, singularity handling, deflection, wrist dynamics, guarding or safety. The 2.0 m total in this concept is therefore a drawing input, not proof that a real arm can reach or safely perform the operations.
 
 ## What the files contain
 
@@ -48,4 +48,12 @@ The hobby-servo prices in the accompanying cost screen are market comparables fo
 
 I added a parametric envelope source, nine-component OBJ/MTL and 556-triangle STL mesh, and executed the two-link IK screen against the existing 71 illustrative perimeter points. The simplified model reported 71/71 reachable and a maximum shoulder-to-target distance of 1,971.44 mm. Its exact forward/inverse closure check is mathematical; no joint limits, collisions, loads from the arm itself or physical motion are represented.
 
-A Node.js NC-loop divider model and LTspice netlist were added for status-input discussion. Only the Node equation model was executed; the LTspice file and Arduino sketch were not compiled or run in their native tools. Thirteen software checks across the arm, mesh, electronics and economics packages passed. The Fusion script remains unexecuted and there is no F3D/STEP export.
+A Node.js NC-loop divider model and LTspice netlist were added for status-input discussion. At the Day 42 update, only the Node equation model had been executed; the LTspice file and Arduino sketch had not been run. Thirteen software checks across the arm, mesh, electronics and economics packages passed. The Fusion script remained unexecuted and there was no F3D/STEP export.
+
+## Digital addendum — 21 November 2026
+
+I extended the selected-branch output with a discrete candidate angle envelope for the 71 illustrative points: yaw 14.7559° to 165.2441°, shoulder pitch −13.4996° to 8.8899°, elbow pitch −134.7785° to −19.4873°, and wrist compensation 32.4608° to 148.2781°. These are model outputs, not required actuator travel. The model still omits collisions, tool approaches, clearances and alternate configurations.
+
+I added a 625-case static gravity-moment sensitivity grid that includes analyst-selected upper-link, forearm, tool and payload masses. It places link centers of mass at link midpoints and tool/payload centers at the wrist on a horizontal, fully extended arm. The sensitivity inputs are not measured loads; resulting moments are not motor ratings. The component masses and actual centers of gravity are still missing.
+
+I ran the status netlist in LTspice 26.1.1 batch mode. The modeled open contact measured 4.9999499 V at 2 ms and the closed contact 0.00024999 V at 7 ms. This confirms only the idealized circuit behavior; no controller board, E-stop, safety relay or arm was wired or tested. I added a quote-completeness framework for three process-cell layouts. It leaves CAPEX, cost per panel and payback unset because no comparable process-cell quotes or operating data were supplied. Eighteen Node checks passed. Fusion-native export remains open. The AutoCAD Core Console attempt timed out before creating a DWG, so in-app AutoCAD review is still outstanding.

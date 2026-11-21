@@ -1,4 +1,4 @@
-# AGASTYA session handoff — 20 November 2026
+# AGASTYA session handoff — 21 November 2026
 
 ## Current project state
 
@@ -6,23 +6,22 @@ AGASTYA is an automated end-of-life PV silver-recovery research system. The curr
 
 This remains an engineering desk study and computational project. No AGASTYA robot, hot-knife/foam-roller station, liberation or silver-recovery process, assay, product, recovered silver, throughput, cost or environmental benefit has been physically validated. Historical calculations and published results are not AGASTYA measurements.
 
-## Work completed in the 20 November continuation
+## Work completed in the 21 November continuation
 
-- Created the requested top-level robotic arm and agastya economics packages and copied the existing Stage 2 concept materials into them.
-- Generated a nine-component OBJ/MTL and 556-triangle STL from the editable envelope generator, plus a parametric source and the existing Fusion API script. Fusion was present in the app list, but a stable inspectable UI could not be established; no Fusion-native F3D/STEP export is claimed. The AutoCAD DXFs were not reviewed inside AutoCAD.
-- Executed the two-link IK/forward-closure screen for the 71 existing illustrative panel-edge points. It found 71/71 within the ideal 200–2,000 mm annulus, with 1,971.44 mm maximum shoulder distance and about 2.54e-13 mm maximum equation closure error. Unlimited joint travel, free yaw, rigid links and no collision are assumed.
-- Executed a simple 5 V / 10 kohm / 0.5 ohm NC status-divider model. A closed contact gives about 0.00025 V and an open loop gives 5 V. Added a standard LTspice transient netlist and static syntax check; the LTspice application itself was not run. The Arduino sketch was not compiled or connected.
-- Added a catalogue-price arithmetic model and an all-null process economics input template. The ₹14,066 / ₹14,315 subtotals reproduce the listed educational components only; process arm cost, cost per panel and payback remain unset.
-- All 13 Node tests pass. No physical arm, circuit, panel or recovery experiment was performed. Day 42 full and short AI-assisted draft entries and package readmes are present.
-- Day 40 still records the owner-reported NML reply and visit inquiry; no new correspondence, confirmed visit, collaboration or sample test occurred in this continuation.
+- Added candidate joint-angle ranges to the 71-point idealized IK output and generated a 625-row static gravity-moment sensitivity sweep including link, tool and payload mass. The grid is analyst-selected sensitivity input, not measured mass or actuator sizing.
+- Ran the NC-loop LTspice transient netlist in batch mode with LTspice 26.1.1. The modeled open contact measured 4.9999499 V at 2 ms; the modeled closed contact measured 0.00024999 V at 7 ms. The record is simulation evidence only; the Arduino sketch and any board or safety device were not tested.
+- Added a quote completeness model for an arm/tooling layout, an arm-on-rail/indexer layout, and a dedicated-mechanism layout. It requires quote source and scope fields and leaves process CAPEX, cost per panel and payback uncalculated while inputs are blank.
+- Reran the kinematics and economics models. Eighteen Node tests pass on v24.22.3, including a check that user-entered quote inputs are preserved when the economics screen is run. No physical arm, circuit, panel or recovery experiment was done.
+- Native Autodesk inspection remains open: Fusion did not produce F3D/STEP, and the AutoCAD 2027 Core Console attempt timed out with a missing error-report-log-path message, so no DWG or in-app visual review was recorded. The mesh, DXFs and API source remain available.
+- Day 43 full and short AI-assisted drafts are present. Day 40 remains the latest NML correspondence record; no new reply, confirmed visit, collaboration or sample test occurred.
 
 ## Immediate continuation
 
-1. The Day 42 package has been committed and pushed normally as 5e7ca0e. Fetch confirmed local main and origin/main matched; the reviewed set was 487 files and about 3.36 MB.
-2. Open the DXFs in AutoCAD and execute/review the Fusion script in the native app before claiming app-generated artifacts; add F3D/STEP only if the model passes visual review.
-3. Replace assumed panel/tool inputs and perform joint-limit, collision, load and safety analysis with a qualified reviewer before any powered build.
-4. Compare a rail/indexer or dedicated fixture against a long-reach arm and gather comparable written India quotes before updating process economics.
-5. Keep physical de-framing, thermal, liberation and silver-recovery work gated on an approved sample, facility, assay and waste route.
+1. Day 43 files are prepared for the next normal push to public main; record the final local/remote commit and refreshed privacy/size manifest after synchronization.
+2. Open and review the concept drawings in AutoCAD and run the Fusion script in the native app before claiming F3D/STEP artifacts.
+3. Replace assumed panel/tool geometry with measured dimensions, masses, centers of gravity and removal forces; then add collisions, joint limits and manufacturer-supported loads.
+4. Populate the three-layout quote template with comparable written supplier quotes and complete scope details; keep cost per panel and payback blank until measured operating inputs exist.
+5. Keep physical de-framing, thermal, liberation and silver-recovery work gated on an approved sample, qualified facility, assay and waste route.
 
 ## Work completed in the 19 November continuation
 

@@ -7,4 +7,6 @@ VTRIP CTRL 0 PULSE(0 5 5m 1u 1u 5m 10m)
 SNC MCU_STATUS 0 CTRL 0 SWNC
 .model SWNC SW(Ron=0.5 Roff=1G Vt=2.5 Vh=0.1)
 .tran 0 20m 0 10u
+.measure TRAN V_OPEN FIND V(MCU_STATUS) AT=2m
+.measure TRAN V_CLOSED FIND V(MCU_STATUS) AT=7m
 .end

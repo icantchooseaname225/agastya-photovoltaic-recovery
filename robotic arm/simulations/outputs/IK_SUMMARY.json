@@ -1,5 +1,5 @@
 {
-  "runId": "S2-3D-PLANAR-IK-2026-11-20-01",
+  "runId": "S2-3D-PLANAR-IK-2026-11-21-01",
   "evidence": "Simulated from stated geometry; not validated against a physical robot.",
   "software": "Node.js v24.22.3; built-in modules only",
   "model": {
@@ -20,6 +20,50 @@
     ],
     "branchSelection": "minimum |shoulder pitch| + |elbow pitch|; no joint stops"
   },
+  "selectedSolutionJointEnvelopeDegrees": {
+    "yaw_deg": {
+      "minimumDeg": 14.7559,
+      "maximumDeg": 165.2441,
+      "spanDeg": 150.4882
+    },
+    "shoulder_pitch_deg": {
+      "minimumDeg": -13.4996,
+      "maximumDeg": 8.8899,
+      "spanDeg": 22.3895
+    },
+    "elbow_pitch_deg": {
+      "minimumDeg": -134.7785,
+      "maximumDeg": -19.4873,
+      "spanDeg": 115.2912
+    },
+    "wrist_compensation_deg": {
+      "minimumDeg": 32.4608,
+      "maximumDeg": 148.2781,
+      "spanDeg": 115.8173
+    }
+  },
+  "staticGravityMomentSensitivity": {
+    "scenarioCount": 625,
+    "grid": {
+      "upperAndForearmLinkMassKg": [
+        0,
+        2.5,
+        5,
+        7.5,
+        10
+      ],
+      "toolAndPayloadMassKg": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "maximumGridShoulderMomentNm": 362.846,
+    "maximumGridElbowMomentNm": 114.7378,
+    "evidence": "Analyst-selected sensitivity grid only; none of these masses is measured or proposed as a design value."
+  },
   "inputs": {
     "taskPointCount": 71
   },
@@ -34,7 +78,9 @@
     "The 71 points represent an illustrative 2278 x 1134 mm panel and 300 mm standoff, not measured feed.",
     "Task points are projected into a radial vertical plane and base yaw is solved separately.",
     "No collision, joint limits, actuator curves, deflection, backlash, repeatability, tool pose, speed or acceleration are included.",
-    "Payload torque excludes links, wrist, tool, acceleration, friction, duty and design factors.",
+    "The selected-solution joint envelope describes this discrete point set only; it is not a commanded joint limit and does not include collisions, clearance or alternate task approaches.",
+    "Payload-only moments exclude links, wrist, tool, acceleration, friction, duty and design factors.",
+    "The link/tool/payload moment grid is an analyst-selected sensitivity range, not measured mass data or actuator sizing.",
     "This is not a robot selection or safe motion plan."
   ]
 }
